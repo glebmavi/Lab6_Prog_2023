@@ -4,8 +4,11 @@
 
 plugins {
     id("common.kotlin-library-conventions")
+    kotlin("plugin.serialization") version "1.8.0"
 }
 
 dependencies {
     api(project(":common"))
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
+    implementation ("com.charleskorn.kaml:kaml:0.51.0")
 }

@@ -5,8 +5,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="318493da-6bbb-42c7-92f9-02df2e4b3d16" name="Changes" comment="Init commit Lab6">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectionManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Console.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Creator.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/JsonCreator.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Validator.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/readers/BooleanReader.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/readers/DoubleReader.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/readers/EnumReader.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/readers/FloatReader.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/readers/IntReader.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/readers/LongReader.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/readers/StringReader.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandInvoker.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandReceiver.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Add.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/AddMin.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Clear.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Command.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/CountByMeleeWeapon.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Exit.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/FilterByChapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Help.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Info.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/RemoveAnyChapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/RemoveGreater.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/RemoveID.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/RemoveLower.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Save.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/ScriptFromFile.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Show.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/UnknownCommand.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Update.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/kotlin/utils/Answer.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/kotlin/utils/AnswerType.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/kotlin/utils/InputManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/kotlin/utils/OutputManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/kotlin/utils/Query.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/kotlin/utils/QueryType.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/CommandInvoker.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/CommandReceiver.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Add.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/AddMin.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Clear.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Command.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/CountByMeleeWeapon.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Exit.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/FilterByChapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Info.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveAnyChapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveGreater.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveID.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveLower.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Save.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Show.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Update.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/ConnectionManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/FileManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Saver.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Validator.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/client/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/server/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,38 +123,57 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2NxVc6fjrkIV36YAiiTEKgV9X1D" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Gleb/IdeaProjects/Lab6/common/src/main/kotlin&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/Gleb/IdeaProjects/Lab6/server/src/main/kotlin/commands",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Gleb\IdeaProjects\Lab6\common\src\main\kotlin" />
-      <recent name="C:\Users\Gleb\IdeaProjects\Lab6\server\src\main\kotlin" />
+      <recent name="C:\Users\Gleb\IdeaProjects\Lab6\server\src\main\kotlin\commands" />
+      <recent name="C:\Users\Gleb\IdeaProjects\Lab6\server\src\main\kotlin\serverUtils" />
+      <recent name="C:\Users\Gleb\IdeaProjects\Lab6\client\src\main\kotlin\clientUtils" />
+      <recent name="C:\Users\Gleb\IdeaProjects\Lab6\client\src\main\kotlin\commands" />
+      <recent name="C:\Users\Gleb\IdeaProjects\Lab6\client\src\main\kotlin\commands\utils" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Gleb\IdeaProjects\Lab6\client\src\main\kotlin" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="utils" />
+      <recent name="cutils" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="serializers" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.AKt">
+  <component name="RunManager">
     <configuration name="Lab6 [init]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -113,16 +196,8 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="AKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="AKt" />
-      <module name="Lab6.common.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.AKt" />
         <item itemvalue="Gradle.Lab6 [init]" />
       </list>
     </recent_temporary>
@@ -138,7 +213,12 @@
       <workItem from="1680605798833" duration="2660000" />
       <workItem from="1680886989977" duration="1750000" />
       <workItem from="1680952590434" duration="13000" />
-      <workItem from="1680953141278" duration="1067000" />
+      <workItem from="1680953141278" duration="3273000" />
+      <workItem from="1681196222309" duration="10000" />
+      <workItem from="1681213860602" duration="1243000" />
+      <workItem from="1681215138717" duration="781000" />
+      <workItem from="1681310468887" duration="67000" />
+      <workItem from="1681310547854" duration="5526000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit Lab6">
       <created>1680607747881</created>
@@ -147,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680607747881</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Init commit Lab6">
+      <created>1680954625606</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680954625606</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
