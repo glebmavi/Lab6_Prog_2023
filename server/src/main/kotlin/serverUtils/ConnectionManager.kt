@@ -7,15 +7,12 @@ import java.net.DatagramPacket
 import java.net.DatagramSocket
 import java.net.InetAddress
 
-
 class ConnectionManager {
-    private var data = ByteArray(4096)
-
     private var port = 6789
     private var host = InetAddress.getLocalHost()
 
     private val datagramSocket = DatagramSocket(port)
-    private var datagramPacket = DatagramPacket(data, data.size)
+    private var datagramPacket = DatagramPacket(ByteArray(4096), 4096)
 
     fun startServer(host: String, port: Int) {
         this.host = InetAddress.getByName(host)

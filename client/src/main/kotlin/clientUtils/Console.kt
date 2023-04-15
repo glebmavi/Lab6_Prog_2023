@@ -43,9 +43,10 @@ class Console {
 
     fun getConnection() {
         connectionManager.connect("localhost", 6789)
-
+        println("CLIENT:Connected to server")
         val query = Query(QueryType.INITIALIZATION, "", mapOf())
         connectionManager.send(query)
+        println("CLIENT: Sent initialization query")
     }
 
     /**
@@ -53,10 +54,12 @@ class Console {
      */
     fun initialize() {
         val serverCommands = connectionManager.receive().message.split(" ")
+        println("CLIENT: Received commands from server: $serverCommands")
 
         for (i in serverCommands) {
             if (i in availableCommands.keys) {
                 commandInvoker.register(i, availableCommands.getValue(i))
+                println("CLIENT: Registered command $i")
             } else {
                 commandInvoker.register(i, UnknownCommand(commandReceiver, "This scope will be replaced with the info", 0, mapOf()))
             }
