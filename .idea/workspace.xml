@@ -4,35 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="318493da-6bbb-42c7-92f9-02df2e4b3d16" name="Changes" comment="Fixed ByteArray bug, Client and Server send correct data">
+    <list default="true" id="318493da-6bbb-42c7-92f9-02df2e4b3d16" name="Changes" comment="working now">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/server/Lab6.server.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/server.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/resources/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Console.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Console.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandReceiver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandReceiver.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/AddMin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/AddMin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Clear.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Clear.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Exit.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Exit.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/FilterByChapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/FilterByChapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Help.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Help.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Info.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Info.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/RemoveAnyChapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/RemoveAnyChapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/RemoveGreater.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/RemoveGreater.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/RemoveID.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/RemoveID.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/RemoveLower.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/RemoveLower.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/ScriptFromFile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/ScriptFromFile.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Show.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Show.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Update.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Update.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/CommandReceiver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/CommandReceiver.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Clear.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Clear.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/CountByMeleeWeapon.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/CountByMeleeWeapon.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/FilterByChapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/FilterByChapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Info.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Info.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveAnyChapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveAnyChapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveGreater.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveGreater.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveID.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveID.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveLower.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveLower.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Save.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Save.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Show.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Show.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Update.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Update.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/server/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,6 +47,12 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Lab6" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Lab6" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build setup" type="c8890929:TasksNode$1" />
               </path>
             </expand>
@@ -90,33 +76,36 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2NxVc6fjrkIV36YAiiTEKgV9X1D" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Gleb/IdeaProjects/dbLab1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/Gleb/IdeaProjects/Lab6/server/src/main/kotlin/commands",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Gleb\IdeaProjects\Lab6\server\src\main\kotlin\commands" />
@@ -126,7 +115,6 @@
       <recent name="C:\Users\Gleb\IdeaProjects\Lab6\client\src\main\kotlin\commands\utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Gleb\IdeaProjects\Lab6" />
       <recent name="C:\Users\Gleb\IdeaProjects\Lab6\client\src\main\kotlin" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -140,6 +128,28 @@
     </key>
   </component>
   <component name="RunManager" selected="Kotlin.ClientKt">
+    <configuration name="Lab6 [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildDependents" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <configuration name="Lab6 [init]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -180,6 +190,7 @@
       <list>
         <item itemvalue="Kotlin.ClientKt" />
         <item itemvalue="Kotlin.ServerKt" />
+        <item itemvalue="Gradle.Lab6 [buildDependents]" />
         <item itemvalue="Gradle.Lab6 [init]" />
       </list>
     </recent_temporary>
@@ -203,7 +214,8 @@
       <workItem from="1681310547854" duration="6439000" />
       <workItem from="1681482270515" duration="886000" />
       <workItem from="1681546277658" duration="582000" />
-      <workItem from="1681567081384" duration="8864000" />
+      <workItem from="1681556131443" duration="545000" />
+      <workItem from="1681574207711" duration="733000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit Lab6">
       <created>1680607747881</created>
@@ -226,12 +238,12 @@
       <option name="project" value="LOCAL" />
       <updated>1681322563744</updated>
     </task>
-    <task id="LOCAL-00004" summary="Fixed ByteArray bug, Client and Server send correct data">
-      <created>1681576639204</created>
+    <task id="LOCAL-00004" summary="working now">
+      <created>1681554233312</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1681576639204</updated>
+      <updated>1681554233312</updated>
     </task>
     <option name="localTasksCounter" value="5" />
     <servers />
@@ -263,104 +275,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Init commit Lab6" />
     <MESSAGE value="Loaded classes from Client and Server repositories" />
-    <MESSAGE value="Fixed ByteArray bug, Client and Server send correct data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed ByteArray bug, Client and Server send correct data" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectionManager.kt</url>
-          <line>25</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectionManager.kt</url>
-          <line>26</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectionManager.kt</url>
-          <line>30</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectionManager.kt</url>
-          <line>31</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectionManager.kt</url>
-          <line>32</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectionManager.kt</url>
-          <line>35</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/AddMin.kt</url>
-          <line>30</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/server/src/main/kotlin/commands/CommandReceiver.kt</url>
-          <line>205</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/RemoveAnyChapter.kt</url>
-          <line>29</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/server/src/main/kotlin/commands/CommandInvoker.kt</url>
-          <line>40</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/server/src/main/kotlin/commands/CommandInvoker.kt</url>
-          <line>44</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/server/src/main/kotlin/commands/CommandInvoker.kt</url>
-          <line>43</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/server/src/main/kotlin/commands/CommandInvoker.kt</url>
-          <line>41</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/server/src/main/kotlin/commands/CommandReceiver.kt</url>
-          <line>156</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/server/src/main/kotlin/commands/CommandReceiver.kt</url>
-          <line>155</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/server/src/main/kotlin/commands/CommandReceiver.kt</url>
-          <line>154</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/AddMin.kt</url>
-          <line>28</line>
-          <properties class="commands.consoleCommands.AddMin" method="execute">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="working now" />
+    <option name="LAST_COMMIT_MESSAGE" value="working now" />
   </component>
 </project>

@@ -64,6 +64,7 @@ class Console {
                 commandInvoker.register(i, UnknownCommand(commandReceiver, "This scope will be replaced with the info", 0, mapOf()))
             }
         }
+
         commandInvoker.register("help", availableCommands.getValue("help"))
         commandInvoker.register("exit", availableCommands.getValue("exit"))
         commandInvoker.register("execute_script", availableCommands.getValue("execute_script"))
