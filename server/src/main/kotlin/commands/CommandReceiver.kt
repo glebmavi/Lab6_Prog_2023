@@ -2,6 +2,7 @@ package commands
 
 import basicClasses.*
 import collection.CollectionManager
+import exceptions.InvalidArgumentException
 import serverUtils.*
 import utils.*
 
@@ -60,6 +61,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
 
         try {
             val oldSpaceMarine = collectionManager.getByID(id.toLong())
+                ?: throw InvalidArgumentException("No Space Marine with id: $id was found")
             val newSpaceMarine = creator.createSpaceMarine(args)
             collectionManager.update(oldSpaceMarine, newSpaceMarine)
             val answer = Answer(AnswerType.OK, "Space Marine ${oldSpaceMarine.getName()} has been updated")
@@ -76,6 +78,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
 
         try {
             val spaceMarine = collectionManager.getByID(id.toLong())
+                ?: throw InvalidArgumentException("No Space Marine with id: $id was found")
 
             collectionManager.remove(spaceMarine)
             val answer = Answer(AnswerType.OK, "Space Marine ${spaceMarine.getName()} has been deleted")
@@ -139,6 +142,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
         try {
             val collection = collectionManager.getCollection()
             val spaceMarine = collectionManager.getByID(id!!.toLong())
+                ?: throw InvalidArgumentException("No Space Marine with id: $id was found")
             var count = 0
 
             while (collection.isNotEmpty()) {
@@ -164,6 +168,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
         try {
             val collection = collectionManager.getCollection()
             val spaceMarine = collectionManager.getByID(id!!.toLong())
+                ?: throw InvalidArgumentException("No Space Marine with id: $id was found")
             var count = 0
 
             while (collection.isNotEmpty()) {
