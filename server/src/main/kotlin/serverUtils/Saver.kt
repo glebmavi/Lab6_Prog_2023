@@ -4,7 +4,6 @@ import basicClasses.SpaceMarine
 import collection.CollectionManager
 import com.charleskorn.kaml.Yaml
 import exceptions.NoEnvironmentVariableFound
-import serverUtils.ConnectionManager
 import utils.*
 import java.io.FileOutputStream
 import java.io.OutputStreamWriter

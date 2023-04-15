@@ -10,7 +10,7 @@ import java.io.FileReader
  * Class that contains environment variables and handles files
  * @property collectionFileName String containing file name
  */
-class FileManager(private val connectionManager: ConnectionManager) {
+class FileManager() {
 
     private val collectionFileName = try {
         System.getenv("COLLECTION")

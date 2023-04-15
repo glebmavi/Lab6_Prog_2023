@@ -1,6 +1,6 @@
 package commands
 
-import commands.consoleCommands.Command
+import basicClasses.Command
 import utils.Answer
 import utils.AnswerType
 import serverUtils.ConnectionManager
