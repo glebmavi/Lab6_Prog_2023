@@ -31,7 +31,7 @@ class Update() : Command() {
             } catch (e:Exception) {
                 throw InvalidArgumentException("Expected an argument but it was not found")
             }
-        } else throw InvalidArgumentException("Too many arguments were entered")
+        } else throw InvalidArgumentException("Invalid arguments were entered. Use HELP command to check")
     }
 
 }

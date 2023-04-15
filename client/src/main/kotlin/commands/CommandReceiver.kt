@@ -191,7 +191,7 @@ class CommandReceiver(private val commandInvoker: CommandInvoker,
      */
     fun removeByChapter() {
         val chapter = creator.createChapter()
-        val query = Query(QueryType.COMMAND_EXEC, "remove_by_chapter", mapOf("chapter" to jsonCreator.objectToString(chapter)))
+        val query = Query(QueryType.COMMAND_EXEC, "remove_any_by_chapter", mapOf("chapter" to jsonCreator.objectToString(chapter)))
         connectionManager.send(query)
 
         val answer = connectionManager.receive()

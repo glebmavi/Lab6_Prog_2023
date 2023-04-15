@@ -29,6 +29,6 @@ class FilterByChapter() : Command() {
     override fun execute(args: List<String>) {
         if (Validator.verifyArgs(0, args)) {
             commandReceiver.filterByChapter()
-        } else throw InvalidArgumentException("Too many arguments were entered")
+        } else throw InvalidArgumentException("Invalid arguments were entered. Use HELP command to check")
     }
 }

@@ -25,13 +25,13 @@ class Update() : Command() {
      * Calls [CommandReceiver.updateByID] with provided id
      */
     override fun execute(args: Map<String, String>) {
-        if (Validator.verifyArgs(10, args)) {
+        if (Validator.verifyArgs(2, args)) {
             try {
                 commandReceiver.updateByID(args)
             } catch (e:Exception) {
                 throw InvalidArgumentException("Expected an argument but it was not found")
             }
-        } else throw InvalidArgumentException("Too many arguments were entered")
+        } else throw InvalidArgumentException("Invalid arguments were entered. Use HELP command to check")
     }
 
 }

@@ -31,6 +31,6 @@ class Help() : Command() {
         } else if (Validator.verifyArgs(0, args)) {
                 commandReceiver.help()
 
-        } else throw InvalidArgumentException("Too many arguments were entered")
+        } else throw InvalidArgumentException("Invalid arguments were entered. Use HELP command to check")
     }
 }

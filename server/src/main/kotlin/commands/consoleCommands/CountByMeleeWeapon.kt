@@ -28,7 +28,7 @@ class CountByMeleeWeapon() : Command() {
     override fun execute(args: Map<String, String>) {
         if (Validator.verifyArgs(1, args)) {
             commandReceiver.countByWeapon(args)
-        }  else throw InvalidArgumentException("Too many arguments were entered")
+        } else throw InvalidArgumentException("Invalid arguments were entered. Use HELP command to check")
     }
 
 
