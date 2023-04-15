@@ -63,7 +63,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
             val oldSpaceMarine = collectionManager.getByID(id.toLong())
                 ?: throw InvalidArgumentException("No Space Marine with id: $id was found")
             val newSpaceMarine = jsonCreator.stringToObject<SpaceMarine>(args["spaceMarine"]!!)
-            collectionManager.update(oldSpaceMarine, newSpaceMarine)
+            collectionManager.update(newSpaceMarine, oldSpaceMarine)
             val answer = Answer(AnswerType.OK, "Space Marine ${oldSpaceMarine.getName()} has been updated")
             connectionManager.send(answer)
 
@@ -120,14 +120,21 @@ class CommandReceiver(private val collectionManager: CollectionManager,
     fun addMin(args: Map<String, String>) {
         try {
             val spaceMarine = jsonCreator.stringToObject<SpaceMarine>(args["spaceMarine"]!!)
-            if (spaceMarine < collectionManager.getCollection().first()) {
+            if (collectionManager.getCollection().isNotEmpty()) {
+                if (spaceMarine < collectionManager.getCollection().first()) {
+                    collectionManager.add(spaceMarine)
+                    val answer = Answer(AnswerType.OK, "Space Marine ${spaceMarine.getName()} has been created and added to the collection")
+                    connectionManager.send(answer)
+                } else {
+                    val answer = Answer(AnswerType.ERROR, "Space Marine ${spaceMarine.getName()} has not been added to the collection, because it is not the smallest")
+                    connectionManager.send(answer)
+                }
+            } else {
                 collectionManager.add(spaceMarine)
                 val answer = Answer(AnswerType.OK, "Space Marine ${spaceMarine.getName()} has been created and added to the collection")
                 connectionManager.send(answer)
-            } else {
-                val answer = Answer(AnswerType.ERROR, "Space Marine ${spaceMarine.getName()} has not been added to the collection, because it is not the smallest")
-                connectionManager.send(answer)
             }
+
         } catch (e: Exception) {
             val answer = Answer(AnswerType.ERROR, e.toString())
             connectionManager.send(answer)
@@ -145,13 +152,17 @@ class CommandReceiver(private val collectionManager: CollectionManager,
                 ?: throw InvalidArgumentException("No Space Marine with id: $id was found")
             var count = 0
 
-            while (collection.isNotEmpty()) {
-                if (collection.last() > spaceMarine) {
+            if (collection.isNotEmpty()) {
+                while (collection.last() > spaceMarine) {
                     collectionManager.remove(collection.last())
                     count++
                 }
             }
-            val answer = Answer(AnswerType.OK, "$count Space Marines have been deleted")
+            val answer = Answer(AnswerType.OK, when (count) {
+                0 -> { "No Space Marines were deleted" }
+                1 -> { "Only 1 Space Marine was deleted" }
+                else -> { "$count Space Marines have been deleted" }
+            })
             connectionManager.send(answer)
 
         } catch (e: Exception) {
@@ -171,18 +182,18 @@ class CommandReceiver(private val collectionManager: CollectionManager,
                 ?: throw InvalidArgumentException("No Space Marine with id: $id was found")
             var count = 0
 
-            while (collection.isNotEmpty()) {
-                if (collection.last() < spaceMarine) {
+            if (collection.isNotEmpty()) {
+                while (collection.first() < spaceMarine) {
                     collectionManager.remove(collection.last())
                     count++
                 }
             }
+
             val answer = Answer(AnswerType.OK, when (count) {
                 0 -> { "No Space Marines were deleted" }
                 1 -> { "Only 1 Space Marine was deleted" }
                 else -> { "$count Space Marines have been deleted" }
             })
-
             connectionManager.send(answer)
 
         } catch (e: Exception) {
@@ -209,9 +220,9 @@ class CommandReceiver(private val collectionManager: CollectionManager,
             }
 
             val answer = Answer(AnswerType.OK, when (count) {
-                0 -> { "No Space Marines with chapter == $chapter was found" }
-                1 -> { "Only 1 Space Marine with chapter == $chapter was found and deleted" }
-                else -> { "$count Space Marines with chapter == $chapter were found and deleted" }
+                0 -> { "No Space Marines with $chapter was found" }
+                1 -> { "Only 1 Space Marine with $chapter was found and deleted" }
+                else -> { "$count Space Marines with $chapter were found and deleted" }
             })
 
             connectionManager.send(answer)
@@ -225,7 +236,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
 
     fun countByWeapon(args: Map<String, String>) {
         try {
-            val weapon = MeleeWeapon.valueOf(args["weapon"]!!)
+            val weapon = jsonCreator.stringToObject<MeleeWeapon>(args["weapon"]!!)
             val collection = collectionManager.getCollection()
             var count = 0
 
@@ -236,9 +247,9 @@ class CommandReceiver(private val collectionManager: CollectionManager,
                     }
                 }
                 val answer = Answer(AnswerType.OK, when (count) {
-                    0 -> { "No Space Marines with weapon == $weapon were found" }
-                    1 -> { "Only 1 Space Marine with weapon == $weapon was found" }
-                    else -> { "$count Space Marines with weapon == $weapon were found" }
+                    0 -> { "No Space Marines with $weapon were found" }
+                    1 -> { "Only 1 Space Marine with $weapon was found" }
+                    else -> { "$count Space Marines with $weapon were found" }
                 })
 
                 connectionManager.send(answer)

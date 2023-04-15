@@ -27,13 +27,14 @@ class ConnectionManager {
         val data = ByteArray(4096)
         datagramPacket = DatagramPacket(data, data.size)
         datagramSocket.receive(datagramPacket)
-
-        return Json.decodeFromString(Query.serializer(), data.decodeToString().trim('\u0000'))
+        val jsonQuery = data.decodeToString().replace("\u0000", "")
+        println("SERVER: Received: $jsonQuery")
+        return Json.decodeFromString(Query.serializer(), jsonQuery)
     }
 
     fun send(answer: Answer) {
         println("Sending answer to $host:$port")
-        println(answer.message)
+        println("SERVER: Sending: ${Json.encodeToString(Answer.serializer(), answer)}")
         val data = Json.encodeToString(Answer.serializer(), answer).toByteArray()
 
         host = datagramPacket.address

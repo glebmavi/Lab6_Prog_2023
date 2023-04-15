@@ -29,6 +29,6 @@ class Save() : Command() {
         if (Validator.verifyArgs(0, args)) {
             commandReceiver.save("")
             TODO()
-        } else throw InvalidArgumentException("Too many arguments were entered")
+        } else throw InvalidArgumentException("Invalid arguments were entered. Use HELP command to check")
     }
 }

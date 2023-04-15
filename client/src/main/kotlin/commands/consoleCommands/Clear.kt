@@ -28,6 +28,6 @@ class Clear() : Command() {
     override fun execute(args: List<String>) {
         if (Validator.verifyArgs(0, args)) {
             commandReceiver.clear()
-        } else throw InvalidArgumentException("Too many arguments were entered")
+        } else throw InvalidArgumentException("Invalid arguments were entered. Use HELP command to check")
     }
 }

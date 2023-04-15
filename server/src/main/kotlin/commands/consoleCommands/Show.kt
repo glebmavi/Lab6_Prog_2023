@@ -27,7 +27,7 @@ class Show() : Command() {
     override fun execute(args: Map<String, String>) {
         if (Validator.verifyArgs(0, args)) {
             commandReceiver.show()
-        } else throw InvalidArgumentException("Too many arguments were entered")
+        } else throw InvalidArgumentException("Invalid arguments were entered. Use HELP command to check")
     }
 
 }

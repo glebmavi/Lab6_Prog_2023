@@ -33,8 +33,8 @@ class Console {
         commandInvoker.register("update_id", Update(commandReceiver))
         commandInvoker.register("remove_by_id", RemoveID(commandReceiver))
         commandInvoker.register("clear", Clear(commandReceiver))
-        commandInvoker.register("save", Save(commandReceiver))
-        commandInvoker.register("exit", Exit(commandReceiver))
+        //commandInvoker.register("save", Save(commandReceiver))
+        //commandInvoker.register("exit", Exit(commandReceiver))
         commandInvoker.register("add_if_min", AddMin(commandReceiver))
         commandInvoker.register("remove_greater", RemoveGreater(commandReceiver))
         commandInvoker.register("remove_lower", RemoveLower(commandReceiver))
@@ -56,7 +56,7 @@ class Console {
 
                 if (query.queryType == QueryType.COMMAND_EXEC) {
                     commandInvoker.executeCommand(query)
-                    executeFlag = commandInvoker.getCommandMap()[query.info]?.getExecutionFlag()
+                    executeFlag = commandInvoker.getCommandMap()[query.information]?.getExecutionFlag()
 
                 } else if (query.queryType == QueryType.INITIALIZATION) {
                     val answer = Answer(AnswerType.SYSTEM, commandInvoker.getCommandMap().keys.joinToString(" "))
