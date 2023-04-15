@@ -7,6 +7,7 @@ import java.net.DatagramPacket
 import java.net.DatagramSocket
 import java.net.InetAddress
 
+
 class ConnectionManager {
     private var data = ByteArray(4096)
 
@@ -26,16 +27,18 @@ class ConnectionManager {
      * @return the line that was read
      */
     fun receive(): Query {
+        val data = ByteArray(4096)
         datagramPacket = DatagramPacket(data, data.size)
         datagramSocket.receive(datagramPacket)
-
-        return Json.decodeFromString(Query.serializer(), data.decodeToString().trim('\u0000'))
+        val jsonQuery = data.decodeToString().replace("\u0000", "")
+        println("SERVER: Received: $jsonQuery")
+        return Json.decodeFromString(Query.serializer(), jsonQuery)
     }
 
     fun send(answer: Answer) {
         println("Sending answer to $host:$port")
-        println(answer.message)
-        data = Json.encodeToString(Answer.serializer(), answer).toByteArray()
+        println("SERVER: Sending: ${Json.encodeToString(Answer.serializer(), answer)}")
+        val data = Json.encodeToString(Answer.serializer(), answer).toByteArray()
 
         host = datagramPacket.address
         port = datagramPacket.port

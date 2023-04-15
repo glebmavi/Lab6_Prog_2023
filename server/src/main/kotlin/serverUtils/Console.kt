@@ -56,7 +56,7 @@ class Console {
 
                 if (query.queryType == QueryType.COMMAND_EXEC) {
                     commandInvoker.executeCommand(query)
-                    executeFlag = commandInvoker.getCommandMap()[query.info]?.getExecutionFlag()
+                    executeFlag = commandInvoker.getCommandMap()[query.information]?.getExecutionFlag()
 
                 } else if (query.queryType == QueryType.INITIALIZATION) {
                     val answer = Answer(AnswerType.SYSTEM, commandInvoker.getCommandMap().keys.joinToString(" "))

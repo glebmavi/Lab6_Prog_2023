@@ -20,8 +20,9 @@ class ConnectionManager {
 
     fun send(query: Query) {
         println("Sending query to $host:$port")
-        println(query)
-        val data = ByteBuffer.wrap(Json.encodeToString(Query.serializer(), query).toByteArray())
+        val jsonQuery = Json.encodeToString(Query.serializer(), query)
+        println("CLIENT: Sending: $jsonQuery")
+        val data = ByteBuffer.wrap(jsonQuery.toByteArray())
         val address = InetSocketAddress(host, port)
         datagramChannel.send(data, address)
     }
@@ -29,7 +30,9 @@ class ConnectionManager {
     fun receive(): Answer {
         val data = ByteBuffer.wrap(ByteArray(4096))
         datagramChannel.receive(data)
-        return Json.decodeFromString(Answer.serializer(), data.array().decodeToString().trim('\u0000'))
+        val jsonAnswer = data.array().decodeToString().replace("\u0000", "")
+        println("CLIENT: Received: $jsonAnswer")
+        return Json.decodeFromString(Answer.serializer(), jsonAnswer)
     }
 
 }
