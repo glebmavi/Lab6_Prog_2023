@@ -2,9 +2,8 @@ package commands
 
 import basicClasses.*
 import commands.consoleCommands.Command
-import clientUtils.Creator
-import clientUtils.readers.EnumReader
 import clientUtils.*
+import clientUtils.readers.*
 import utils.*
 
 class CommandReceiver(private val commandInvoker: CommandInvoker,
@@ -16,6 +15,14 @@ class CommandReceiver(private val commandInvoker: CommandInvoker,
     private val creator = Creator(outputManager, inputManager)
     private val enumReader = EnumReader(outputManager, inputManager)
     private val jsonCreator = JsonCreator()
+
+//    private val argReaders = mapOf(
+//        "MeleeWeapon" to enumReader.read<MeleeWeapon>("Enter Weapon category from the list: ", true),
+//        "Chapter" to creator.createChapter(),
+//        "Coordinates" to creator.createCoordinates(),
+//        "SpaceMarine" to creator.createSpaceMarine()
+//    )
+
 
     /**
      * Gets a command map from [commandInvoker], and prints each command's info or info of provided command in arg
@@ -43,6 +50,38 @@ class CommandReceiver(private val commandInvoker: CommandInvoker,
             outputManager.println(commands[arg.lowercase()]?.getInfo().toString())
         }
     }
+//
+//    //No args
+//    fun universalExecute(commandName:String) {
+//        val query = Query(QueryType.COMMAND_EXEC, commandName, mapOf())
+//        connectionManager.send(query)
+//
+//        val answer = connectionManager.receive()
+//        outputManager.println(answer.message)
+//    }
+//
+//    //inline String type arg (id, filepath)
+//    fun universalExecute(commandName:String, argName:String, argValue:String) {
+//        val query = Query(QueryType.COMMAND_EXEC, commandName, mapOf(argName to argValue))
+//        connectionManager.send(query)
+//
+//        val answer = connectionManager.receive()
+//        outputManager.println(answer.message)
+//    }
+//
+//    //names of args with their types
+//    fun universalExecute(commandName:String, args:Map<String, String>) {
+//        val sendingArgs = mutableMapOf<String, String>()
+//        for (arg in args) {
+//            sendingArgs[arg.key] = jsonCreator.objectToString(argReaders[arg.value])
+//        }
+//
+//        val query = Query(QueryType.COMMAND_EXEC, commandName, sendingArgs)
+//        connectionManager.send(query)
+//
+//        val answer = connectionManager.receive()
+//        outputManager.println(answer.message)
+//    }
 
     /**
      * Prints retrieved info from collection

@@ -1,4 +1,4 @@
-package basicClasses
+package commands.consoleCommands
 
 import kotlinx.serialization.Serializable
 
@@ -7,19 +7,10 @@ import kotlinx.serialization.Serializable
  *
  * @constructor Create empty Command
  */
+
 @Serializable
 abstract class Command {
     private var executionFlag = true
-    val name : String = "Command"
-    val info : String = "Command Info"
-
-    /**
-     * K: Argument name
-     * V: Argument type
-     */
-    val argsTypes = mapOf<String, String>()
-
-
     fun setFlag(flag:Boolean) {
         this.executionFlag = flag
     }
@@ -27,7 +18,9 @@ abstract class Command {
     fun getExecutionFlag(): Boolean {
         return executionFlag
     }
+    constructor() {
 
+    }
     /**
      * Get info
      *

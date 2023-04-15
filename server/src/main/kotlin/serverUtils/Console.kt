@@ -16,7 +16,7 @@ import utils.*
  */
 class Console {
     private val connectionManager = ConnectionManager()
-    private val fileManager = FileManager(connectionManager)
+    private val fileManager = FileManager()
 
     private val collectionManager = CollectionManager()
 

@@ -3,7 +3,6 @@ package commands.consoleCommands
 import commands.CommandReceiver
 import serverUtils.Validator
 import exceptions.InvalidArgumentException
-import basicClasses.Command
 
 /**
  * Remove greater command

@@ -25,24 +25,16 @@ class Creator(outputManager: OutputManager, inputManager: InputManager) {
      *
      * @return [SpaceMarine] object
      */
-    fun createSpaceMarine(): Map<String, String> {
+    fun createSpaceMarine(): SpaceMarine {
         val name = stringReader.read("Enter name of the new Space Marine: ")
         val coordinates = createCoordinates()
         val health = floatReader.read("Enter health value (\\null for null value): ", true)
         val loyal = booleanReader.read("Enter loyalty [true / false]: ")
-        val category = enumReader.read<AstartesCategory>("Enter Astartes category from the list: ", false)
+        val category = enumReader.read<AstartesCategory>("Enter Astartes category from the list: ", false)!!
         val weapon = enumReader.read<MeleeWeapon>("Enter Weapon category from the list: ", true)
         val chapter = createChapter()
 
-        return mapOf (
-            "name" to name,
-            "coordinates" to Json.encodeToString(Coordinates.serializer(), coordinates),
-            "health" to health.toString(),
-            "loyal" to loyal.toString(),
-            "category" to category.toString(),
-            "weapon" to weapon.toString(),
-            "chapter" to Json.encodeToString(Chapter.serializer(), chapter)
-        )
+        return SpaceMarine(name, coordinates, health, loyal, category, weapon, chapter)
     }
 
     /**
@@ -60,7 +52,7 @@ class Creator(outputManager: OutputManager, inputManager: InputManager) {
      * Creates and returns a new [Coordinates] object
      * @return [Coordinates] from entered values
      */
-    private fun createCoordinates() : Coordinates {
+    fun createCoordinates() : Coordinates {
         val x: Double = doubleReader.read("Enter value of X: ")
         val y: Int = intReader.read("Enter value of Y: ")
 

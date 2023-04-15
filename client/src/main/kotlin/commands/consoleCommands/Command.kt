@@ -18,7 +18,9 @@ abstract class Command {
     fun getExecutionFlag(): Boolean {
         return executionFlag
     }
+    constructor() {
 
+    }
     /**
      * Get info
      *

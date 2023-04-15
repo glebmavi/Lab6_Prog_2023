@@ -10,7 +10,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
                       private val connectionManager: ConnectionManager
 ) {
 
-    private val creator = Creator()
+    private val jsonCreator = JsonCreator()
 
     /**
      * Prints retrieved info from [collectionManager]
@@ -43,7 +43,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
      */
     fun add(args: Map<String, String>) {
         try {
-            val spaceMarine = creator.createSpaceMarine(args)
+            val spaceMarine = jsonCreator.stringToObject<SpaceMarine>(args["spaceMarine"]!!)
             collectionManager.add(spaceMarine)
             val answer = Answer(AnswerType.OK, "Space Marine ${spaceMarine.getName()} has been created and added to the collection")
             connectionManager.send(answer)
@@ -62,7 +62,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
         try {
             val oldSpaceMarine = collectionManager.getByID(id.toLong())
                 ?: throw InvalidArgumentException("No Space Marine with id: $id was found")
-            val newSpaceMarine = creator.createSpaceMarine(args)
+            val newSpaceMarine = jsonCreator.stringToObject<SpaceMarine>(args["spaceMarine"]!!)
             collectionManager.update(oldSpaceMarine, newSpaceMarine)
             val answer = Answer(AnswerType.OK, "Space Marine ${oldSpaceMarine.getName()} has been updated")
             connectionManager.send(answer)
@@ -119,7 +119,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
 
     fun addMin(args: Map<String, String>) {
         try {
-            val spaceMarine = creator.createSpaceMarine(args)
+            val spaceMarine = jsonCreator.stringToObject<SpaceMarine>(args["spaceMarine"]!!)
             if (spaceMarine < collectionManager.getCollection().first()) {
                 collectionManager.add(spaceMarine)
                 val answer = Answer(AnswerType.OK, "Space Marine ${spaceMarine.getName()} has been created and added to the collection")
@@ -196,7 +196,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
      */
     fun removeByChapter(args: Map<String, String>) {
         try {
-            val chapter = creator.createChapter(args["chapter_name"]!!, args["marines_count"]!!.toLong())
+            val chapter = jsonCreator.stringToObject<Chapter>(args["chapter"]!!)
 
             val collection = collectionManager.getCollection()
             var count = 0
@@ -253,7 +253,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
 
     fun filterByChapter(args: Map<String, String>) {
         try {
-            val chapter = creator.createChapter(args["chapter_name"]!!, args["marines_count"]!!.toLong())
+            val chapter = jsonCreator.stringToObject<Chapter>(args["chapter"]!!)
             val filteredList = mutableListOf<SpaceMarine>()
 
             for (i in collectionManager.filter { e -> e.getChapter()!! == chapter }) {

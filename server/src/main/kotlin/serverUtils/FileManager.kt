@@ -17,6 +17,7 @@ class FileManager() {
     } catch (e:Exception) {
         throw NoEnvironmentVariableFound()
     }
+
     /**
      * Reads data from the file provided in [collectionFileName] and adds objects to [collection]
      * @param collectionManager Current collection
