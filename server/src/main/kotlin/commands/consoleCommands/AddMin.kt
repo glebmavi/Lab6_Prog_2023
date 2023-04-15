@@ -27,7 +27,7 @@ class AddMin() : Command() {
      * Calls [CommandReceiver.addMin]
      */
     override fun execute(args: Map<String, String>) {
-        if (Validator.verifyArgs(9, args)) {
+        if (Validator.verifyArgs(1, args)) {
             commandReceiver.addMin(args)
         } else throw InvalidArgumentException("Too many arguments were entered")
     }
