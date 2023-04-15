@@ -8,13 +8,11 @@ import java.net.DatagramSocket
 import java.net.InetAddress
 
 class ConnectionManager {
-    private var data = ByteArray(4096)
-
     private var port = 6789
     private var host = InetAddress.getLocalHost()
 
     private val datagramSocket = DatagramSocket(port)
-    private var datagramPacket = DatagramPacket(data, data.size)
+    private var datagramPacket = DatagramPacket(ByteArray(4096), 4096)
 
     fun startServer(host: String, port: Int) {
         this.host = InetAddress.getByName(host)
@@ -26,6 +24,7 @@ class ConnectionManager {
      * @return the line that was read
      */
     fun receive(): Query {
+        val data = ByteArray(4096)
         datagramPacket = DatagramPacket(data, data.size)
         datagramSocket.receive(datagramPacket)
 
@@ -35,7 +34,7 @@ class ConnectionManager {
     fun send(answer: Answer) {
         println("Sending answer to $host:$port")
         println(answer.message)
-        data = Json.encodeToString(Answer.serializer(), answer).toByteArray()
+        val data = Json.encodeToString(Answer.serializer(), answer).toByteArray()
 
         host = datagramPacket.address
         port = datagramPacket.port

@@ -19,9 +19,9 @@ class ConnectionManager {
     }
 
     fun send(query: Query) {
+        val data = ByteBuffer.wrap(Json.encodeToString(Query.serializer(), query).toByteArray())
         println("Sending query to $host:$port")
         println(query)
-        val data = ByteBuffer.wrap(Json.encodeToString(Query.serializer(), query).toByteArray())
         val address = InetSocketAddress(host, port)
         datagramChannel.send(data, address)
     }
