@@ -4,6 +4,8 @@ import basicClasses.SpaceMarine
 import collection.CollectionManager
 import com.charleskorn.kaml.Yaml
 import exceptions.NoEnvironmentVariableFound
+import org.apache.logging.log4j.LogManager
+import org.apache.logging.log4j.Logger
 import java.io.FileReader
 
 /**
@@ -11,6 +13,8 @@ import java.io.FileReader
  * @property collectionFileName String containing file name
  */
 class FileManager() {
+
+    private val logger: Logger = LogManager.getLogger(FileManager::class.java)
 
     private val collectionFileName = try {
         System.getenv("COLLECTION")
@@ -39,9 +43,9 @@ class FileManager() {
             }
             file.close()
 
-            println("Loaded ${collectionManager.getCollection().size} elements successfully")
+            logger.trace("Loaded ${collectionManager.getCollection().size} elements successfully")
         } catch (e: Exception) {
-            println(e.message.toString())
+            logger.trace(e.message.toString())
         }
 
 

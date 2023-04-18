@@ -119,3 +119,48 @@
 2023-04-18 20:44:42.933 [main] TRACE serverUtils.Console - Server started
 2023-04-18 20:44:42.933 [main] TRACE serverUtils.Console - The server is ready to receive commands
 2023-04-18 20:44:45.829 [main] TRACE serverUtils.Console - Received command: show
+2023-04-18 20:55:59.769 [main] TRACE serverUtils.Console - Initializing the server
+2023-04-18 20:55:59.774 [main] TRACE serverUtils.Console - Command 'info' registered
+2023-04-18 20:55:59.774 [main] TRACE serverUtils.Console - Command 'show' registered
+2023-04-18 20:55:59.775 [main] TRACE serverUtils.Console - Command 'add' registered
+2023-04-18 20:55:59.775 [main] TRACE serverUtils.Console - Command 'update_id' registered
+2023-04-18 20:55:59.775 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
+2023-04-18 20:55:59.776 [main] TRACE serverUtils.Console - Command 'clear' registered
+2023-04-18 20:55:59.776 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
+2023-04-18 20:55:59.776 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
+2023-04-18 20:55:59.776 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
+2023-04-18 20:55:59.777 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-18 20:55:59.777 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-18 20:55:59.777 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-18 20:55:59.777 [main] TRACE serverUtils.Console - Collection loaded
+2023-04-18 20:55:59.778 [main] TRACE serverUtils.Console - Server started
+2023-04-18 20:55:59.778 [main] TRACE serverUtils.Console - The server is ready to receive commands
+2023-04-18 20:56:06.497 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
+2023-04-18 20:56:06.514 [main] TRACE serverUtils.Console - Received ping request
+2023-04-18 20:56:06.515 [main] TRACE serverUtils.ConnectionManager - Sending answer to localhost/127.0.0.1:6789
+2023-04-18 20:56:06.531 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
+2023-04-18 20:56:06.545 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
+2023-04-18 20:56:06.545 [main] TRACE serverUtils.Console - Received initialization request
+2023-04-18 20:56:06.546 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:51186
+2023-04-18 20:56:06.546 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
+2023-04-18 20:57:27.734 [main] TRACE serverUtils.Console - Initializing the server
+2023-04-18 20:57:27.740 [main] TRACE serverUtils.Console - Command 'info' registered
+2023-04-18 20:57:27.740 [main] TRACE serverUtils.Console - Command 'show' registered
+2023-04-18 20:57:27.741 [main] TRACE serverUtils.Console - Command 'add' registered
+2023-04-18 20:57:27.741 [main] TRACE serverUtils.Console - Command 'update_id' registered
+2023-04-18 20:57:27.741 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
+2023-04-18 20:57:27.741 [main] TRACE serverUtils.Console - Command 'clear' registered
+2023-04-18 20:57:27.742 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
+2023-04-18 20:57:27.742 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
+2023-04-18 20:57:27.742 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
+2023-04-18 20:57:27.743 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-18 20:57:27.743 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-18 20:57:27.743 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-18 20:57:27.743 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-18 20:57:27.744 [main] TRACE serverUtils.Console - Collection loaded
+2023-04-18 20:57:27.744 [main] TRACE serverUtils.Console - Server started
+2023-04-18 20:57:27.744 [main] TRACE serverUtils.Console - The server is ready to receive commands
+2023-04-18 20:57:54.343 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"id\":1681840674330,\"name\":\"3\",\"coordinates\":{\"x\":4.0,\"y\":5},\"health\":6.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"3\",\"marinesCount\":6}}"}}
+2023-04-18 20:57:54.360 [main] TRACE serverUtils.Console - Received command: add
+2023-04-18 20:57:54.381 [main] TRACE serverUtils.ConnectionManager - Sending answer to localhost/127.0.0.1:6789
+2023-04-18 20:57:54.390 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 3 has been created and added to the collection"}

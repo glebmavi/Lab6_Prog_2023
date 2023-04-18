@@ -1,6 +1,8 @@
 package serverUtils
 
 import kotlinx.serialization.json.Json
+import org.apache.logging.log4j.LogManager
+import org.apache.logging.log4j.Logger
 import utils.Answer
 import utils.Query
 import java.net.DatagramPacket
@@ -8,6 +10,8 @@ import java.net.DatagramSocket
 import java.net.InetAddress
 
 class ConnectionManager {
+
+    private val logger: Logger = LogManager.getLogger(ConnectionManager::class.java)
     private var port = 6789
     private var host = InetAddress.getLocalHost()
 
@@ -28,13 +32,13 @@ class ConnectionManager {
         datagramPacket = DatagramPacket(data, data.size)
         datagramSocket.receive(datagramPacket)
         val jsonQuery = data.decodeToString().replace("\u0000", "")
-        println("SERVER: Received: $jsonQuery")
+        logger.trace("Received: $jsonQuery")
         return Json.decodeFromString(Query.serializer(), jsonQuery)
     }
 
     fun send(answer: Answer) {
-        println("Sending answer to $host:$port")
-        println("SERVER: Sending: ${Json.encodeToString(Answer.serializer(), answer)}")
+        logger.trace("Sending answer to {}:{}", host, port)
+        logger.trace("Sending: ${Json.encodeToString(Answer.serializer(), answer)}")
         val data = Json.encodeToString(Answer.serializer(), answer).toByteArray()
 
         host = datagramPacket.address
