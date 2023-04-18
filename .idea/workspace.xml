@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="318493da-6bbb-42c7-92f9-02df2e4b3d16" name="Changes" comment="working now">
+    <list default="true" id="318493da-6bbb-42c7-92f9-02df2e4b3d16" name="Changes" comment="Added pinging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectionManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectionManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Validator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Validator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/utils/QueryType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/utils/QueryType.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +119,7 @@
       <recent name="serializers" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.ClientKt">
+  <component name="RunManager" selected="Kotlin.ServerKt">
     <configuration name="Lab6 [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -183,8 +180,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.ClientKt" />
         <item itemvalue="Kotlin.ServerKt" />
+        <item itemvalue="Kotlin.ClientKt" />
         <item itemvalue="Gradle.Lab6 [buildDependents]" />
         <item itemvalue="Gradle.Lab6 [init]" />
       </list>
@@ -240,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681554233312</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added pinging">
+      <created>1681820211076</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681820211076</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,6 +278,7 @@
     <MESSAGE value="Init commit Lab6" />
     <MESSAGE value="Loaded classes from Client and Server repositories" />
     <MESSAGE value="working now" />
-    <option name="LAST_COMMIT_MESSAGE" value="working now" />
+    <MESSAGE value="Added pinging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added pinging" />
   </component>
 </project>

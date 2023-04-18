@@ -53,9 +53,14 @@ class Console {
      */
     fun initialize() {
         val query = Query(QueryType.INITIALIZATION, "", mapOf())
-        connectionManager.send(query)
+        var answer = connectionManager.checkedSendReceive(query)
         println("CLIENT: Sent initialization query")
-        val serverCommands = connectionManager.receive().message.split(" ")
+        while (answer.answerType == AnswerType.ERROR) {
+            outputManager.println(answer.message)
+            answer = connectionManager.checkedSendReceive(query)
+            println("CLIENT: Sent initialization query")
+        }
+        val serverCommands = answer.message.split(" ")
         println("CLIENT: Received commands from server: $serverCommands")
 
         for (i in serverCommands) {

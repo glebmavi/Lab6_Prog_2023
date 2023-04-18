@@ -88,9 +88,7 @@ class CommandReceiver(private val commandInvoker: CommandInvoker,
      */
     fun info() {
         val query = Query(QueryType.COMMAND_EXEC, "info", mapOf())
-        connectionManager.send(query)
-
-        val answer = connectionManager.receive()
+        val answer = connectionManager.checkedSendReceive(query)
         outputManager.println(answer.message)
     }
 
@@ -99,18 +97,14 @@ class CommandReceiver(private val commandInvoker: CommandInvoker,
      */
     fun show() {
         val query = Query(QueryType.COMMAND_EXEC, "show", mapOf())
-        connectionManager.send(query)
-
-        val answer = connectionManager.receive()
+        val answer = connectionManager.checkedSendReceive(query)
         outputManager.println(answer.message)
     }
 
     fun add() {
         val spaceMarine = creator.createSpaceMarine()
         val query = Query(QueryType.COMMAND_EXEC, "add", mapOf("spaceMarine" to jsonCreator.objectToString(spaceMarine)))
-        connectionManager.send(query)
-
-        val answer = connectionManager.receive()
+        val answer = connectionManager.checkedSendReceive(query)
         outputManager.println(answer.message)
     }
 
@@ -121,33 +115,25 @@ class CommandReceiver(private val commandInvoker: CommandInvoker,
         val spaceMarine = creator.createSpaceMarine()
 
         val query = Query(QueryType.COMMAND_EXEC, "update_id", mapOf("id" to id, "spaceMarine" to jsonCreator.objectToString(spaceMarine)))
-        connectionManager.send(query)
-
-        val answer = connectionManager.receive()
+        val answer = connectionManager.checkedSendReceive(query)
         outputManager.println(answer.message)
     }
 
     fun removeByID(id:String) {
         val query = Query(QueryType.COMMAND_EXEC, "remove_by_id", mapOf("id" to id))
-        connectionManager.send(query)
-
-        val answer = connectionManager.receive()
+        val answer = connectionManager.checkedSendReceive(query)
         outputManager.println(answer.message)
     }
 
     fun clear() {
         val query = Query(QueryType.COMMAND_EXEC, "clear", mapOf())
-        connectionManager.send(query)
-
-        val answer = connectionManager.receive()
+        val answer = connectionManager.checkedSendReceive(query)
         outputManager.println(answer.message)
     }
 
     fun save() {
         val query = Query(QueryType.COMMAND_EXEC, "save", mapOf())
-        connectionManager.send(query)
-
-        val answer = connectionManager.receive()
+        val answer = connectionManager.checkedSendReceive(query)
         outputManager.println(answer.message)
     }
 
@@ -158,9 +144,7 @@ class CommandReceiver(private val commandInvoker: CommandInvoker,
     fun addMin() {
         val spaceMarine = creator.createSpaceMarine()
         val query = Query(QueryType.COMMAND_EXEC, "add_if_min", mapOf("spaceMarine" to jsonCreator.objectToString(spaceMarine)))
-        connectionManager.send(query)
-
-        val answer = connectionManager.receive()
+        val answer = connectionManager.checkedSendReceive(query)
         outputManager.println(answer.message)
     }
 
@@ -169,9 +153,7 @@ class CommandReceiver(private val commandInvoker: CommandInvoker,
      */
     fun removeGreater(id: String) {
         val query = Query(QueryType.COMMAND_EXEC, "remove_greater", mapOf("id" to id))
-        connectionManager.send(query)
-
-        val answer = connectionManager.receive()
+        val answer = connectionManager.checkedSendReceive(query)
         outputManager.println(answer.message)
     }
 
@@ -180,9 +162,7 @@ class CommandReceiver(private val commandInvoker: CommandInvoker,
      */
     fun removeLower(id: String) {
         val query = Query(QueryType.COMMAND_EXEC, "remove_lower", mapOf("id" to id))
-        connectionManager.send(query)
-
-        val answer = connectionManager.receive()
+        val answer = connectionManager.checkedSendReceive(query)
         outputManager.println(answer.message)
     }
 
@@ -192,27 +172,21 @@ class CommandReceiver(private val commandInvoker: CommandInvoker,
     fun removeByChapter() {
         val chapter = creator.createChapter()
         val query = Query(QueryType.COMMAND_EXEC, "remove_any_by_chapter", mapOf("chapter" to jsonCreator.objectToString(chapter)))
-        connectionManager.send(query)
-
-        val answer = connectionManager.receive()
+        val answer = connectionManager.checkedSendReceive(query)
         outputManager.println(answer.message)
     }
 
     fun countByWeapon() {
         val weapon = enumReader.read<MeleeWeapon>("Enter Weapon category from the list: ", true)
         val query = Query(QueryType.COMMAND_EXEC, "count_by_melee_weapon", mapOf("weapon" to jsonCreator.objectToString(weapon)))
-        connectionManager.send(query)
-
-        val answer = connectionManager.receive()
+        val answer = connectionManager.checkedSendReceive(query)
         outputManager.println(answer.message)
     }
 
     fun filterByChapter() {
         val chapter = creator.createChapter()
         val query = Query(QueryType.COMMAND_EXEC, "filter_by_chapter", mapOf("chapter" to jsonCreator.objectToString(chapter)))
-        connectionManager.send(query)
-
-        val answer = connectionManager.receive()
+        val answer = connectionManager.checkedSendReceive(query)
         outputManager.println(answer.message)
     }
 
