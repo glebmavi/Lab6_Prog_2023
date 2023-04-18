@@ -84,16 +84,24 @@ class Console {
             try {
                 val query = connectionManager.receive()
 
-                if (query.queryType == QueryType.COMMAND_EXEC) {
-                    logger.trace("Received command: ${query.information}")
+                when (query.queryType) {
+                    QueryType.COMMAND_EXEC -> {
+                        logger.trace("Received command: ${query.information}")
 
-                    commandInvoker.executeCommand(query)
-                    executeFlag = commandInvoker.getCommandMap()[query.information]?.getExecutionFlag()
+                        commandInvoker.executeCommand(query)
+                        executeFlag = commandInvoker.getCommandMap()[query.information]?.getExecutionFlag()
 
-                } else if (query.queryType == QueryType.INITIALIZATION) {
-                    logger.trace("Received initialization request")
-                    val answer = Answer(AnswerType.SYSTEM, commandInvoker.getCommandMap().keys.joinToString(" "))
-                    connectionManager.send(answer)
+                    }
+                    QueryType.INITIALIZATION -> {
+                        logger.trace("Received initialization request")
+                        val answer = Answer(AnswerType.SYSTEM, commandInvoker.getCommandMap().keys.joinToString(" "))
+                        connectionManager.send(answer)
+                    }
+                    QueryType.PING -> {
+                        logger.trace("Received ping request")
+                        val answer = Answer(AnswerType.SYSTEM, "Pong")
+                        connectionManager.send(answer)
+                    }
                 }
             } catch (e:Exception) {
                 logger.error("Error while executing command: ${e.message}")

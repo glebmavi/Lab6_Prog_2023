@@ -8,7 +8,7 @@ class Validator {
             return args.size == size
         }
 
-        fun verifyArgs (size:Int, argsTypes:Map<String, Type>, args: List<String>):Boolean { //TODO Используется правильный Type?
+        fun verifyArgs (size:Int, argsTypes:Map<String, Type>, args: List<String>):Boolean {
             if (args.size != size) return false
 
             for (i in args.indices) {

@@ -42,17 +42,19 @@ class Console {
     )
 
     fun getConnection() {
-        connectionManager.connect("localhost", 6789)
-        println("CLIENT:Connected to server")
-        val query = Query(QueryType.INITIALIZATION, "", mapOf())
-        connectionManager.send(query)
-        println("CLIENT: Sent initialization query")
+        val connected = connectionManager.connect("localhost", 6789)
+        if (connected) {
+            println("CLIENT:Connected to server")
+        } else getConnection()
     }
 
     /**
      * Registers commands and waits for user prompt
      */
     fun initialize() {
+        val query = Query(QueryType.INITIALIZATION, "", mapOf())
+        connectionManager.send(query)
+        println("CLIENT: Sent initialization query")
         val serverCommands = connectionManager.receive().message.split(" ")
         println("CLIENT: Received commands from server: $serverCommands")
 
