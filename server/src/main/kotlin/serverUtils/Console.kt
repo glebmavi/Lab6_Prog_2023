@@ -87,14 +87,13 @@ class Console {
                 when (query.queryType) {
                     QueryType.COMMAND_EXEC -> {
                         logger.trace("Received command: ${query.information}")
-
                         commandInvoker.executeCommand(query)
                         executeFlag = commandInvoker.getCommandMap()[query.information]?.getExecutionFlag()
 
                     }
                     QueryType.INITIALIZATION -> {
                         logger.trace("Received initialization request")
-                        val answer = Answer(AnswerType.SYSTEM, commandInvoker.getCommandMap().keys.joinToString(" "))
+                        val answer = Answer(AnswerType.INIT, commandInvoker.getCommandMap().keys.joinToString(" "))
                         connectionManager.send(answer)
                     }
                     QueryType.PING -> {

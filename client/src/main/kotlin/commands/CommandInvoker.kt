@@ -26,6 +26,10 @@ class CommandInvoker(private val outputManager: OutputManager) {
         commandMap += name to command
     }
 
+    fun clearCommandMap() {
+        commandMap = mapOf()
+    }
+
     /**
      * Execute command
      *

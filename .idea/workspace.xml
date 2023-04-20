@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="318493da-6bbb-42c7-92f9-02df2e4b3d16" name="Changes" comment="Logger for FileManager and ConnectionManager in server">
+    <list default="true" id="318493da-6bbb-42c7-92f9-02df2e4b3d16" name="Changes" comment="Changed compareTo of SpaceMarine to compare name">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/basicClasses/SpaceMarine.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/basicClasses/SpaceMarine.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectionManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectionManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Console.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Console.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandInvoker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandInvoker.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/utils/AnswerType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/utils/AnswerType.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/server.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Save.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Save.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +65,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -210,7 +216,7 @@
       <workItem from="1681546277658" duration="582000" />
       <workItem from="1681556131443" duration="545000" />
       <workItem from="1681574207711" duration="733000" />
-      <workItem from="1681990560955" duration="2853000" />
+      <workItem from="1681990560955" duration="9460000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit Lab6">
       <created>1680607747881</created>
@@ -261,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681840735981</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Changed compareTo of SpaceMarine to compare name">
+      <created>1681993718486</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681993718486</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +311,7 @@
     <MESSAGE value="Added pinging" />
     <MESSAGE value="Added timeout for client" />
     <MESSAGE value="Logger for FileManager and ConnectionManager in server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Logger for FileManager and ConnectionManager in server" />
+    <MESSAGE value="Changed compareTo of SpaceMarine to compare name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed compareTo of SpaceMarine to compare name" />
   </component>
 </project>

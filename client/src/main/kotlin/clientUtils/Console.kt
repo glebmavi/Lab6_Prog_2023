@@ -44,7 +44,7 @@ class Console {
     fun getConnection() {
         val connected = connectionManager.connect("localhost", 6789)
         if (connected) {
-            println("CLIENT:Connected to server")
+            println("Connected to server")
         } else getConnection()
     }
 
@@ -54,19 +54,20 @@ class Console {
     fun initialize() {
         val query = Query(QueryType.INITIALIZATION, "", mapOf())
         var answer = connectionManager.checkedSendReceive(query)
-        println("CLIENT: Sent initialization query")
+        println("Sent initialization query")
         while (answer.answerType == AnswerType.ERROR) {
             outputManager.println(answer.message)
             answer = connectionManager.checkedSendReceive(query)
-            println("CLIENT: Sent initialization query")
+            println("Sent initialization query")
         }
         val serverCommands = answer.message.split(" ")
-        println("CLIENT: Received commands from server: $serverCommands")
+        println("Received commands from server: $serverCommands")
 
+        commandInvoker.clearCommandMap()
         for (i in serverCommands) {
             if (i in availableCommands.keys) {
                 commandInvoker.register(i, availableCommands.getValue(i))
-                println("CLIENT: Registered command $i")
+                println("Registered command $i")
             } else {
                 commandInvoker.register(i, UnknownCommand(commandReceiver, "This scope will be replaced with the info", 0, mapOf()))
             }
@@ -82,8 +83,14 @@ class Console {
         outputManager.surePrint("Waiting for user prompt ...")
 
         do {
-            outputManager.print("$ ")
             try {
+                val ping = connectionManager.ping()
+                if (ping > 5000) {
+                    outputManager.println("No server connection")
+                    initialize()
+                }
+
+                outputManager.print("$ ")
                 val query = inputManager.read().trim().split(" ")
                 if (query[0] != "") {
                     commandInvoker.executeCommand(query)

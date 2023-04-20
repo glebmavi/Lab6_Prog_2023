@@ -14,60 +14,56 @@ import java.nio.channels.DatagramChannel
 class ConnectionManager {
     private var port = 6789
     private var host = InetAddress.getLocalHost()
-    private val MAX_TIMEOUT = 5000
+    private val timeout = 5000
 
     private val datagramChannel = DatagramChannel.open()
 
     fun connect(host: String, port: Int) : Boolean {
         this.host = InetAddress.getByName(host)
         this.port = port
+        datagramChannel.configureBlocking(false)
 
-        return ping() < MAX_TIMEOUT
+        return ping() < timeout
     }
 
     fun ping() : Double {
         val query = Query(QueryType.PING, "Ping", mapOf())
         send(query)
         val startTime = System.nanoTime()
-        datagramChannel.configureBlocking(false)
         val data = ByteBuffer.wrap(ByteArray(4096))
-        var elapsedTimeInMs: Double = -0.1
+        var elapsedTimeInMs: Double
         do {
             val received = datagramChannel.receive(data)
             elapsedTimeInMs = (System.nanoTime() - startTime).toDouble() / 1000000
-        } while ((received == null) and (elapsedTimeInMs < MAX_TIMEOUT))
+        } while ((received == null) and (elapsedTimeInMs < timeout))
 
-        println("CLIENT: Ping with server: $elapsedTimeInMs ms")
-        datagramChannel.configureBlocking(true)
+        println("Ping with server: $elapsedTimeInMs ms")
         return elapsedTimeInMs
     }
 
     fun checkedSendReceive(query: Query) : Answer{
         send(query)
         val startTime = System.nanoTime()
-        datagramChannel.configureBlocking(false)
         val data = ByteBuffer.wrap(ByteArray(4096))
-        var elapsedTimeInMs: Double = -0.1
-        var received: SocketAddress? = null
+        var elapsedTimeInMs: Double
+        var received: SocketAddress?
         do {
             received = datagramChannel.receive(data)
             elapsedTimeInMs = (System.nanoTime() - startTime).toDouble() / 1000000
-        } while ((received == null) and (elapsedTimeInMs < MAX_TIMEOUT))
+        } while ((received == null) and (elapsedTimeInMs < timeout))
 
         if (received == null) {
-            datagramChannel.configureBlocking(true)
             return Answer(AnswerType.ERROR, "No server connection")
         }
         val jsonAnswer = data.array().decodeToString().replace("\u0000", "")
-        println("CLIENT: Received: $jsonAnswer")
-        datagramChannel.configureBlocking(true)
+        println("Received: $jsonAnswer")
         return Json.decodeFromString(Answer.serializer(), jsonAnswer)
     }
 
     fun send(query: Query) {
         println("Sending query to $host:$port")
         val jsonQuery = Json.encodeToString(Query.serializer(), query)
-        println("CLIENT: Sending: $jsonQuery")
+        println("Sending: $jsonQuery")
         val data = ByteBuffer.wrap(jsonQuery.toByteArray())
         val address = InetSocketAddress(host, port)
         datagramChannel.send(data, address)
@@ -77,7 +73,10 @@ class ConnectionManager {
         val data = ByteBuffer.wrap(ByteArray(4096))
         datagramChannel.receive(data)
         val jsonAnswer = data.array().decodeToString().replace("\u0000", "")
-        println("CLIENT: Received: $jsonAnswer")
+        if (jsonAnswer == "") {
+            return Answer(AnswerType.ERROR, "")
+        }
+        println("Received: $jsonAnswer")
         return Json.decodeFromString(Answer.serializer(), jsonAnswer)
     }
 

@@ -26,9 +26,8 @@ class Save() : Command() {
      * Calls [CommandReceiver.save]
      */
     override fun execute(args: Map<String, String>) {
-        if (Validator.verifyArgs(0, args)) {
-            commandReceiver.save("")
-            TODO()
+        if (Validator.verifyArgs(1, args)) {
+            args["filename"]?.let { commandReceiver.save(it) }
         } else throw InvalidArgumentException("Invalid arguments were entered. Use HELP command to check")
     }
 }
