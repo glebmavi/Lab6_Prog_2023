@@ -6,6 +6,11 @@ import exceptions.InvalidArgumentException
 import serverUtils.*
 import utils.*
 
+/**
+ * Class that receives and processes user commands
+ * @param collectionManager A [CollectionManager] that manages the collection of objects
+ * @param connectionManager A [ConnectionManager] object to handle communication with the client
+ */
 class CommandReceiver(private val collectionManager: CollectionManager,
                       private val connectionManager: ConnectionManager
 ) {
@@ -13,7 +18,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
     private val jsonCreator = JsonCreator()
 
     /**
-     * Prints retrieved info from [collectionManager]
+     * Sends the collection's info to the client
      */
     fun info() {
         try {
@@ -26,7 +31,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
     }
 
     /**
-     * Prints each element in [collectionManager]
+     * Sends each element in the collection to the client
      */
     fun show() {
         try {
@@ -39,7 +44,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
     }
 
     /**
-     * Creates new Space Marine and add it into collection
+     * Creates new Space Marine and adds it into collection
      */
     fun add(args: Map<String, String>) {
         try {
@@ -73,6 +78,9 @@ class CommandReceiver(private val collectionManager: CollectionManager,
         }
     }
 
+    /**
+     * Searches for a Space Marine with the provided id and removes it from the collection
+     */
     fun removeByID(args: Map<String, String>) {
         val id = args["id"]!!
 
@@ -90,6 +98,9 @@ class CommandReceiver(private val collectionManager: CollectionManager,
         }
     }
 
+    /**
+     * Clears the collection
+     */
     fun clear() {
         if (collectionManager.getCollection().size > 0) {
             try {
@@ -106,6 +117,9 @@ class CommandReceiver(private val collectionManager: CollectionManager,
         }
     }
 
+    /**
+     * Saves the collection
+     */
     fun save(filepath:String) {
         try {
             Saver(connectionManager).save(filepath, collectionManager)

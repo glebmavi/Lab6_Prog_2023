@@ -9,6 +9,9 @@ import java.net.DatagramPacket
 import java.net.DatagramSocket
 import java.net.InetAddress
 
+/**
+ * Class responsible for managing network connections
+ */
 class ConnectionManager {
 
     private val logger: Logger = LogManager.getLogger(ConnectionManager::class.java)
@@ -18,14 +21,17 @@ class ConnectionManager {
     private val datagramSocket = DatagramSocket(port)
     private var datagramPacket = DatagramPacket(ByteArray(4096), 4096)
 
+    /**
+     * Starts the server at given host and port
+     */
     fun startServer(host: String, port: Int) {
         this.host = InetAddress.getByName(host)
         this.port = port
     }
 
     /**
-     * reads one line
-     * @return the line that was read
+     * Reads and decodes the incoming query
+     * @return Query object
      */
     fun receive(): Query {
         val data = ByteArray(4096)
@@ -36,6 +42,9 @@ class ConnectionManager {
         return Json.decodeFromString(Query.serializer(), jsonQuery)
     }
 
+    /**
+     * Encodes and sends the answer to the client
+     */
     fun send(answer: Answer) {
         logger.trace("Sending answer to {}:{}", host, port)
         logger.trace("Sending: ${Json.encodeToString(Answer.serializer(), answer)}")

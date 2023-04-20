@@ -7,21 +7,15 @@ import serverUtils.ConnectionManager
 import utils.Query
 
 /**
- * Command invoker
- * 
- * Class that handles commands and call its execution
- *
- * @constructor Create Command invoker
+ * Class that handles commands and calls their execution.
+ * @param connectionManager A [ConnectionManager] object to handle communication with the client.
  */
 class CommandInvoker(private val connectionManager: ConnectionManager) {
     private var commandMap:Map<String, Command> = mapOf()
     private var commandsHistory:Array<String> = arrayOf()
 
     /**
-     * Register
-     *
      * Add commands to [commandMap]
-     *
      * @param name Name of the command in its console representation
      * @param command A [Command] object
      */
@@ -30,11 +24,8 @@ class CommandInvoker(private val connectionManager: ConnectionManager) {
     }
 
     /**
-     * Execute command
-     *
-     * Executes command with provided arguments
-     *
-     * @param query A single line string split into command and argument
+     * Executes the command with the provided [query] argument.
+     * @param query A [Query] object containing the command and its arguments.
      */
     fun executeCommand(query: Query) {
         try {
@@ -51,9 +42,8 @@ class CommandInvoker(private val connectionManager: ConnectionManager) {
     }
 
     /**
-     * Get commands list
-     *
-     * @return
+     * Get command map.
+     * @return The [commandMap].
      */
     fun getCommandMap() : Map<String, Command> {
         return commandMap

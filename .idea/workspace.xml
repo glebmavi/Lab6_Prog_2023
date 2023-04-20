@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="318493da-6bbb-42c7-92f9-02df2e4b3d16" name="Changes" comment="Changed compareTo of SpaceMarine to compare name">
+    <list default="true" id="318493da-6bbb-42c7-92f9-02df2e4b3d16" name="Changes" comment="Client checks ping before prompt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectionManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectionManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Console.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Console.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandInvoker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandInvoker.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/utils/AnswerType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/utils/AnswerType.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/server.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Save.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/consoleCommands/Save.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/CommandInvoker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/CommandInvoker.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/commands/CommandReceiver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/commands/CommandReceiver.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/ConnectionManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/ConnectionManager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,29 +80,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Gleb/IdeaProjects/Lab4&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/Gleb/IdeaProjects/site-1.0",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Gleb\IdeaProjects\Lab6\server\src\main\kotlin\commands" />
@@ -216,7 +213,8 @@
       <workItem from="1681546277658" duration="582000" />
       <workItem from="1681556131443" duration="545000" />
       <workItem from="1681574207711" duration="733000" />
-      <workItem from="1681990560955" duration="9460000" />
+      <workItem from="1681990560955" duration="11716000" />
+      <workItem from="1682002763616" duration="3983000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit Lab6">
       <created>1680607747881</created>
@@ -274,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681993718486</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Client checks ping before prompt">
+      <created>1682001406481</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682001406481</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,6 +317,7 @@
     <MESSAGE value="Added timeout for client" />
     <MESSAGE value="Logger for FileManager and ConnectionManager in server" />
     <MESSAGE value="Changed compareTo of SpaceMarine to compare name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed compareTo of SpaceMarine to compare name" />
+    <MESSAGE value="Client checks ping before prompt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Client checks ping before prompt" />
   </component>
 </project>

@@ -9,12 +9,12 @@ import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 
 /**
- * Class that handles commands and provides them all needed parameters
- * @property connectionManager
- * @property fileManager Used for loading data to collection
- * @property collectionManager
- * @property commandInvoker
- * @property commandReceiver
+ * Class that handles user commands and provides them all the necessary parameters
+ * @property connectionManager - Manages connections to the server
+ * @property fileManager - Used for loading data to the collection
+ * @property collectionManager - Manages the collection of objects
+ * @property commandInvoker - Invokes commands that operate on the collection
+ * @property commandReceiver - Receives commands and executes them
  */
 class Console {
     private val connectionManager = ConnectionManager()
@@ -76,6 +76,9 @@ class Console {
         logger.trace("Server started")
     }
 
+    /**
+     * Enters interactive mode and waits for incoming queries
+     */
     fun startInteractiveMode() {
         logger.trace("The server is ready to receive commands")
         var executeFlag:Boolean? = true
