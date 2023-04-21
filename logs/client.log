@@ -1,0 +1,193 @@
+2023-04-21 19:27:30.511 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"PING","information":"Ping","args":{}} 
+ to localhost/127.0.0.1:6789
+2023-04-21 19:27:35.529 [main] INFO  clientUtils.ConnectionManager - Ping with server: 5012.6817 ms
+2023-04-21 19:27:35.529 [main] WARN  clientUtils.Console - No server connection
+2023-04-21 19:27:43.930 [main] DEBUG clientUtils.Console - Registered basic client commands
+2023-04-21 19:28:00.623 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"PING","information":"Ping","args":{}} 
+ to localhost/127.0.0.1:6789
+2023-04-21 19:28:00.673 [main] INFO  clientUtils.ConnectionManager - Received: {"answerType":"SYSTEM","message":"Pong"}
+2023-04-21 19:28:00.676 [main] INFO  clientUtils.ConnectionManager - Ping with server: 53.0979 ms
+2023-04-21 19:28:00.676 [main] DEBUG clientUtils.Console - Connected to server
+2023-04-21 19:28:00.677 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"INITIALIZATION","information":"","args":{}} 
+ to /127.0.0.1:6789
+2023-04-21 19:28:00.680 [main] INFO  clientUtils.ConnectionManager - Received: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
+2023-04-21 19:28:00.680 [main] DEBUG clientUtils.Console - Sent initialization query
+2023-04-21 19:31:15.338 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"PING","information":"Ping","args":{}} 
+ to localhost/127.0.0.1:6789
+2023-04-21 19:31:15.347 [main] INFO  clientUtils.ConnectionManager - Received: {"answerType":"SYSTEM","message":"Pong"}
+2023-04-21 19:31:15.354 [main] INFO  clientUtils.ConnectionManager - Ping with server: 12.0562 ms
+2023-04-21 19:31:15.354 [main] DEBUG clientUtils.Console - Connected to server
+2023-04-21 19:31:15.358 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"INITIALIZATION","information":"","args":{}} 
+ to /127.0.0.1:6789
+2023-04-21 19:31:15.359 [main] INFO  clientUtils.ConnectionManager - Received: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
+2023-04-21 19:31:15.360 [main] DEBUG clientUtils.Console - Sent initialization query
+2023-04-21 19:31:15.360 [main] INFO  clientUtils.Console - Received commands from server: [info, show, add, update_id, remove_by_id, clear, add_if_min, remove_greater, remove_lower, remove_any_by_chapter, count_by_melee_weapon, filter_by_chapter]
+2023-04-21 19:31:15.360 [main] DEBUG clientUtils.Console - Registered command info
+2023-04-21 19:31:15.360 [main] DEBUG clientUtils.Console - Registered command show
+2023-04-21 19:31:15.360 [main] DEBUG clientUtils.Console - Registered command add
+2023-04-21 19:31:15.360 [main] DEBUG clientUtils.Console - Registered command update_id
+2023-04-21 19:31:15.361 [main] DEBUG clientUtils.Console - Registered command remove_by_id
+2023-04-21 19:31:15.361 [main] DEBUG clientUtils.Console - Registered command clear
+2023-04-21 19:31:15.361 [main] DEBUG clientUtils.Console - Registered command add_if_min
+2023-04-21 19:31:15.361 [main] DEBUG clientUtils.Console - Registered command remove_greater
+2023-04-21 19:31:15.361 [main] DEBUG clientUtils.Console - Registered command remove_lower
+2023-04-21 19:31:15.361 [main] DEBUG clientUtils.Console - Registered command remove_any_by_chapter
+2023-04-21 19:31:15.361 [main] DEBUG clientUtils.Console - Registered command count_by_melee_weapon
+2023-04-21 19:31:15.361 [main] DEBUG clientUtils.Console - Registered command filter_by_chapter
+2023-04-21 19:31:15.361 [main] DEBUG clientUtils.Console - Registered basic client commands
+2023-04-21 19:31:57.000 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"PING","information":"Ping","args":{}} 
+ to localhost/127.0.0.1:6789
+2023-04-21 19:31:57.010 [main] INFO  clientUtils.ConnectionManager - Received: {"answerType":"SYSTEM","message":"Pong"}
+2023-04-21 19:31:57.016 [main] INFO  clientUtils.ConnectionManager - Ping with server: 11.6686 ms
+2023-04-21 19:31:57.016 [main] DEBUG clientUtils.Console - Connected to server
+2023-04-21 19:31:57.019 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"INITIALIZATION","information":"","args":{}} 
+ to /127.0.0.1:6789
+2023-04-21 19:31:57.021 [main] INFO  clientUtils.ConnectionManager - Received: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
+2023-04-21 19:31:57.022 [main] DEBUG clientUtils.Console - Sent initialization query
+2023-04-21 19:31:57.022 [main] INFO  clientUtils.Console - Received commands from server: [info, show, add, update_id, remove_by_id, clear, add_if_min, remove_greater, remove_lower, remove_any_by_chapter, count_by_melee_weapon, filter_by_chapter]
+2023-04-21 19:31:57.023 [main] DEBUG clientUtils.Console - Registered command info
+2023-04-21 19:31:57.023 [main] DEBUG clientUtils.Console - Registered command show
+2023-04-21 19:31:57.023 [main] DEBUG clientUtils.Console - Registered command add
+2023-04-21 19:31:57.023 [main] DEBUG clientUtils.Console - Registered command update_id
+2023-04-21 19:31:57.023 [main] DEBUG clientUtils.Console - Registered command remove_by_id
+2023-04-21 19:31:57.023 [main] DEBUG clientUtils.Console - Registered command clear
+2023-04-21 19:31:57.023 [main] DEBUG clientUtils.Console - Registered command add_if_min
+2023-04-21 19:31:57.023 [main] DEBUG clientUtils.Console - Registered command remove_greater
+2023-04-21 19:31:57.023 [main] DEBUG clientUtils.Console - Registered command remove_lower
+2023-04-21 19:31:57.023 [main] DEBUG clientUtils.Console - Registered command remove_any_by_chapter
+2023-04-21 19:31:57.023 [main] DEBUG clientUtils.Console - Registered command count_by_melee_weapon
+2023-04-21 19:31:57.023 [main] DEBUG clientUtils.Console - Registered command filter_by_chapter
+2023-04-21 19:31:57.023 [main] DEBUG clientUtils.Console - Registered basic client commands
+2023-04-21 19:32:27.078 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"PING","information":"Ping","args":{}} 
+ to /127.0.0.1:6789
+2023-04-21 19:32:27.079 [main] INFO  clientUtils.ConnectionManager - Received: {"answerType":"SYSTEM","message":"Pong"}
+2023-04-21 19:32:27.079 [main] INFO  clientUtils.ConnectionManager - Ping with server: 1.5865 ms
+2023-04-21 19:32:27.080 [main] DEBUG clientUtils.Console - Connected to server
+2023-04-21 19:32:27.080 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"INITIALIZATION","information":"","args":{}} 
+ to /127.0.0.1:6789
+2023-04-21 19:32:27.080 [main] INFO  clientUtils.ConnectionManager - Received: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
+2023-04-21 19:32:27.080 [main] DEBUG clientUtils.Console - Sent initialization query
+2023-04-21 19:32:27.081 [main] INFO  clientUtils.Console - Received commands from server: [info, show, add, update_id, remove_by_id, clear, add_if_min, remove_greater, remove_lower, remove_any_by_chapter, count_by_melee_weapon, filter_by_chapter]
+2023-04-21 19:32:27.081 [main] DEBUG clientUtils.Console - Registered command info
+2023-04-21 19:32:27.081 [main] DEBUG clientUtils.Console - Registered command show
+2023-04-21 19:32:27.081 [main] DEBUG clientUtils.Console - Registered command add
+2023-04-21 19:32:27.081 [main] DEBUG clientUtils.Console - Registered command update_id
+2023-04-21 19:32:27.081 [main] DEBUG clientUtils.Console - Registered command remove_by_id
+2023-04-21 19:32:27.081 [main] DEBUG clientUtils.Console - Registered command clear
+2023-04-21 19:32:27.081 [main] DEBUG clientUtils.Console - Registered command add_if_min
+2023-04-21 19:32:27.081 [main] DEBUG clientUtils.Console - Registered command remove_greater
+2023-04-21 19:32:27.081 [main] DEBUG clientUtils.Console - Registered command remove_lower
+2023-04-21 19:32:27.081 [main] DEBUG clientUtils.Console - Registered command remove_any_by_chapter
+2023-04-21 19:32:27.081 [main] DEBUG clientUtils.Console - Registered command count_by_melee_weapon
+2023-04-21 19:32:27.081 [main] DEBUG clientUtils.Console - Registered command filter_by_chapter
+2023-04-21 19:32:27.081 [main] DEBUG clientUtils.Console - Registered basic client commands
+2023-04-21 19:34:31.266 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"PING","information":"Ping","args":{}} 
+ to localhost/127.0.0.1:6789
+2023-04-21 19:34:31.276 [main] INFO  clientUtils.ConnectionManager - Received: {"answerType":"SYSTEM","message":"Pong"}
+2023-04-21 19:34:31.282 [main] INFO  clientUtils.ConnectionManager - Ping with server: 12.6612 ms
+2023-04-21 19:34:31.282 [main] DEBUG clientUtils.Console - Connected to server
+2023-04-21 19:34:31.287 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"INITIALIZATION","information":"","args":{}} 
+ to /127.0.0.1:6789
+2023-04-21 19:34:31.288 [main] INFO  clientUtils.ConnectionManager - Received: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
+2023-04-21 19:34:31.288 [main] DEBUG clientUtils.Console - Sent initialization query
+2023-04-21 19:34:31.289 [main] INFO  clientUtils.Console - Received commands from server: [info, show, add, update_id, remove_by_id, clear, add_if_min, remove_greater, remove_lower, remove_any_by_chapter, count_by_melee_weapon, filter_by_chapter]
+2023-04-21 19:34:31.289 [main] DEBUG clientUtils.Console - Registered command info
+2023-04-21 19:34:31.289 [main] DEBUG clientUtils.Console - Registered command show
+2023-04-21 19:34:31.289 [main] DEBUG clientUtils.Console - Registered command add
+2023-04-21 19:34:31.289 [main] DEBUG clientUtils.Console - Registered command update_id
+2023-04-21 19:34:31.289 [main] DEBUG clientUtils.Console - Registered command remove_by_id
+2023-04-21 19:34:31.289 [main] DEBUG clientUtils.Console - Registered command clear
+2023-04-21 19:34:31.289 [main] DEBUG clientUtils.Console - Registered command add_if_min
+2023-04-21 19:34:31.289 [main] DEBUG clientUtils.Console - Registered command remove_greater
+2023-04-21 19:34:31.289 [main] DEBUG clientUtils.Console - Registered command remove_lower
+2023-04-21 19:34:31.289 [main] DEBUG clientUtils.Console - Registered command remove_any_by_chapter
+2023-04-21 19:34:31.289 [main] DEBUG clientUtils.Console - Registered command count_by_melee_weapon
+2023-04-21 19:34:31.290 [main] DEBUG clientUtils.Console - Registered command filter_by_chapter
+2023-04-21 19:34:31.290 [main] DEBUG clientUtils.Console - Registered basic client commands
+2023-04-21 19:37:12.564 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"PING","information":"Ping","args":{}} 
+ to localhost/127.0.0.1:6789
+2023-04-21 19:37:17.576 [main] INFO  clientUtils.ConnectionManager - Ping with server: 5007.4737 ms
+2023-04-21 19:37:17.576 [main] WARN  clientUtils.Console - No server connection
+2023-04-21 19:38:02.975 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"PING","information":"Ping","args":{}} 
+ to localhost/127.0.0.1:6789
+2023-04-21 19:38:07.990 [main] INFO  clientUtils.ConnectionManager - Ping with server: 5011.3786 ms
+2023-04-21 19:38:07.990 [main] WARN  clientUtils.Console - No server connection
+2023-04-21 19:41:04.920 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"PING","information":"Ping","args":{}} 
+ to localhost/127.0.0.1:6789
+2023-04-21 19:41:09.929 [main] INFO  clientUtils.ConnectionManager - Ping with server: 5004.7435 ms
+2023-04-21 19:41:09.929 [main] WARN  clientUtils.Console - No server connection
+2023-04-21 19:48:26.701 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"PING","information":"Ping","args":{}} to localhost/127.0.0.1:6789
+2023-04-21 19:48:31.719 [main] INFO  clientUtils.ConnectionManager - Ping with server: 5013.5905 ms
+2023-04-21 19:48:31.719 [main] WARN  clientUtils.Console - No server connection
+2023-04-21 19:48:56.703 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"PING","information":"Ping","args":{}} to localhost/127.0.0.1:6789
+2023-04-21 19:49:01.711 [main] INFO  clientUtils.ConnectionManager - Ping with server: 5004.4253 ms
+2023-04-21 19:49:01.712 [main] WARN  clientUtils.Console - No server connection
+2023-04-21 19:49:05.737 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"PING","information":"Ping","args":{}} to localhost/127.0.0.1:6789
+2023-04-21 19:49:10.752 [main] INFO  clientUtils.ConnectionManager - Ping with server: 5014.9222 ms
+2023-04-21 19:49:10.752 [main] WARN  clientUtils.Console - No server connection
+2023-04-21 19:49:33.517 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"PING","information":"Ping","args":{}} to localhost/127.0.0.1:6789
+2023-04-21 19:49:33.563 [main] INFO  clientUtils.ConnectionManager - Received: {"answerType":"SYSTEM","message":"Pong"}
+2023-04-21 19:49:33.567 [main] INFO  clientUtils.ConnectionManager - Ping with server: 49.7896 ms
+2023-04-21 19:49:33.567 [main] DEBUG clientUtils.Console - Connected to server
+2023-04-21 19:49:33.567 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"INITIALIZATION","information":"","args":{}} to /127.0.0.1:6789
+2023-04-21 19:49:33.569 [main] INFO  clientUtils.ConnectionManager - Received: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
+2023-04-21 19:49:33.570 [main] DEBUG clientUtils.Console - Sent initialization query
+2023-04-21 19:49:33.570 [main] INFO  clientUtils.Console - Received commands from server: [info, show, add, update_id, remove_by_id, clear, add_if_min, remove_greater, remove_lower, remove_any_by_chapter, count_by_melee_weapon, filter_by_chapter]
+2023-04-21 19:49:33.571 [main] DEBUG clientUtils.Console - Registered command info
+2023-04-21 19:49:33.571 [main] DEBUG clientUtils.Console - Registered command show
+2023-04-21 19:49:33.571 [main] DEBUG clientUtils.Console - Registered command add
+2023-04-21 19:49:33.571 [main] DEBUG clientUtils.Console - Registered command update_id
+2023-04-21 19:49:33.571 [main] DEBUG clientUtils.Console - Registered command remove_by_id
+2023-04-21 19:49:33.571 [main] DEBUG clientUtils.Console - Registered command clear
+2023-04-21 19:49:33.571 [main] DEBUG clientUtils.Console - Registered command add_if_min
+2023-04-21 19:49:33.571 [main] DEBUG clientUtils.Console - Registered command remove_greater
+2023-04-21 19:49:33.571 [main] DEBUG clientUtils.Console - Registered command remove_lower
+2023-04-21 19:49:33.571 [main] DEBUG clientUtils.Console - Registered command remove_any_by_chapter
+2023-04-21 19:49:33.572 [main] DEBUG clientUtils.Console - Registered command count_by_melee_weapon
+2023-04-21 19:49:33.572 [main] DEBUG clientUtils.Console - Registered command filter_by_chapter
+2023-04-21 19:49:33.572 [main] DEBUG clientUtils.Console - Registered basic client commands
+2023-04-21 19:49:40.738 [main] WARN  clientUtils.Console - Invalid arguments were entered. Use HELP command to check
+2023-04-21 19:49:40.738 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"PING","information":"Ping","args":{}} to /127.0.0.1:6789
+2023-04-21 19:49:40.739 [main] INFO  clientUtils.ConnectionManager - Received: {"answerType":"SYSTEM","message":"Pong"}
+2023-04-21 19:49:40.740 [main] INFO  clientUtils.ConnectionManager - Ping with server: 1.2686 ms
+2023-04-21 19:49:40.740 [main] DEBUG clientUtils.Console - Connected to server
+2023-04-21 19:49:40.740 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"INITIALIZATION","information":"","args":{}} to /127.0.0.1:6789
+2023-04-21 19:49:40.741 [main] INFO  clientUtils.ConnectionManager - Received: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
+2023-04-21 19:49:40.741 [main] DEBUG clientUtils.Console - Sent initialization query
+2023-04-21 19:49:40.741 [main] INFO  clientUtils.Console - Received commands from server: [info, show, add, update_id, remove_by_id, clear, add_if_min, remove_greater, remove_lower, remove_any_by_chapter, count_by_melee_weapon, filter_by_chapter]
+2023-04-21 19:49:40.741 [main] DEBUG clientUtils.Console - Registered command info
+2023-04-21 19:49:40.741 [main] DEBUG clientUtils.Console - Registered command show
+2023-04-21 19:49:40.741 [main] DEBUG clientUtils.Console - Registered command add
+2023-04-21 19:49:40.741 [main] DEBUG clientUtils.Console - Registered command update_id
+2023-04-21 19:49:40.741 [main] DEBUG clientUtils.Console - Registered command remove_by_id
+2023-04-21 19:49:40.741 [main] DEBUG clientUtils.Console - Registered command clear
+2023-04-21 19:49:40.741 [main] DEBUG clientUtils.Console - Registered command add_if_min
+2023-04-21 19:49:40.741 [main] DEBUG clientUtils.Console - Registered command remove_greater
+2023-04-21 19:49:40.741 [main] DEBUG clientUtils.Console - Registered command remove_lower
+2023-04-21 19:49:40.741 [main] DEBUG clientUtils.Console - Registered command remove_any_by_chapter
+2023-04-21 19:49:40.741 [main] DEBUG clientUtils.Console - Registered command count_by_melee_weapon
+2023-04-21 19:49:40.741 [main] DEBUG clientUtils.Console - Registered command filter_by_chapter
+2023-04-21 19:49:40.742 [main] DEBUG clientUtils.Console - Registered basic client commands
+2023-04-21 19:49:54.207 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"COMMAND_EXEC","information":"update_id","args":{"id":"234","spaceMarine":"{\"id\":1682095794201,\"name\":\"f43\",\"coordinates\":{\"x\":3.0,\"y\":4},\"health\":4.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"fh893\",\"marinesCount\":34}}"}} to /127.0.0.1:6789
+2023-04-21 19:49:54.210 [main] INFO  clientUtils.ConnectionManager - Received: {"answerType":"ERROR","message":"exceptions.InvalidArgumentException: No Space Marine with id: 234 was found"}
+2023-04-21 19:49:54.210 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"PING","information":"Ping","args":{}} to /127.0.0.1:6789
+2023-04-21 19:49:54.211 [main] INFO  clientUtils.ConnectionManager - Received: {"answerType":"SYSTEM","message":"Pong"}
+2023-04-21 19:49:54.211 [main] INFO  clientUtils.ConnectionManager - Ping with server: 0.9246 ms
+2023-04-21 19:49:54.211 [main] DEBUG clientUtils.Console - Connected to server
+2023-04-21 19:49:54.211 [main] INFO  clientUtils.ConnectionManager - Sending: {"queryType":"INITIALIZATION","information":"","args":{}} to /127.0.0.1:6789
+2023-04-21 19:49:54.212 [main] INFO  clientUtils.ConnectionManager - Received: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
+2023-04-21 19:49:54.212 [main] DEBUG clientUtils.Console - Sent initialization query
+2023-04-21 19:49:54.212 [main] INFO  clientUtils.Console - Received commands from server: [info, show, add, update_id, remove_by_id, clear, add_if_min, remove_greater, remove_lower, remove_any_by_chapter, count_by_melee_weapon, filter_by_chapter]
+2023-04-21 19:49:54.212 [main] DEBUG clientUtils.Console - Registered command info
+2023-04-21 19:49:54.212 [main] DEBUG clientUtils.Console - Registered command show
+2023-04-21 19:49:54.213 [main] DEBUG clientUtils.Console - Registered command add
+2023-04-21 19:49:54.213 [main] DEBUG clientUtils.Console - Registered command update_id
+2023-04-21 19:49:54.213 [main] DEBUG clientUtils.Console - Registered command remove_by_id
+2023-04-21 19:49:54.213 [main] DEBUG clientUtils.Console - Registered command clear
+2023-04-21 19:49:54.213 [main] DEBUG clientUtils.Console - Registered command add_if_min
+2023-04-21 19:49:54.213 [main] DEBUG clientUtils.Console - Registered command remove_greater
+2023-04-21 19:49:54.213 [main] DEBUG clientUtils.Console - Registered command remove_lower
+2023-04-21 19:49:54.213 [main] DEBUG clientUtils.Console - Registered command remove_any_by_chapter
+2023-04-21 19:49:54.213 [main] DEBUG clientUtils.Console - Registered command count_by_melee_weapon
+2023-04-21 19:49:54.213 [main] DEBUG clientUtils.Console - Registered command filter_by_chapter
+2023-04-21 19:49:54.213 [main] DEBUG clientUtils.Console - Registered basic client commands

@@ -1,922 +1,404 @@
-2023-04-18 15:16:15.040 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-18 15:16:15.045 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-18 15:16:15.046 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-18 15:16:15.046 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-18 15:16:15.046 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-18 15:16:15.047 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-18 15:16:15.047 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-18 15:16:15.048 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-18 15:16:15.048 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-18 15:16:15.049 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-18 15:16:15.049 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-18 15:16:15.049 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-18 15:16:15.050 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-18 15:16:15.050 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-18 15:16:15.050 [main] TRACE serverUtils.Console - Server started
-2023-04-18 15:16:15.051 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-18 15:16:17.765 [main] TRACE serverUtils.Console - Received ping request
-2023-04-18 15:16:17.786 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-18 17:21:24.393 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-18 17:21:24.407 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-18 17:21:24.409 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-18 17:21:24.409 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-18 17:21:24.409 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-18 17:21:24.409 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-18 17:21:24.409 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-18 17:21:24.409 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-18 17:21:24.409 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-18 17:21:24.409 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-18 17:21:24.409 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-18 17:21:24.409 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-18 17:21:24.409 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-18 17:21:24.409 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-18 17:21:24.409 [main] TRACE serverUtils.Console - Server started
-2023-04-18 17:21:24.409 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-18 20:36:00.497 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-18 20:36:00.505 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-18 20:36:00.505 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-18 20:36:00.506 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-18 20:36:00.506 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-18 20:36:00.507 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-18 20:36:00.507 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-18 20:36:00.508 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-18 20:36:00.508 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-18 20:36:00.508 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-18 20:36:00.509 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-18 20:36:00.509 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-18 20:36:00.510 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-18 20:36:00.510 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-18 20:36:00.510 [main] TRACE serverUtils.Console - Server started
-2023-04-18 20:36:00.510 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-18 20:36:04.589 [main] TRACE serverUtils.Console - Received ping request
-2023-04-18 20:36:04.611 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-18 20:39:55.322 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-18 20:39:55.328 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-18 20:39:55.329 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-18 20:39:55.329 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-18 20:39:55.329 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-18 20:39:55.329 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-18 20:39:55.330 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-18 20:39:55.330 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-18 20:39:55.330 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-18 20:39:55.331 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-18 20:39:55.331 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-18 20:39:55.331 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-18 20:39:55.332 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-18 20:39:55.332 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-18 20:39:55.332 [main] TRACE serverUtils.Console - Server started
-2023-04-18 20:39:55.332 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-18 20:39:56.862 [main] TRACE serverUtils.Console - Received ping request
-2023-04-18 20:39:56.889 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-18 20:40:04.397 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-18 20:40:04.403 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-18 20:40:04.404 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-18 20:40:04.405 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-18 20:40:04.405 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-18 20:40:04.405 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-18 20:40:04.406 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-18 20:40:04.406 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-18 20:40:04.406 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-18 20:40:04.406 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-18 20:40:04.407 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-18 20:40:04.407 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-18 20:40:04.407 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-18 20:40:04.407 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-18 20:40:04.407 [main] TRACE serverUtils.Console - Server started
-2023-04-18 20:40:04.407 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-18 20:44:15.324 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-18 20:44:15.329 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-18 20:44:15.329 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-18 20:44:15.330 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-18 20:44:15.330 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-18 20:44:15.330 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-18 20:44:15.331 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-18 20:44:15.331 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-18 20:44:15.331 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-18 20:44:15.331 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-18 20:44:15.332 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-18 20:44:15.332 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-18 20:44:15.332 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-18 20:44:15.333 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-18 20:44:15.333 [main] TRACE serverUtils.Console - Server started
-2023-04-18 20:44:15.333 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-18 20:44:15.834 [main] TRACE serverUtils.Console - Received ping request
-2023-04-18 20:44:15.859 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-18 20:44:42.923 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-18 20:44:42.929 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-18 20:44:42.929 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-18 20:44:42.930 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-18 20:44:42.930 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-18 20:44:42.930 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-18 20:44:42.931 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-18 20:44:42.931 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-18 20:44:42.931 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-18 20:44:42.931 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-18 20:44:42.932 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-18 20:44:42.932 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-18 20:44:42.932 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-18 20:44:42.933 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-18 20:44:42.933 [main] TRACE serverUtils.Console - Server started
-2023-04-18 20:44:42.933 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-18 20:44:45.829 [main] TRACE serverUtils.Console - Received command: show
-2023-04-18 20:55:59.769 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-18 20:55:59.774 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-18 20:55:59.774 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-18 20:55:59.775 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-18 20:55:59.775 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-18 20:55:59.775 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-18 20:55:59.776 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-18 20:55:59.776 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-18 20:55:59.776 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-18 20:55:59.776 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-18 20:55:59.777 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-18 20:55:59.777 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-18 20:55:59.777 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-18 20:55:59.777 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-18 20:55:59.778 [main] TRACE serverUtils.Console - Server started
-2023-04-18 20:55:59.778 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-18 20:56:06.497 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-18 20:56:06.514 [main] TRACE serverUtils.Console - Received ping request
-2023-04-18 20:56:06.515 [main] TRACE serverUtils.ConnectionManager - Sending answer to localhost/127.0.0.1:6789
-2023-04-18 20:56:06.531 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-18 20:56:06.545 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-18 20:56:06.545 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-18 20:56:06.546 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:51186
-2023-04-18 20:56:06.546 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-18 20:57:27.734 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-18 20:57:27.740 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-18 20:57:27.740 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-18 20:57:27.741 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-18 20:57:27.741 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-18 20:57:27.741 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-18 20:57:27.741 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-18 20:57:27.742 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-18 20:57:27.742 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-18 20:57:27.742 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-18 20:57:27.743 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-18 20:57:27.743 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-18 20:57:27.743 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-18 20:57:27.743 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
-2023-04-18 20:57:27.744 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-18 20:57:27.744 [main] TRACE serverUtils.Console - Server started
-2023-04-18 20:57:27.744 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-18 20:57:54.343 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"id\":1681840674330,\"name\":\"3\",\"coordinates\":{\"x\":4.0,\"y\":5},\"health\":6.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"3\",\"marinesCount\":6}}"}}
-2023-04-18 20:57:54.360 [main] TRACE serverUtils.Console - Received command: add
-2023-04-18 20:57:54.381 [main] TRACE serverUtils.ConnectionManager - Sending answer to localhost/127.0.0.1:6789
-2023-04-18 20:57:54.390 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 3 has been created and added to the collection"}
-2023-04-20 15:19:43.903 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-20 15:19:43.910 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-20 15:19:43.911 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-20 15:19:43.912 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-20 15:19:43.912 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-20 15:19:43.914 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-20 15:19:43.915 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-20 15:19:43.915 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-20 15:19:43.916 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-20 15:19:43.916 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-20 15:19:43.917 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-20 15:19:43.917 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-20 15:19:43.918 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-20 15:19:43.918 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
-2023-04-20 15:19:43.918 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-20 15:19:43.918 [main] TRACE serverUtils.Console - Server started
-2023-04-20 15:19:43.918 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-20 15:19:48.430 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 15:19:48.445 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 15:19:48.448 [main] TRACE serverUtils.ConnectionManager - Sending answer to localhost/127.0.0.1:6789
-2023-04-20 15:19:48.465 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 15:19:48.470 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 15:19:48.470 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 15:19:48.472 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:49170
-2023-04-20 15:19:48.472 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 15:20:19.496 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"info","args":{}}
-2023-04-20 15:20:19.496 [main] TRACE serverUtils.Console - Received command: info
-2023-04-20 15:20:19.500 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:49170
-2023-04-20 15:20:19.500 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Tree Set of SpaceMarine: size=0, date=Thu Apr 20 15:19:43 MSK 2023"}
-2023-04-20 15:20:19.501 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 15:20:19.502 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 15:20:19.502 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:49170
-2023-04-20 15:20:19.502 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Collection is empty"}
-2023-04-20 15:20:19.525 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"id\":1681993219518,\"name\":\"1\",\"coordinates\":{\"x\":1.0,\"y\":1},\"health\":1.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"1\",\"marinesCount\":1}}"}}
-2023-04-20 15:20:19.525 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 15:20:19.533 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:49170
-2023-04-20 15:20:19.533 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 1 has been created and added to the collection"}
-2023-04-20 15:20:19.534 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"name\":\"2\",\"coordinates\":{\"x\":2.0,\"y\":2},\"health\":2.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"2\",\"marinesCount\":2}}"}}
-2023-04-20 15:20:19.534 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 15:20:19.535 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:49170
-2023-04-20 15:20:19.535 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 2 has been created and added to the collection"}
-2023-04-20 15:20:19.536 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"name\":\"3\",\"coordinates\":{\"x\":3.0,\"y\":3},\"health\":3.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"3\",\"marinesCount\":3}}"}}
-2023-04-20 15:20:19.536 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 15:20:19.536 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:49170
-2023-04-20 15:20:19.536 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 3 has been created and added to the collection"}
-2023-04-20 15:20:19.537 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 15:20:19.537 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 15:20:19.546 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:49170
-2023-04-20 15:20:19.546 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"SpaceMarine(id=1681993219518 ,name=1, coordinates=Coordinates(x=1.0, y=1), creationDate=2023-04-20, health=1.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=1, marinesCount=1))\nSpaceMarine(id=1681993219535 ,name=2, coordinates=Coordinates(x=2.0, y=2), creationDate=2023-04-20, health=2.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=2, marinesCount=2))\nSpaceMarine(id=1681993219536 ,name=3, coordinates=Coordinates(x=3.0, y=3), creationDate=2023-04-20, health=3.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=3, marinesCount=3))"}
-2023-04-20 15:20:29.767 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 15:20:29.767 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 15:20:29.767 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:49170
-2023-04-20 15:20:29.767 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"SpaceMarine(id=1681993219518 ,name=1, coordinates=Coordinates(x=1.0, y=1), creationDate=2023-04-20, health=1.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=1, marinesCount=1))\nSpaceMarine(id=1681993219535 ,name=2, coordinates=Coordinates(x=2.0, y=2), creationDate=2023-04-20, health=2.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=2, marinesCount=2))\nSpaceMarine(id=1681993219536 ,name=3, coordinates=Coordinates(x=3.0, y=3), creationDate=2023-04-20, health=3.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=3, marinesCount=3))"}
-2023-04-20 15:20:44.094 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 15:20:44.094 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 15:20:44.094 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:49170
-2023-04-20 15:20:44.094 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 15:20:44.103 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 15:20:44.103 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 15:20:44.103 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:20:44.103 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 15:21:03.880 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"info","args":{}}
-2023-04-20 15:21:03.880 [main] TRACE serverUtils.Console - Received command: info
-2023-04-20 15:21:03.880 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:21:03.881 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Tree Set of SpaceMarine: size=3, date=Thu Apr 20 15:19:43 MSK 2023"}
-2023-04-20 15:21:03.882 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 15:21:03.882 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 15:21:03.882 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:21:03.882 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"SpaceMarine(id=1681993219518 ,name=1, coordinates=Coordinates(x=1.0, y=1), creationDate=2023-04-20, health=1.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=1, marinesCount=1))\nSpaceMarine(id=1681993219535 ,name=2, coordinates=Coordinates(x=2.0, y=2), creationDate=2023-04-20, health=2.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=2, marinesCount=2))\nSpaceMarine(id=1681993219536 ,name=3, coordinates=Coordinates(x=3.0, y=3), creationDate=2023-04-20, health=3.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=3, marinesCount=3))"}
-2023-04-20 15:21:03.897 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"id\":1681993263892,\"name\":\"2\",\"coordinates\":{\"x\":2.0,\"y\":2},\"health\":2.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"2\",\"marinesCount\":2}}"}}
-2023-04-20 15:21:03.898 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 15:21:03.898 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:21:03.898 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 2 has been created and added to the collection"}
-2023-04-20 15:21:03.899 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"name\":\"1\",\"coordinates\":{\"x\":1.0,\"y\":1},\"health\":1.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"1\",\"marinesCount\":1}}"}}
-2023-04-20 15:21:03.899 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 15:21:03.899 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:21:03.899 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 1 has been created and added to the collection"}
-2023-04-20 15:21:03.900 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"name\":\"3\",\"coordinates\":{\"x\":3.0,\"y\":3},\"health\":3.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"3\",\"marinesCount\":3}}"}}
-2023-04-20 15:21:03.901 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 15:21:03.901 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:21:03.901 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 3 has been created and added to the collection"}
-2023-04-20 15:21:03.902 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 15:21:03.902 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 15:21:03.902 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:21:03.902 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"SpaceMarine(id=1681993219518 ,name=1, coordinates=Coordinates(x=1.0, y=1), creationDate=2023-04-20, health=1.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=1, marinesCount=1))\nSpaceMarine(id=1681993219535 ,name=2, coordinates=Coordinates(x=2.0, y=2), creationDate=2023-04-20, health=2.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=2, marinesCount=2))\nSpaceMarine(id=1681993219536 ,name=3, coordinates=Coordinates(x=3.0, y=3), creationDate=2023-04-20, health=3.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=3, marinesCount=3))\nSpaceMarine(id=1681993263892 ,name=2, coordinates=Coordinates(x=2.0, y=2), creationDate=2023-04-20, health=2.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=2, marinesCount=2))\nSpaceMarine(id=1681993263899 ,name=1, coordinates=Coordinates(x=1.0, y=1), creationDate=2023-04-20, health=1.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=1, marinesCount=1))\nSpaceMarine(id=1681993263901 ,name=3, coordinates=Coordinates(x=3.0, y=3), creationDate=2023-04-20, health=3.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=3, marinesCount=3))"}
-2023-04-20 15:21:07.308 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 15:21:07.308 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 15:21:07.308 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:21:07.308 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"SpaceMarine(id=1681993219518 ,name=1, coordinates=Coordinates(x=1.0, y=1), creationDate=2023-04-20, health=1.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=1, marinesCount=1))\nSpaceMarine(id=1681993219535 ,name=2, coordinates=Coordinates(x=2.0, y=2), creationDate=2023-04-20, health=2.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=2, marinesCount=2))\nSpaceMarine(id=1681993219536 ,name=3, coordinates=Coordinates(x=3.0, y=3), creationDate=2023-04-20, health=3.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=3, marinesCount=3))\nSpaceMarine(id=1681993263892 ,name=2, coordinates=Coordinates(x=2.0, y=2), creationDate=2023-04-20, health=2.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=2, marinesCount=2))\nSpaceMarine(id=1681993263899 ,name=1, coordinates=Coordinates(x=1.0, y=1), creationDate=2023-04-20, health=1.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=1, marinesCount=1))\nSpaceMarine(id=1681993263901 ,name=3, coordinates=Coordinates(x=3.0, y=3), creationDate=2023-04-20, health=3.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=3, marinesCount=3))"}
-2023-04-20 15:21:11.439 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"clear","args":{}}
-2023-04-20 15:21:11.439 [main] TRACE serverUtils.Console - Received command: clear
-2023-04-20 15:21:11.440 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:21:11.440 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Collection has been cleared"}
-2023-04-20 15:21:16.806 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 15:21:16.806 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 15:21:16.807 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:21:16.807 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Collection is empty"}
-2023-04-20 15:21:22.994 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"info","args":{}}
-2023-04-20 15:21:22.994 [main] TRACE serverUtils.Console - Received command: info
-2023-04-20 15:21:22.995 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:21:22.995 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Tree Set of SpaceMarine: size=0, date=Thu Apr 20 15:19:43 MSK 2023"}
-2023-04-20 15:21:22.995 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 15:21:22.996 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 15:21:22.996 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:21:22.996 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Collection is empty"}
-2023-04-20 15:21:22.997 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"name\":\"2\",\"coordinates\":{\"x\":2.0,\"y\":2},\"health\":2.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"2\",\"marinesCount\":2}}"}}
-2023-04-20 15:21:22.997 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 15:21:22.997 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:21:22.997 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 2 has been created and added to the collection"}
-2023-04-20 15:21:22.998 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"name\":\"1\",\"coordinates\":{\"x\":1.0,\"y\":1},\"health\":1.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"1\",\"marinesCount\":1}}"}}
-2023-04-20 15:21:22.998 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 15:21:22.998 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:21:22.998 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 1 has been created and added to the collection"}
-2023-04-20 15:21:22.999 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"name\":\"3\",\"coordinates\":{\"x\":3.0,\"y\":3},\"health\":3.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"3\",\"marinesCount\":3}}"}}
-2023-04-20 15:21:22.999 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 15:21:22.999 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:21:22.999 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 3 has been created and added to the collection"}
-2023-04-20 15:21:23.000 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 15:21:23.000 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 15:21:23.000 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:21:23.000 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"SpaceMarine(id=1681993282997 ,name=2, coordinates=Coordinates(x=2.0, y=2), creationDate=2023-04-20, health=2.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=2, marinesCount=2))\nSpaceMarine(id=1681993282998 ,name=1, coordinates=Coordinates(x=1.0, y=1), creationDate=2023-04-20, health=1.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=1, marinesCount=1))\nSpaceMarine(id=1681993282999 ,name=3, coordinates=Coordinates(x=3.0, y=3), creationDate=2023-04-20, health=3.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=3, marinesCount=3))"}
-2023-04-20 15:21:24.736 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 15:21:24.736 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 15:21:24.737 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:21:24.737 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"SpaceMarine(id=1681993282997 ,name=2, coordinates=Coordinates(x=2.0, y=2), creationDate=2023-04-20, health=2.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=2, marinesCount=2))\nSpaceMarine(id=1681993282998 ,name=1, coordinates=Coordinates(x=1.0, y=1), creationDate=2023-04-20, health=1.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=1, marinesCount=1))\nSpaceMarine(id=1681993282999 ,name=3, coordinates=Coordinates(x=3.0, y=3), creationDate=2023-04-20, health=3.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=3, marinesCount=3))"}
-2023-04-20 15:24:00.131 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-20 15:24:00.136 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-20 15:24:00.136 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-20 15:24:00.137 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-20 15:24:00.137 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-20 15:24:00.137 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-20 15:24:00.137 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-20 15:24:00.138 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-20 15:24:00.138 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-20 15:24:00.138 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-20 15:24:00.138 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-20 15:24:00.139 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-20 15:24:00.139 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-20 15:24:00.139 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
-2023-04-20 15:24:00.139 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-20 15:24:00.139 [main] TRACE serverUtils.Console - Server started
-2023-04-20 15:24:00.139 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-20 15:24:07.047 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 15:24:07.063 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 15:24:07.076 [main] TRACE serverUtils.ConnectionManager - Sending answer to localhost/127.0.0.1:6789
-2023-04-20 15:24:07.085 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Collection is empty"}
-2023-04-20 15:24:13.164 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"info","args":{}}
-2023-04-20 15:24:13.164 [main] TRACE serverUtils.Console - Received command: info
-2023-04-20 15:24:13.168 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:24:13.168 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Tree Set of SpaceMarine: size=0, date=Thu Apr 20 15:24:00 MSK 2023"}
-2023-04-20 15:24:13.169 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 15:24:13.169 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 15:24:13.170 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:24:13.170 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Collection is empty"}
-2023-04-20 15:24:13.171 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"name\":\"2\",\"coordinates\":{\"x\":2.0,\"y\":2},\"health\":2.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"2\",\"marinesCount\":2}}"}}
-2023-04-20 15:24:13.171 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 15:24:13.184 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:24:13.184 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 2 has been created and added to the collection"}
-2023-04-20 15:24:13.185 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"id\":1681993453184,\"name\":\"1\",\"coordinates\":{\"x\":1.0,\"y\":1},\"health\":1.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"1\",\"marinesCount\":1}}"}}
-2023-04-20 15:24:13.185 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 15:24:13.185 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:24:13.185 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 1 has been created and added to the collection"}
-2023-04-20 15:24:13.186 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"name\":\"3\",\"coordinates\":{\"x\":3.0,\"y\":3},\"health\":3.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"3\",\"marinesCount\":3}}"}}
-2023-04-20 15:24:13.187 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 15:24:13.187 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:24:13.187 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 3 has been created and added to the collection"}
-2023-04-20 15:24:13.188 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 15:24:13.188 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 15:24:13.198 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:24:13.199 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"SpaceMarine(id=1681993453184 ,name=1, coordinates=Coordinates(x=1.0, y=1), creationDate=2023-04-20, health=1.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=1, marinesCount=1))\nSpaceMarine(id=1681993453181 ,name=2, coordinates=Coordinates(x=2.0, y=2), creationDate=2023-04-20, health=2.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=2, marinesCount=2))\nSpaceMarine(id=1681993453187 ,name=3, coordinates=Coordinates(x=3.0, y=3), creationDate=2023-04-20, health=3.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=3, marinesCount=3))"}
-2023-04-20 15:24:17.539 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 15:24:17.539 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 15:24:17.539 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:52755
-2023-04-20 15:24:17.539 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"SpaceMarine(id=1681993453184 ,name=1, coordinates=Coordinates(x=1.0, y=1), creationDate=2023-04-20, health=1.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=1, marinesCount=1))\nSpaceMarine(id=1681993453181 ,name=2, coordinates=Coordinates(x=2.0, y=2), creationDate=2023-04-20, health=2.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=2, marinesCount=2))\nSpaceMarine(id=1681993453187 ,name=3, coordinates=Coordinates(x=3.0, y=3), creationDate=2023-04-20, health=3.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=3, marinesCount=3))"}
-2023-04-20 16:14:07.132 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-20 16:14:07.136 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-20 16:14:07.137 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-20 16:14:07.137 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-20 16:14:07.137 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-20 16:14:07.138 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-20 16:14:07.138 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-20 16:14:07.138 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-20 16:14:07.138 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-20 16:14:07.139 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-20 16:14:07.139 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-20 16:14:07.139 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-20 16:14:07.140 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-20 16:14:07.140 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
-2023-04-20 16:14:07.140 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-20 16:14:07.140 [main] TRACE serverUtils.Console - Server started
-2023-04-20 16:14:07.148 [main] TRACE serverUtils.ConnectionManager - Sending answer to localhost/127.0.0.1:6789
-2023-04-20 16:14:07.176 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 16:18:00.020 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-20 16:18:00.027 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-20 16:18:00.027 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-20 16:18:00.028 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-20 16:18:00.028 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-20 16:18:00.028 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-20 16:18:00.028 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-20 16:18:00.029 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-20 16:18:00.029 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-20 16:18:00.029 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-20 16:18:00.029 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-20 16:18:00.030 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-20 16:18:00.030 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-20 16:18:00.030 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
-2023-04-20 16:18:00.030 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-20 16:18:00.031 [main] TRACE serverUtils.Console - Server started
-2023-04-20 16:18:00.039 [main] TRACE serverUtils.ConnectionManager - Sending answer to localhost/127.0.0.1:6789
-2023-04-20 16:18:00.065 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 16:18:00.066 [main] TRACE serverUtils.Console - Address not set
-2023-04-20 16:18:00.066 [main] TRACE serverUtils.Console - Sent initialization
-2023-04-20 16:18:00.066 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-20 16:18:19.830 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-20 16:18:19.836 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-20 16:18:19.836 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-20 16:18:19.836 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-20 16:18:19.837 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-20 16:18:19.837 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-20 16:18:19.837 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-20 16:18:19.837 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-20 16:18:19.838 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-20 16:18:19.838 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-20 16:18:19.838 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-20 16:18:19.838 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-20 16:18:19.839 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-20 16:18:19.839 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
-2023-04-20 16:18:19.839 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-20 16:18:19.839 [main] TRACE serverUtils.Console - Server started
-2023-04-20 16:18:19.839 [main] TRACE serverUtils.Console - Sending initialization
-2023-04-20 16:18:19.848 [main] TRACE serverUtils.ConnectionManager - Sending answer to localhost/127.0.0.1:6789
-2023-04-20 16:18:19.878 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 16:18:19.880 [main] TRACE serverUtils.Console - Address not set
-2023-04-20 16:18:19.880 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-20 16:18:30.131 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 16:18:30.140 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 16:18:30.140 [main] TRACE serverUtils.ConnectionManager - Sending answer to null:0
-2023-04-20 16:18:30.140 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 16:18:30.152 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 16:18:30.152 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 16:18:30.152 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64615
-2023-04-20 16:18:30.153 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 16:19:06.392 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 16:19:06.393 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 16:19:06.393 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64615
-2023-04-20 16:19:06.393 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 16:19:06.400 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 16:19:06.400 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 16:19:06.401 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64616
-2023-04-20 16:19:06.401 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 16:19:41.470 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 16:19:41.470 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 16:19:41.470 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64616
-2023-04-20 16:19:41.470 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 16:19:41.478 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 16:19:41.478 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 16:19:41.478 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64617
-2023-04-20 16:19:41.478 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 16:22:29.280 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 16:22:29.280 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 16:22:29.280 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64617
-2023-04-20 16:22:29.280 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 16:22:29.288 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 16:22:29.288 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 16:22:29.288 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64618
-2023-04-20 16:22:29.288 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 16:24:30.211 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 16:24:30.212 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 16:24:30.212 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64618
-2023-04-20 16:24:30.212 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 16:24:30.219 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 16:24:30.219 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 16:24:30.219 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:53868
-2023-04-20 16:24:30.219 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 16:24:35.877 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 16:24:35.878 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 16:24:35.878 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:53868
-2023-04-20 16:24:35.878 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 16:24:35.887 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 16:24:35.887 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 16:24:35.888 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:53869
-2023-04-20 16:24:35.888 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 16:24:56.658 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 16:24:56.658 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 16:24:56.659 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:53869
-2023-04-20 16:24:56.659 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 16:24:56.667 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 16:24:56.667 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 16:24:56.667 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:53870
-2023-04-20 16:24:56.667 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 16:26:14.430 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 16:26:14.431 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 16:26:14.431 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:53870
-2023-04-20 16:26:14.431 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 16:26:14.438 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 16:26:14.438 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 16:26:14.439 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:53871
-2023-04-20 16:26:14.439 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 16:26:39.723 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 16:26:39.724 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 16:26:39.724 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:53871
-2023-04-20 16:26:39.724 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 16:26:39.733 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 16:26:39.733 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 16:26:39.734 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:53872
-2023-04-20 16:26:39.734 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 16:27:20.093 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"info","args":{}}
-2023-04-20 16:27:20.094 [main] TRACE serverUtils.Console - Received command: info
-2023-04-20 16:27:20.097 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:53872
-2023-04-20 16:27:20.097 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Tree Set of SpaceMarine: size=0, date=Thu Apr 20 16:18:19 MSK 2023"}
-2023-04-20 16:27:20.098 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 16:27:20.098 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 16:27:20.099 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:53872
-2023-04-20 16:27:20.099 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Collection is empty"}
-2023-04-20 16:27:20.113 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"id\":1681997240107,\"name\":\"2\",\"coordinates\":{\"x\":2.0,\"y\":2},\"health\":2.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"2\",\"marinesCount\":2}}"}}
-2023-04-20 16:27:20.113 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 16:27:20.122 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:53872
-2023-04-20 16:27:20.122 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 2 has been created and added to the collection"}
-2023-04-20 16:27:20.123 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"name\":\"1\",\"coordinates\":{\"x\":1.0,\"y\":1},\"health\":1.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"1\",\"marinesCount\":1}}"}}
-2023-04-20 16:27:20.124 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 16:27:20.124 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:53872
-2023-04-20 16:27:20.124 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 1 has been created and added to the collection"}
-2023-04-20 16:27:20.126 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"name\":\"3\",\"coordinates\":{\"x\":3.0,\"y\":3},\"health\":3.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"3\",\"marinesCount\":3}}"}}
-2023-04-20 16:27:20.126 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 16:27:20.126 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:53872
-2023-04-20 16:27:20.126 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 3 has been created and added to the collection"}
-2023-04-20 16:27:20.127 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 16:27:20.127 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 16:27:20.137 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:53872
-2023-04-20 16:27:20.137 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"SpaceMarine(id=1681997240124 ,name=1, coordinates=Coordinates(x=1.0, y=1), creationDate=2023-04-20, health=1.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=1, marinesCount=1))\nSpaceMarine(id=1681997240107 ,name=2, coordinates=Coordinates(x=2.0, y=2), creationDate=2023-04-20, health=2.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=2, marinesCount=2))\nSpaceMarine(id=1681997240126 ,name=3, coordinates=Coordinates(x=3.0, y=3), creationDate=2023-04-20, health=3.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=3, marinesCount=3))"}
-2023-04-20 16:27:22.057 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 16:27:22.057 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 16:27:22.057 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:53872
-2023-04-20 16:27:22.057 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"SpaceMarine(id=1681997240124 ,name=1, coordinates=Coordinates(x=1.0, y=1), creationDate=2023-04-20, health=1.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=1, marinesCount=1))\nSpaceMarine(id=1681997240107 ,name=2, coordinates=Coordinates(x=2.0, y=2), creationDate=2023-04-20, health=2.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=2, marinesCount=2))\nSpaceMarine(id=1681997240126 ,name=3, coordinates=Coordinates(x=3.0, y=3), creationDate=2023-04-20, health=3.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=3, marinesCount=3))"}
-2023-04-20 16:28:56.882 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-20 16:28:56.887 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-20 16:28:56.888 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-20 16:28:56.888 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-20 16:28:56.888 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-20 16:28:56.889 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-20 16:28:56.889 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-20 16:28:56.889 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-20 16:28:56.889 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-20 16:28:56.890 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-20 16:28:56.890 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-20 16:28:56.890 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-20 16:28:56.890 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-20 16:28:56.891 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
-2023-04-20 16:28:56.891 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-20 16:28:56.891 [main] TRACE serverUtils.Console - Server started
-2023-04-20 16:28:56.891 [main] TRACE serverUtils.Console - Sending initialization
-2023-04-20 16:28:56.899 [main] TRACE serverUtils.ConnectionManager - Sending answer to localhost/127.0.0.1:6789
-2023-04-20 16:28:56.924 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 16:28:56.925 [main] TRACE serverUtils.Console - Address not set
-2023-04-20 16:28:56.926 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-20 16:28:58.578 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 16:28:58.585 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 16:28:58.586 [main] TRACE serverUtils.ConnectionManager - Sending answer to null:0
-2023-04-20 16:28:58.586 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 16:28:58.587 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 16:28:58.587 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 16:28:58.587 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:51268
-2023-04-20 16:28:58.587 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 16:30:17.468 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"info","args":{}}
-2023-04-20 16:30:17.469 [main] TRACE serverUtils.Console - Received command: info
-2023-04-20 16:30:17.471 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:51268
-2023-04-20 16:30:17.471 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Tree Set of SpaceMarine: size=0, date=Thu Apr 20 16:28:56 MSK 2023"}
-2023-04-20 16:30:17.472 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 16:30:17.472 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 16:30:17.473 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:51268
-2023-04-20 16:30:17.473 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Collection is empty"}
-2023-04-20 16:30:17.487 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"id\":1681997417481,\"name\":\"2\",\"coordinates\":{\"x\":2.0,\"y\":2},\"health\":2.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"2\",\"marinesCount\":2}}"}}
-2023-04-20 16:30:17.487 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 16:30:17.495 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:51268
-2023-04-20 16:30:17.495 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 2 has been created and added to the collection"}
-2023-04-20 16:30:17.496 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"name\":\"1\",\"coordinates\":{\"x\":1.0,\"y\":1},\"health\":1.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"1\",\"marinesCount\":1}}"}}
-2023-04-20 16:30:17.497 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 16:30:17.498 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:51268
-2023-04-20 16:30:17.498 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 1 has been created and added to the collection"}
-2023-04-20 16:30:17.499 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"name\":\"3\",\"coordinates\":{\"x\":3.0,\"y\":3},\"health\":3.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"3\",\"marinesCount\":3}}"}}
-2023-04-20 16:30:17.499 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 16:30:17.499 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:51268
-2023-04-20 16:30:17.500 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 3 has been created and added to the collection"}
-2023-04-20 16:30:17.500 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 16:30:17.501 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 16:30:17.511 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:51268
-2023-04-20 16:30:17.511 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"SpaceMarine(id=1681997417498 ,name=1, coordinates=Coordinates(x=1.0, y=1), creationDate=2023-04-20, health=1.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=1, marinesCount=1))\nSpaceMarine(id=1681997417481 ,name=2, coordinates=Coordinates(x=2.0, y=2), creationDate=2023-04-20, health=2.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=2, marinesCount=2))\nSpaceMarine(id=1681997417499 ,name=3, coordinates=Coordinates(x=3.0, y=3), creationDate=2023-04-20, health=3.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=3, marinesCount=3))"}
-2023-04-20 16:30:25.367 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 16:30:25.368 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 16:30:25.368 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:51268
-2023-04-20 16:30:25.368 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"SpaceMarine(id=1681997417498 ,name=1, coordinates=Coordinates(x=1.0, y=1), creationDate=2023-04-20, health=1.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=1, marinesCount=1))\nSpaceMarine(id=1681997417481 ,name=2, coordinates=Coordinates(x=2.0, y=2), creationDate=2023-04-20, health=2.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=2, marinesCount=2))\nSpaceMarine(id=1681997417499 ,name=3, coordinates=Coordinates(x=3.0, y=3), creationDate=2023-04-20, health=3.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=3, marinesCount=3))"}
-2023-04-20 16:44:57.507 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 16:44:57.507 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 16:44:57.507 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:51268
-2023-04-20 16:44:57.507 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 16:44:57.517 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 16:44:57.517 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 16:44:57.517 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:63263
-2023-04-20 16:44:57.518 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 16:47:18.800 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-20 16:47:18.806 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-20 16:47:18.806 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-20 16:47:18.807 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-20 16:47:18.807 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-20 16:47:18.807 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-20 16:47:18.808 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-20 16:47:18.808 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-20 16:47:18.808 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-20 16:47:18.808 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-20 16:47:18.809 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-20 16:47:18.809 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-20 16:47:18.809 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-20 16:47:18.810 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
-2023-04-20 16:47:18.810 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-20 16:47:18.810 [main] TRACE serverUtils.Console - Server started
-2023-04-20 16:47:18.810 [main] TRACE serverUtils.Console - Sending initialization
-2023-04-20 16:47:18.819 [main] TRACE serverUtils.ConnectionManager - Sending answer to localhost/127.0.0.1:6789
-2023-04-20 16:47:18.849 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 16:47:18.850 [main] TRACE serverUtils.Console - Address not set
-2023-04-20 16:47:18.850 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-20 16:47:36.957 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-20 16:47:36.962 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-20 16:47:36.962 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-20 16:47:36.962 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-20 16:47:36.963 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-20 16:47:36.963 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-20 16:47:36.963 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-20 16:47:36.964 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-20 16:47:36.964 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-20 16:47:36.964 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-20 16:47:36.964 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-20 16:47:36.965 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-20 16:47:36.965 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-20 16:47:36.965 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
-2023-04-20 16:47:36.965 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-20 16:47:36.965 [main] TRACE serverUtils.Console - Server started
-2023-04-20 16:47:36.966 [main] TRACE serverUtils.Console - Sending initialization
-2023-04-20 16:47:36.974 [main] TRACE serverUtils.ConnectionManager - Sending answer to localhost/127.0.0.1:6789
-2023-04-20 16:47:36.998 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 16:47:36.999 [main] TRACE serverUtils.Console - Address not set
-2023-04-20 16:47:36.999 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-20 16:48:55.141 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-20 16:48:55.146 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-20 16:48:55.146 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-20 16:48:55.147 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-20 16:48:55.147 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-20 16:48:55.147 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-20 16:48:55.148 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-20 16:48:55.148 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-20 16:48:55.148 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-20 16:48:55.148 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-20 16:48:55.149 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-20 16:48:55.149 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-20 16:48:55.149 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-20 16:48:55.149 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
-2023-04-20 16:48:55.149 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-20 16:48:55.150 [main] TRACE serverUtils.Console - Server started
-2023-04-20 16:48:55.150 [main] TRACE serverUtils.Console - Sending initialization
-2023-04-20 16:48:55.158 [main] TRACE serverUtils.ConnectionManager - Sending answer to localhost/127.0.0.1:6789
-2023-04-20 16:48:55.187 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 16:48:55.188 [main] TRACE serverUtils.Console - Address not set
-2023-04-20 16:48:55.188 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-20 17:05:52.483 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-20 17:05:52.489 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-20 17:05:52.489 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-20 17:05:52.489 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-20 17:05:52.490 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-20 17:05:52.490 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-20 17:05:52.490 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-20 17:05:52.491 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-20 17:05:52.491 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-20 17:05:52.491 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-20 17:05:52.492 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-20 17:05:52.492 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-20 17:05:52.492 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-20 17:05:52.492 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
-2023-04-20 17:05:52.492 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-20 17:05:52.493 [main] TRACE serverUtils.Console - Server started
-2023-04-20 17:05:52.493 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-20 17:05:57.732 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:05:57.746 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:05:57.747 [main] TRACE serverUtils.ConnectionManager - Sending answer to localhost/127.0.0.1:6789
-2023-04-20 17:05:57.763 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:05:57.776 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 17:05:57.776 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 17:05:57.778 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64540
-2023-04-20 17:05:57.778 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 17:05:57.793 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:05:57.793 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:05:57.793 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64540
-2023-04-20 17:05:57.793 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:05:57.794 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 17:05:57.794 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 17:05:57.795 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64540
-2023-04-20 17:05:57.795 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 17:06:29.394 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:06:29.394 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:06:29.394 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64540
-2023-04-20 17:06:29.394 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:06:29.394 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 17:06:29.395 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 17:06:29.395 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64540
-2023-04-20 17:06:29.395 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 17:08:06.173 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:08:06.173 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:08:06.173 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64540
-2023-04-20 17:08:06.173 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:08:06.181 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 17:08:06.181 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 17:08:06.181 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64541
-2023-04-20 17:08:06.181 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 17:08:06.195 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:08:06.195 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:08:06.195 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64541
-2023-04-20 17:08:06.195 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:08:23.407 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:08:23.407 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:08:23.407 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64541
-2023-04-20 17:08:23.407 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:08:23.415 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 17:08:23.415 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 17:08:23.416 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:08:23.416 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 17:08:23.430 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:08:23.430 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:08:23.430 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:08:23.430 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:08:30.623 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:08:30.623 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:08:30.624 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:08:30.624 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:08:44.192 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 17:08:44.192 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 17:08:44.193 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:08:44.193 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Collection is empty"}
-2023-04-20 17:08:44.195 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:08:44.195 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:08:44.195 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:08:44.195 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:08:58.750 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"id\":1681999738745,\"name\":\"4\",\"coordinates\":{\"x\":4.0,\"y\":5},\"health\":6.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"234\",\"marinesCount\":2}}"}}
-2023-04-20 17:08:58.750 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 17:08:58.759 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:08:58.760 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 4 has been created and added to the collection"}
-2023-04-20 17:08:58.760 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:08:58.761 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:08:58.761 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:08:58.761 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:09:01.749 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 17:09:01.749 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 17:09:01.758 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:09:01.759 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"SpaceMarine(id=1681999738745 ,name=4, coordinates=Coordinates(x=4.0, y=5), creationDate=2023-04-20, health=6.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=234, marinesCount=2))"}
-2023-04-20 17:09:01.759 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:09:01.759 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:09:01.759 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:09:01.759 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:09:07.250 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:09:07.251 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:09:07.251 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:09:07.251 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:09:07.251 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"info","args":{}}
-2023-04-20 17:09:07.252 [main] TRACE serverUtils.Console - Received command: info
-2023-04-20 17:09:07.253 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:09:07.253 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Tree Set of SpaceMarine: size=1, date=Thu Apr 20 17:05:52 MSK 2023"}
-2023-04-20 17:09:07.254 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:09:07.254 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:09:07.254 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:09:07.254 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:09:07.254 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 17:09:07.254 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 17:09:07.254 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:09:07.255 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"SpaceMarine(id=1681999738745 ,name=4, coordinates=Coordinates(x=4.0, y=5), creationDate=2023-04-20, health=6.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=234, marinesCount=2))"}
-2023-04-20 17:09:07.255 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:09:07.255 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:09:07.255 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:09:07.255 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:09:07.256 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"name\":\"2\",\"coordinates\":{\"x\":2.0,\"y\":2},\"health\":2.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"2\",\"marinesCount\":2}}"}}
-2023-04-20 17:09:07.256 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 17:09:07.257 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:09:07.257 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 2 has been created and added to the collection"}
-2023-04-20 17:09:07.257 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:09:07.257 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:09:07.257 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:09:07.257 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:09:07.258 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"name\":\"1\",\"coordinates\":{\"x\":1.0,\"y\":1},\"health\":1.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"1\",\"marinesCount\":1}}"}}
-2023-04-20 17:09:07.258 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 17:09:07.258 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:09:07.258 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 1 has been created and added to the collection"}
-2023-04-20 17:09:07.259 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:09:07.259 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:09:07.259 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:09:07.259 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:09:07.260 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"add","args":{"spaceMarine":"{\"name\":\"3\",\"coordinates\":{\"x\":3.0,\"y\":3},\"health\":3.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"3\",\"marinesCount\":3}}"}}
-2023-04-20 17:09:07.260 [main] TRACE serverUtils.Console - Received command: add
-2023-04-20 17:09:07.260 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:09:07.260 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Space Marine 3 has been created and added to the collection"}
-2023-04-20 17:09:07.261 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:09:07.261 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:09:07.261 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:09:07.261 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:09:07.261 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 17:09:07.261 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 17:09:07.261 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:09:07.262 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"SpaceMarine(id=1681999747258 ,name=1, coordinates=Coordinates(x=1.0, y=1), creationDate=2023-04-20, health=1.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=1, marinesCount=1))\nSpaceMarine(id=1681999747256 ,name=2, coordinates=Coordinates(x=2.0, y=2), creationDate=2023-04-20, health=2.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=2, marinesCount=2))\nSpaceMarine(id=1681999747260 ,name=3, coordinates=Coordinates(x=3.0, y=3), creationDate=2023-04-20, health=3.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=3, marinesCount=3))\nSpaceMarine(id=1681999738745 ,name=4, coordinates=Coordinates(x=4.0, y=5), creationDate=2023-04-20, health=6.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=234, marinesCount=2))"}
-2023-04-20 17:09:07.262 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:09:07.262 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:09:07.262 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:09:07.262 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:09:07.263 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:09:07.263 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:09:07.263 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:09:07.263 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:09:10.526 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 17:09:10.526 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 17:09:10.527 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:09:10.527 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"SpaceMarine(id=1681999747258 ,name=1, coordinates=Coordinates(x=1.0, y=1), creationDate=2023-04-20, health=1.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=1, marinesCount=1))\nSpaceMarine(id=1681999747256 ,name=2, coordinates=Coordinates(x=2.0, y=2), creationDate=2023-04-20, health=2.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=2, marinesCount=2))\nSpaceMarine(id=1681999747260 ,name=3, coordinates=Coordinates(x=3.0, y=3), creationDate=2023-04-20, health=3.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=3, marinesCount=3))\nSpaceMarine(id=1681999738745 ,name=4, coordinates=Coordinates(x=4.0, y=5), creationDate=2023-04-20, health=6.0, loyal=true, category=HELIX, meleeWeapon=POWER_FIST, chapter=Chapter(name=234, marinesCount=2))"}
-2023-04-20 17:09:10.527 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:09:10.528 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:09:10.528 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:09:10.528 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:09:17.564 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:09:17.565 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:09:17.565 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:09:17.565 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:09:37.867 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:09:37.867 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:09:37.867 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64542
-2023-04-20 17:09:37.867 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:09:37.875 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 17:09:37.876 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 17:09:37.876 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64316
-2023-04-20 17:09:37.876 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 17:09:37.890 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:09:37.890 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:09:37.890 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64316
-2023-04-20 17:09:37.890 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:12:12.078 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-20 17:12:12.083 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-20 17:12:12.084 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-20 17:12:12.084 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-20 17:12:12.084 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-20 17:12:12.084 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-20 17:12:12.085 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-20 17:12:12.085 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-20 17:12:12.085 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-20 17:12:12.085 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-20 17:12:12.086 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-20 17:12:12.086 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-20 17:12:12.086 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-20 17:12:12.086 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
-2023-04-20 17:12:12.086 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-20 17:12:12.087 [main] TRACE serverUtils.Console - Server started
-2023-04-20 17:12:12.087 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-20 17:12:12.510 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:12:12.527 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:12:12.529 [main] TRACE serverUtils.ConnectionManager - Sending answer to localhost/127.0.0.1:6789
-2023-04-20 17:12:12.547 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:12:12.552 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 17:12:12.552 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 17:12:12.553 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64317
-2023-04-20 17:12:12.553 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 17:12:12.587 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:12:12.587 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:12:12.587 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64317
-2023-04-20 17:12:12.587 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:12:38.389 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"show","args":{}}
-2023-04-20 17:12:38.389 [main] TRACE serverUtils.Console - Received command: show
-2023-04-20 17:12:38.390 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64317
-2023-04-20 17:12:38.390 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"OK","message":"Collection is empty"}
-2023-04-20 17:12:38.391 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:12:38.391 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:12:38.391 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:64317
-2023-04-20 17:12:38.391 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:17:26.012 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-20 17:17:26.019 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-20 17:17:26.019 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-20 17:17:26.020 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-20 17:17:26.020 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-20 17:17:26.020 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-20 17:17:26.021 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-20 17:17:26.021 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-20 17:17:26.021 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-20 17:17:26.021 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-20 17:17:26.022 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-20 17:17:26.022 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-20 17:17:26.022 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-20 17:17:26.023 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
-2023-04-20 17:17:26.023 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-20 17:17:26.023 [main] TRACE serverUtils.Console - Server started
-2023-04-20 17:17:26.023 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-20 17:17:30.871 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:17:30.886 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:17:30.888 [main] TRACE serverUtils.ConnectionManager - Sending answer to localhost/127.0.0.1:6789
-2023-04-20 17:17:30.904 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:17:30.917 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 17:17:30.918 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 17:17:30.919 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:50394
-2023-04-20 17:17:30.919 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
-2023-04-20 17:17:30.933 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
-2023-04-20 17:17:30.933 [main] TRACE serverUtils.Console - Received ping request
-2023-04-20 17:17:30.934 [main] TRACE serverUtils.ConnectionManager - Sending answer to /127.0.0.1:50394
-2023-04-20 17:17:30.934 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
-2023-04-20 17:17:34.884 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-20 17:17:34.890 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-20 17:17:34.891 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-20 17:17:34.891 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-20 17:17:34.891 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-20 17:17:34.891 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-20 17:17:34.892 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-20 17:17:34.892 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-20 17:17:34.892 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-20 17:17:34.893 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-20 17:17:34.893 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-20 17:17:34.893 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-20 17:17:34.893 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-20 17:17:34.894 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
-2023-04-20 17:17:34.894 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-20 17:17:34.894 [main] TRACE serverUtils.Console - Server started
-2023-04-20 17:17:34.894 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-20 17:34:13.623 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-20 17:34:13.628 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-20 17:34:13.629 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-20 17:34:13.629 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-20 17:34:13.629 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-20 17:34:13.630 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-20 17:34:13.630 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-20 17:34:13.630 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-20 17:34:13.630 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-20 17:34:13.631 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-20 17:34:13.631 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-20 17:34:13.631 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-20 17:34:13.632 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-20 17:34:13.632 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
-2023-04-20 17:34:13.632 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-20 17:34:13.632 [main] TRACE serverUtils.Console - Server started
-2023-04-20 17:34:13.632 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-20 17:34:32.340 [main] TRACE serverUtils.Console - Initializing the server
-2023-04-20 17:34:32.345 [main] TRACE serverUtils.Console - Command 'info' registered
-2023-04-20 17:34:32.345 [main] TRACE serverUtils.Console - Command 'show' registered
-2023-04-20 17:34:32.346 [main] TRACE serverUtils.Console - Command 'add' registered
-2023-04-20 17:34:32.346 [main] TRACE serverUtils.Console - Command 'update_id' registered
-2023-04-20 17:34:32.346 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
-2023-04-20 17:34:32.347 [main] TRACE serverUtils.Console - Command 'clear' registered
-2023-04-20 17:34:32.347 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
-2023-04-20 17:34:32.347 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
-2023-04-20 17:34:32.347 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
-2023-04-20 17:34:32.348 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
-2023-04-20 17:34:32.348 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
-2023-04-20 17:34:32.348 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
-2023-04-20 17:34:32.348 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
-2023-04-20 17:34:32.349 [main] TRACE serverUtils.Console - Collection loaded
-2023-04-20 17:34:32.349 [main] TRACE serverUtils.Console - Server started
-2023-04-20 17:34:32.349 [main] TRACE serverUtils.Console - The server is ready to receive commands
-2023-04-20 17:34:34.024 [main] TRACE serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
-2023-04-20 17:34:34.040 [main] TRACE serverUtils.Console - Received initialization request
-2023-04-20 17:34:34.044 [main] TRACE serverUtils.ConnectionManager - Sending answer to localhost/127.0.0.1:6789
-2023-04-20 17:34:34.061 [main] TRACE serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
+2023-04-21 10:59:03.300 [main] TRACE serverUtils.Console - Initializing the server
+2023-04-21 10:59:03.306 [main] TRACE serverUtils.Console - Command 'info' registered
+2023-04-21 10:59:03.306 [main] TRACE serverUtils.Console - Command 'show' registered
+2023-04-21 10:59:03.306 [main] TRACE serverUtils.Console - Command 'add' registered
+2023-04-21 10:59:03.306 [main] TRACE serverUtils.Console - Command 'update_id' registered
+2023-04-21 10:59:03.307 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
+2023-04-21 10:59:03.307 [main] TRACE serverUtils.Console - Command 'clear' registered
+2023-04-21 10:59:03.307 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
+2023-04-21 10:59:03.308 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
+2023-04-21 10:59:03.310 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
+2023-04-21 10:59:03.310 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-21 10:59:03.310 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-21 10:59:03.311 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-21 10:59:03.311 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-21 10:59:03.311 [main] TRACE serverUtils.Console - Collection loaded
+2023-04-21 10:59:03.311 [main] TRACE serverUtils.Console - Server started
+2023-04-21 10:59:03.311 [main] TRACE serverUtils.Console - The server is ready to receive commands
+2023-04-21 11:04:03.431 [main] TRACE serverUtils.Console - Initializing the server
+2023-04-21 11:04:03.436 [main] TRACE serverUtils.Console - Command 'info' registered
+2023-04-21 11:04:03.437 [main] TRACE serverUtils.Console - Command 'show' registered
+2023-04-21 11:04:03.437 [main] TRACE serverUtils.Console - Command 'add' registered
+2023-04-21 11:04:03.438 [main] TRACE serverUtils.Console - Command 'update_id' registered
+2023-04-21 11:04:03.438 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
+2023-04-21 11:04:03.438 [main] TRACE serverUtils.Console - Command 'clear' registered
+2023-04-21 11:04:03.439 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
+2023-04-21 11:04:03.439 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
+2023-04-21 11:04:03.439 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
+2023-04-21 11:04:03.440 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-21 11:04:03.440 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-21 11:04:03.440 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-21 11:04:03.440 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-21 11:04:03.440 [main] TRACE serverUtils.Console - Collection loaded
+2023-04-21 11:04:03.441 [main] TRACE serverUtils.Console - Server started
+2023-04-21 11:04:03.441 [main] TRACE serverUtils.Console - The server is ready to receive commands
+2023-04-21 11:18:51.020 [main] TRACE serverUtils.Console - Initializing the server
+2023-04-21 11:18:51.026 [main] TRACE serverUtils.Console - Command 'info' registered
+2023-04-21 11:18:51.026 [main] TRACE serverUtils.Console - Command 'show' registered
+2023-04-21 11:18:51.027 [main] TRACE serverUtils.Console - Command 'add' registered
+2023-04-21 11:18:51.027 [main] TRACE serverUtils.Console - Command 'update_id' registered
+2023-04-21 11:18:51.027 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
+2023-04-21 11:18:51.028 [main] TRACE serverUtils.Console - Command 'clear' registered
+2023-04-21 11:18:51.028 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
+2023-04-21 11:18:51.028 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
+2023-04-21 11:18:51.029 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
+2023-04-21 11:18:51.029 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-21 11:18:51.029 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-21 11:18:51.029 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-21 11:18:51.030 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-21 11:18:51.030 [main] TRACE serverUtils.Console - Collection loaded
+2023-04-21 11:18:51.030 [main] TRACE serverUtils.Console - Server started
+2023-04-21 11:18:51.030 [main] TRACE serverUtils.Console - The server is ready to receive commands
+2023-04-21 11:20:26.582 [main] TRACE serverUtils.Console - Initializing the server
+2023-04-21 11:20:26.587 [main] TRACE serverUtils.Console - Command 'info' registered
+2023-04-21 11:20:26.588 [main] TRACE serverUtils.Console - Command 'show' registered
+2023-04-21 11:20:26.588 [main] TRACE serverUtils.Console - Command 'add' registered
+2023-04-21 11:20:26.588 [main] TRACE serverUtils.Console - Command 'update_id' registered
+2023-04-21 11:20:26.588 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
+2023-04-21 11:20:26.589 [main] TRACE serverUtils.Console - Command 'clear' registered
+2023-04-21 11:20:26.589 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
+2023-04-21 11:20:26.589 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
+2023-04-21 11:20:26.589 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
+2023-04-21 11:20:26.590 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-21 11:20:26.590 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-21 11:20:26.590 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-21 11:20:26.590 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-21 11:20:26.590 [main] TRACE serverUtils.Console - Collection loaded
+2023-04-21 11:20:26.590 [main] TRACE serverUtils.Console - Server started
+2023-04-21 11:20:26.590 [main] TRACE serverUtils.Console - The server is ready to receive commands
+2023-04-21 11:24:37.583 [main] TRACE serverUtils.Console - Initializing the server
+2023-04-21 11:24:37.588 [main] TRACE serverUtils.Console - Command 'info' registered
+2023-04-21 11:24:37.589 [main] TRACE serverUtils.Console - Command 'show' registered
+2023-04-21 11:24:37.589 [main] TRACE serverUtils.Console - Command 'add' registered
+2023-04-21 11:24:37.589 [main] TRACE serverUtils.Console - Command 'update_id' registered
+2023-04-21 11:24:37.590 [main] TRACE serverUtils.Console - Command 'remove_by_id' registered
+2023-04-21 11:24:37.590 [main] TRACE serverUtils.Console - Command 'clear' registered
+2023-04-21 11:24:37.590 [main] TRACE serverUtils.Console - Command 'add_if_min' registered
+2023-04-21 11:24:37.590 [main] TRACE serverUtils.Console - Command 'remove_greater' registered
+2023-04-21 11:24:37.591 [main] TRACE serverUtils.Console - Command 'remove_lower' registered
+2023-04-21 11:24:37.591 [main] TRACE serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-21 11:24:37.591 [main] TRACE serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-21 11:24:37.591 [main] TRACE serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-21 11:24:37.591 [main] TRACE serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-21 11:24:37.591 [main] TRACE serverUtils.Console - Collection loaded
+2023-04-21 11:24:37.592 [main] TRACE serverUtils.Console - Server started
+2023-04-21 11:24:37.592 [main] TRACE serverUtils.Console - The server is ready to receive commands
+2023-04-21 11:31:47.302 [main] INFO  serverUtils.Console - Initializing the server
+2023-04-21 11:31:47.306 [main] DEBUG serverUtils.Console - Command 'info' registered
+2023-04-21 11:31:47.307 [main] DEBUG serverUtils.Console - Command 'show' registered
+2023-04-21 11:31:47.307 [main] DEBUG serverUtils.Console - Command 'add' registered
+2023-04-21 11:31:47.307 [main] DEBUG serverUtils.Console - Command 'update_id' registered
+2023-04-21 11:31:47.307 [main] DEBUG serverUtils.Console - Command 'remove_by_id' registered
+2023-04-21 11:31:47.308 [main] DEBUG serverUtils.Console - Command 'clear' registered
+2023-04-21 11:31:47.308 [main] DEBUG serverUtils.Console - Command 'add_if_min' registered
+2023-04-21 11:31:47.308 [main] DEBUG serverUtils.Console - Command 'remove_greater' registered
+2023-04-21 11:31:47.308 [main] DEBUG serverUtils.Console - Command 'remove_lower' registered
+2023-04-21 11:31:47.309 [main] DEBUG serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-21 11:31:47.309 [main] DEBUG serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-21 11:31:47.309 [main] DEBUG serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-21 11:31:47.309 [main] WARN  serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-21 11:31:47.309 [main] INFO  serverUtils.Console - Collection loaded
+2023-04-21 11:31:47.309 [main] INFO  serverUtils.Console - Server started
+2023-04-21 11:31:47.309 [main] INFO  serverUtils.Console - The server is ready to receive commands
+2023-04-21 11:42:14.833 [main] INFO  serverUtils.Console - Initializing the server
+2023-04-21 11:42:14.841 [main] DEBUG serverUtils.Console - Command 'info' registered
+2023-04-21 11:42:14.842 [main] DEBUG serverUtils.Console - Command 'show' registered
+2023-04-21 11:42:14.842 [main] DEBUG serverUtils.Console - Command 'add' registered
+2023-04-21 11:42:14.843 [main] DEBUG serverUtils.Console - Command 'update_id' registered
+2023-04-21 11:42:14.844 [main] DEBUG serverUtils.Console - Command 'remove_by_id' registered
+2023-04-21 11:42:14.844 [main] DEBUG serverUtils.Console - Command 'clear' registered
+2023-04-21 11:42:14.845 [main] DEBUG serverUtils.Console - Command 'add_if_min' registered
+2023-04-21 11:42:14.845 [main] DEBUG serverUtils.Console - Command 'remove_greater' registered
+2023-04-21 11:42:14.845 [main] DEBUG serverUtils.Console - Command 'remove_lower' registered
+2023-04-21 11:42:14.846 [main] DEBUG serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-21 11:42:14.847 [main] DEBUG serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-21 11:42:14.847 [main] DEBUG serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-21 11:42:14.847 [main] WARN  serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-21 11:42:14.847 [main] INFO  serverUtils.Console - Collection loaded
+2023-04-21 11:42:14.847 [main] INFO  serverUtils.Console - Server started
+2023-04-21 11:42:14.847 [main] INFO  serverUtils.Console - The server is ready to receive commands
+2023-04-21 11:42:35.406 [main] INFO  serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
+2023-04-21 11:42:35.421 [main] INFO  serverUtils.Console - Received ping request
+2023-04-21 11:42:35.424 [main] INFO  serverUtils.ConnectionManager - Sending answer to /127.0.0.1:8080
+2023-04-21 11:42:35.442 [main] INFO  serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
+2023-04-21 11:42:35.474 [main] INFO  serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
+2023-04-21 11:42:35.474 [main] INFO  serverUtils.Console - Received initialization request
+2023-04-21 11:42:35.475 [main] INFO  serverUtils.ConnectionManager - Sending answer to /127.0.0.1:8080
+2023-04-21 11:42:35.476 [main] INFO  serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
+2023-04-21 11:43:12.907 [main] INFO  serverUtils.Console - Initializing the server
+2023-04-21 11:43:12.913 [main] DEBUG serverUtils.Console - Command 'info' registered
+2023-04-21 11:43:12.913 [main] DEBUG serverUtils.Console - Command 'show' registered
+2023-04-21 11:43:12.914 [main] DEBUG serverUtils.Console - Command 'add' registered
+2023-04-21 11:43:12.914 [main] DEBUG serverUtils.Console - Command 'update_id' registered
+2023-04-21 11:43:12.914 [main] DEBUG serverUtils.Console - Command 'remove_by_id' registered
+2023-04-21 11:43:12.915 [main] DEBUG serverUtils.Console - Command 'clear' registered
+2023-04-21 11:43:12.915 [main] DEBUG serverUtils.Console - Command 'add_if_min' registered
+2023-04-21 11:43:12.915 [main] DEBUG serverUtils.Console - Command 'remove_greater' registered
+2023-04-21 11:43:12.915 [main] DEBUG serverUtils.Console - Command 'remove_lower' registered
+2023-04-21 11:43:12.916 [main] DEBUG serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-21 11:43:12.916 [main] DEBUG serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-21 11:43:12.916 [main] DEBUG serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-21 11:43:12.917 [main] WARN  serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-21 11:43:12.917 [main] INFO  serverUtils.Console - Collection loaded
+2023-04-21 11:43:12.917 [main] INFO  serverUtils.Console - Server started
+2023-04-21 11:43:12.917 [main] INFO  serverUtils.Console - The server is ready to receive commands
+2023-04-21 11:43:50.772 [main] INFO  serverUtils.Console - Initializing the server
+2023-04-21 11:43:50.777 [main] DEBUG serverUtils.Console - Command 'info' registered
+2023-04-21 11:43:50.777 [main] DEBUG serverUtils.Console - Command 'show' registered
+2023-04-21 11:43:50.777 [main] DEBUG serverUtils.Console - Command 'add' registered
+2023-04-21 11:43:50.777 [main] DEBUG serverUtils.Console - Command 'update_id' registered
+2023-04-21 11:43:50.778 [main] DEBUG serverUtils.Console - Command 'remove_by_id' registered
+2023-04-21 11:43:50.778 [main] DEBUG serverUtils.Console - Command 'clear' registered
+2023-04-21 11:43:50.778 [main] DEBUG serverUtils.Console - Command 'add_if_min' registered
+2023-04-21 11:43:50.778 [main] DEBUG serverUtils.Console - Command 'remove_greater' registered
+2023-04-21 11:43:50.778 [main] DEBUG serverUtils.Console - Command 'remove_lower' registered
+2023-04-21 11:43:50.779 [main] DEBUG serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-21 11:43:50.779 [main] DEBUG serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-21 11:43:50.779 [main] DEBUG serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-21 11:43:50.779 [main] WARN  serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-21 11:43:50.779 [main] INFO  serverUtils.Console - Collection loaded
+2023-04-21 11:43:50.779 [main] INFO  serverUtils.Console - Server started
+2023-04-21 11:43:50.779 [main] INFO  serverUtils.Console - The server is ready to receive commands
+2023-04-21 11:45:38.499 [main] INFO  serverUtils.Console - Initializing the server
+2023-04-21 11:45:38.508 [main] DEBUG serverUtils.Console - Command 'info' registered
+2023-04-21 11:45:38.508 [main] DEBUG serverUtils.Console - Command 'show' registered
+2023-04-21 11:45:38.509 [main] DEBUG serverUtils.Console - Command 'add' registered
+2023-04-21 11:45:38.509 [main] DEBUG serverUtils.Console - Command 'update_id' registered
+2023-04-21 11:45:38.509 [main] DEBUG serverUtils.Console - Command 'remove_by_id' registered
+2023-04-21 11:45:38.510 [main] DEBUG serverUtils.Console - Command 'clear' registered
+2023-04-21 11:45:38.510 [main] DEBUG serverUtils.Console - Command 'add_if_min' registered
+2023-04-21 11:45:38.510 [main] DEBUG serverUtils.Console - Command 'remove_greater' registered
+2023-04-21 11:45:38.511 [main] DEBUG serverUtils.Console - Command 'remove_lower' registered
+2023-04-21 11:45:38.511 [main] DEBUG serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-21 11:45:38.511 [main] DEBUG serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-21 11:45:38.511 [main] DEBUG serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-21 11:45:38.512 [main] WARN  serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-21 11:45:38.512 [main] INFO  serverUtils.Console - Collection loaded
+2023-04-21 11:45:38.512 [main] INFO  serverUtils.Console - Server started
+2023-04-21 11:45:38.512 [main] INFO  serverUtils.Console - The server is ready to receive commands
+2023-04-21 11:47:36.101 [main] INFO  serverUtils.Console - Initializing the server
+2023-04-21 11:47:36.109 [main] DEBUG serverUtils.Console - Command 'info' registered
+2023-04-21 11:47:36.109 [main] DEBUG serverUtils.Console - Command 'show' registered
+2023-04-21 11:47:36.109 [main] DEBUG serverUtils.Console - Command 'add' registered
+2023-04-21 11:47:36.110 [main] DEBUG serverUtils.Console - Command 'update_id' registered
+2023-04-21 11:47:36.110 [main] DEBUG serverUtils.Console - Command 'remove_by_id' registered
+2023-04-21 11:47:36.111 [main] DEBUG serverUtils.Console - Command 'clear' registered
+2023-04-21 11:47:36.111 [main] DEBUG serverUtils.Console - Command 'add_if_min' registered
+2023-04-21 11:47:36.112 [main] DEBUG serverUtils.Console - Command 'remove_greater' registered
+2023-04-21 11:47:36.112 [main] DEBUG serverUtils.Console - Command 'remove_lower' registered
+2023-04-21 11:47:36.112 [main] DEBUG serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-21 11:47:36.113 [main] DEBUG serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-21 11:47:36.113 [main] DEBUG serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-21 11:47:36.113 [main] WARN  serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-21 11:47:36.113 [main] INFO  serverUtils.Console - Collection loaded
+2023-04-21 11:47:36.113 [main] INFO  serverUtils.Console - Server started
+2023-04-21 11:47:36.114 [main] INFO  serverUtils.Console - The server is ready to receive commands
+2023-04-21 11:48:06.127 [main] INFO  serverUtils.Console - Initializing the server
+2023-04-21 11:48:06.136 [main] WARN  serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-21 11:48:06.136 [main] INFO  serverUtils.Console - Collection loaded
+2023-04-21 11:48:06.136 [main] INFO  serverUtils.Console - Server started
+2023-04-21 11:48:06.136 [main] INFO  serverUtils.Console - The server is ready to receive commands
+2023-04-21 11:49:36.108 [main] INFO  serverUtils.Console - Initializing the server
+2023-04-21 11:49:36.113 [main] DEBUG serverUtils.Console - Command 'info' registered
+2023-04-21 11:49:36.113 [main] DEBUG serverUtils.Console - Command 'show' registered
+2023-04-21 11:49:36.114 [main] DEBUG serverUtils.Console - Command 'add' registered
+2023-04-21 11:49:36.114 [main] DEBUG serverUtils.Console - Command 'update_id' registered
+2023-04-21 11:49:36.114 [main] DEBUG serverUtils.Console - Command 'remove_by_id' registered
+2023-04-21 11:49:36.114 [main] DEBUG serverUtils.Console - Command 'clear' registered
+2023-04-21 11:49:36.115 [main] DEBUG serverUtils.Console - Command 'add_if_min' registered
+2023-04-21 11:49:36.115 [main] DEBUG serverUtils.Console - Command 'remove_greater' registered
+2023-04-21 11:49:36.115 [main] DEBUG serverUtils.Console - Command 'remove_lower' registered
+2023-04-21 11:49:36.116 [main] DEBUG serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-21 11:49:36.116 [main] DEBUG serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-21 11:49:36.117 [main] DEBUG serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-21 11:49:36.117 [main] WARN  serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-21 11:49:36.117 [main] INFO  serverUtils.Console - Collection loaded
+2023-04-21 11:49:36.117 [main] INFO  serverUtils.Console - Server started
+2023-04-21 11:49:36.117 [main] INFO  serverUtils.Console - The server is ready to receive commands
+2023-04-21 18:55:18.644 [main] INFO  serverUtils.Console - Initializing the server
+2023-04-21 18:55:18.650 [main] DEBUG serverUtils.Console - Command 'info' registered
+2023-04-21 18:55:18.650 [main] DEBUG serverUtils.Console - Command 'show' registered
+2023-04-21 18:55:18.650 [main] DEBUG serverUtils.Console - Command 'add' registered
+2023-04-21 18:55:18.651 [main] DEBUG serverUtils.Console - Command 'update_id' registered
+2023-04-21 18:55:18.651 [main] DEBUG serverUtils.Console - Command 'remove_by_id' registered
+2023-04-21 18:55:18.651 [main] DEBUG serverUtils.Console - Command 'clear' registered
+2023-04-21 18:55:18.651 [main] DEBUG serverUtils.Console - Command 'add_if_min' registered
+2023-04-21 18:55:18.651 [main] DEBUG serverUtils.Console - Command 'remove_greater' registered
+2023-04-21 18:55:18.652 [main] DEBUG serverUtils.Console - Command 'remove_lower' registered
+2023-04-21 18:55:18.652 [main] DEBUG serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-21 18:55:18.652 [main] DEBUG serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-21 18:55:18.653 [main] DEBUG serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-21 18:55:18.653 [main] WARN  serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-21 18:55:18.653 [main] INFO  serverUtils.Console - Collection loaded
+2023-04-21 18:55:18.653 [main] INFO  serverUtils.Console - Server started
+2023-04-21 18:55:18.653 [main] INFO  serverUtils.Console - The server is ready to receive commands
+2023-04-21 19:01:44.847 [main] INFO  serverUtils.Console - Initializing the server
+2023-04-21 19:01:44.852 [main] DEBUG serverUtils.Console - Command 'info' registered
+2023-04-21 19:01:44.852 [main] DEBUG serverUtils.Console - Command 'show' registered
+2023-04-21 19:01:44.853 [main] DEBUG serverUtils.Console - Command 'add' registered
+2023-04-21 19:01:44.853 [main] DEBUG serverUtils.Console - Command 'update_id' registered
+2023-04-21 19:01:44.853 [main] DEBUG serverUtils.Console - Command 'remove_by_id' registered
+2023-04-21 19:01:44.853 [main] DEBUG serverUtils.Console - Command 'clear' registered
+2023-04-21 19:01:44.854 [main] DEBUG serverUtils.Console - Command 'add_if_min' registered
+2023-04-21 19:01:44.854 [main] DEBUG serverUtils.Console - Command 'remove_greater' registered
+2023-04-21 19:01:44.854 [main] DEBUG serverUtils.Console - Command 'remove_lower' registered
+2023-04-21 19:01:44.855 [main] DEBUG serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-21 19:01:44.855 [main] DEBUG serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-21 19:01:44.855 [main] DEBUG serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-21 19:01:44.855 [main] WARN  serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-21 19:01:44.855 [main] INFO  serverUtils.Console - Collection loaded
+2023-04-21 19:01:44.856 [main] INFO  serverUtils.Console - Server started
+2023-04-21 19:01:44.856 [main] INFO  serverUtils.Console - The server is ready to receive commands
+2023-04-21 19:09:42.031 [main] INFO  serverUtils.Console - Initializing the server
+2023-04-21 19:09:42.036 [main] DEBUG serverUtils.Console - Command 'info' registered
+2023-04-21 19:09:42.037 [main] DEBUG serverUtils.Console - Command 'show' registered
+2023-04-21 19:09:42.037 [main] DEBUG serverUtils.Console - Command 'add' registered
+2023-04-21 19:09:42.037 [main] DEBUG serverUtils.Console - Command 'update_id' registered
+2023-04-21 19:09:42.038 [main] DEBUG serverUtils.Console - Command 'remove_by_id' registered
+2023-04-21 19:09:42.038 [main] DEBUG serverUtils.Console - Command 'clear' registered
+2023-04-21 19:09:42.038 [main] DEBUG serverUtils.Console - Command 'add_if_min' registered
+2023-04-21 19:09:42.038 [main] DEBUG serverUtils.Console - Command 'remove_greater' registered
+2023-04-21 19:09:42.039 [main] DEBUG serverUtils.Console - Command 'remove_lower' registered
+2023-04-21 19:09:42.039 [main] DEBUG serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-21 19:09:42.039 [main] DEBUG serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-21 19:09:42.040 [main] DEBUG serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-21 19:09:42.040 [main] WARN  serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-21 19:09:42.040 [main] INFO  serverUtils.Console - Collection loaded
+2023-04-21 19:09:42.040 [main] INFO  serverUtils.Console - Server started
+2023-04-21 19:09:42.040 [main] INFO  serverUtils.Console - The server is ready to receive commands
+2023-04-21 19:10:11.166 [main] INFO  serverUtils.Console - Initializing the server
+2023-04-21 19:10:11.172 [main] DEBUG serverUtils.Console - Command 'info' registered
+2023-04-21 19:10:11.172 [main] DEBUG serverUtils.Console - Command 'show' registered
+2023-04-21 19:10:11.172 [main] DEBUG serverUtils.Console - Command 'add' registered
+2023-04-21 19:10:11.173 [main] DEBUG serverUtils.Console - Command 'update_id' registered
+2023-04-21 19:10:11.173 [main] DEBUG serverUtils.Console - Command 'remove_by_id' registered
+2023-04-21 19:10:11.173 [main] DEBUG serverUtils.Console - Command 'clear' registered
+2023-04-21 19:10:11.174 [main] DEBUG serverUtils.Console - Command 'add_if_min' registered
+2023-04-21 19:10:11.174 [main] DEBUG serverUtils.Console - Command 'remove_greater' registered
+2023-04-21 19:10:11.174 [main] DEBUG serverUtils.Console - Command 'remove_lower' registered
+2023-04-21 19:10:11.174 [main] DEBUG serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-21 19:10:11.175 [main] DEBUG serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-21 19:10:11.175 [main] DEBUG serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-21 19:10:11.175 [main] WARN  serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-21 19:10:11.175 [main] INFO  serverUtils.Console - Collection loaded
+2023-04-21 19:10:11.175 [main] INFO  serverUtils.Console - Server started
+2023-04-21 19:10:11.175 [main] INFO  serverUtils.Console - The server is ready to receive commands
+2023-04-21 19:16:16.776 [main] INFO  serverUtils.Console - Initializing the server
+2023-04-21 19:16:16.780 [main] DEBUG serverUtils.Console - Command 'info' registered
+2023-04-21 19:16:16.780 [main] DEBUG serverUtils.Console - Command 'show' registered
+2023-04-21 19:16:16.781 [main] DEBUG serverUtils.Console - Command 'add' registered
+2023-04-21 19:16:16.781 [main] DEBUG serverUtils.Console - Command 'update_id' registered
+2023-04-21 19:16:16.781 [main] DEBUG serverUtils.Console - Command 'remove_by_id' registered
+2023-04-21 19:16:16.782 [main] DEBUG serverUtils.Console - Command 'clear' registered
+2023-04-21 19:16:16.782 [main] DEBUG serverUtils.Console - Command 'add_if_min' registered
+2023-04-21 19:16:16.782 [main] DEBUG serverUtils.Console - Command 'remove_greater' registered
+2023-04-21 19:16:16.782 [main] DEBUG serverUtils.Console - Command 'remove_lower' registered
+2023-04-21 19:16:16.783 [main] DEBUG serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-21 19:16:16.783 [main] DEBUG serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-21 19:16:16.783 [main] DEBUG serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-21 19:16:16.783 [main] WARN  serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-21 19:16:16.783 [main] INFO  serverUtils.Console - Collection loaded
+2023-04-21 19:16:16.783 [main] INFO  serverUtils.Console - Server started
+2023-04-21 19:16:16.784 [main] INFO  serverUtils.Console - The server is ready to receive commands
+2023-04-21 19:27:52.417 [main] INFO  serverUtils.Console - Initializing the server
+2023-04-21 19:27:52.420 [main] DEBUG serverUtils.Console - Command 'info' registered
+2023-04-21 19:27:52.420 [main] DEBUG serverUtils.Console - Command 'show' registered
+2023-04-21 19:27:52.421 [main] DEBUG serverUtils.Console - Command 'add' registered
+2023-04-21 19:27:52.421 [main] DEBUG serverUtils.Console - Command 'update_id' registered
+2023-04-21 19:27:52.421 [main] DEBUG serverUtils.Console - Command 'remove_by_id' registered
+2023-04-21 19:27:52.422 [main] DEBUG serverUtils.Console - Command 'clear' registered
+2023-04-21 19:27:52.422 [main] DEBUG serverUtils.Console - Command 'add_if_min' registered
+2023-04-21 19:27:52.422 [main] DEBUG serverUtils.Console - Command 'remove_greater' registered
+2023-04-21 19:27:52.422 [main] DEBUG serverUtils.Console - Command 'remove_lower' registered
+2023-04-21 19:27:52.423 [main] DEBUG serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-21 19:27:52.423 [main] DEBUG serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-21 19:27:52.424 [main] DEBUG serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-21 19:27:52.424 [main] WARN  serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-21 19:27:52.424 [main] INFO  serverUtils.Console - Collection loaded
+2023-04-21 19:27:52.424 [main] INFO  serverUtils.Console - Server started
+2023-04-21 19:27:52.424 [main] INFO  serverUtils.Console - The server is ready to receive commands
+2023-04-21 19:28:00.631 [main] INFO  serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
+2023-04-21 19:28:00.645 [main] INFO  serverUtils.Console - Received ping request
+2023-04-21 19:28:00.648 [main] INFO  serverUtils.ConnectionManager - Sending answer to /127.0.0.1:8080
+2023-04-21 19:28:00.668 [main] INFO  serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
+2023-04-21 19:28:00.677 [main] INFO  serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
+2023-04-21 19:28:00.677 [main] INFO  serverUtils.Console - Received initialization request
+2023-04-21 19:28:00.678 [main] INFO  serverUtils.ConnectionManager - Sending answer to /127.0.0.1:8080
+2023-04-21 19:28:00.679 [main] INFO  serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
+2023-04-21 19:31:15.341 [main] INFO  serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
+2023-04-21 19:31:15.341 [main] INFO  serverUtils.Console - Received ping request
+2023-04-21 19:31:15.341 [main] INFO  serverUtils.ConnectionManager - Sending answer to /127.0.0.1:8080
+2023-04-21 19:31:15.342 [main] INFO  serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
+2023-04-21 19:31:15.358 [main] INFO  serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
+2023-04-21 19:31:15.359 [main] INFO  serverUtils.Console - Received initialization request
+2023-04-21 19:31:15.359 [main] INFO  serverUtils.ConnectionManager - Sending answer to /127.0.0.1:8080
+2023-04-21 19:31:15.359 [main] INFO  serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
+2023-04-21 19:31:57.003 [main] INFO  serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
+2023-04-21 19:31:57.003 [main] INFO  serverUtils.Console - Received ping request
+2023-04-21 19:31:57.003 [main] INFO  serverUtils.ConnectionManager - Sending answer to /127.0.0.1:8080
+2023-04-21 19:31:57.003 [main] INFO  serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
+2023-04-21 19:31:57.020 [main] INFO  serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
+2023-04-21 19:31:57.020 [main] INFO  serverUtils.Console - Received initialization request
+2023-04-21 19:31:57.020 [main] INFO  serverUtils.ConnectionManager - Sending answer to /127.0.0.1:8080
+2023-04-21 19:31:57.021 [main] INFO  serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
+2023-04-21 19:32:27.078 [main] INFO  serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
+2023-04-21 19:32:27.079 [main] INFO  serverUtils.Console - Received ping request
+2023-04-21 19:32:27.079 [main] INFO  serverUtils.ConnectionManager - Sending answer to /127.0.0.1:8080
+2023-04-21 19:32:27.079 [main] INFO  serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
+2023-04-21 19:32:27.080 [main] INFO  serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
+2023-04-21 19:32:27.080 [main] INFO  serverUtils.Console - Received initialization request
+2023-04-21 19:32:27.080 [main] INFO  serverUtils.ConnectionManager - Sending answer to /127.0.0.1:8080
+2023-04-21 19:32:27.080 [main] INFO  serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
+2023-04-21 19:34:31.268 [main] INFO  serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
+2023-04-21 19:34:31.269 [main] INFO  serverUtils.Console - Received ping request
+2023-04-21 19:34:31.269 [main] INFO  serverUtils.ConnectionManager - Sending answer to /127.0.0.1:8080
+2023-04-21 19:34:31.269 [main] INFO  serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
+2023-04-21 19:34:31.287 [main] INFO  serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
+2023-04-21 19:34:31.287 [main] INFO  serverUtils.Console - Received initialization request
+2023-04-21 19:34:31.287 [main] INFO  serverUtils.ConnectionManager - Sending answer to /127.0.0.1:8080
+2023-04-21 19:34:31.288 [main] INFO  serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
+2023-04-21 19:49:21.278 [main] INFO  serverUtils.Console - Initializing the server
+2023-04-21 19:49:21.282 [main] DEBUG serverUtils.Console - Command 'info' registered
+2023-04-21 19:49:21.283 [main] DEBUG serverUtils.Console - Command 'show' registered
+2023-04-21 19:49:21.283 [main] DEBUG serverUtils.Console - Command 'add' registered
+2023-04-21 19:49:21.284 [main] DEBUG serverUtils.Console - Command 'update_id' registered
+2023-04-21 19:49:21.284 [main] DEBUG serverUtils.Console - Command 'remove_by_id' registered
+2023-04-21 19:49:21.284 [main] DEBUG serverUtils.Console - Command 'clear' registered
+2023-04-21 19:49:21.285 [main] DEBUG serverUtils.Console - Command 'add_if_min' registered
+2023-04-21 19:49:21.285 [main] DEBUG serverUtils.Console - Command 'remove_greater' registered
+2023-04-21 19:49:21.285 [main] DEBUG serverUtils.Console - Command 'remove_lower' registered
+2023-04-21 19:49:21.286 [main] DEBUG serverUtils.Console - Command 'remove_any_by_chapter' registered
+2023-04-21 19:49:21.286 [main] DEBUG serverUtils.Console - Command 'count_by_melee_weapon' registered
+2023-04-21 19:49:21.286 [main] DEBUG serverUtils.Console - Command 'filter_by_chapter' registered
+2023-04-21 19:49:21.286 [main] WARN  serverUtils.FileManager - No value of environment variable 'COLLECTION' was found
+2023-04-21 19:49:21.286 [main] INFO  serverUtils.Console - Collection loaded
+2023-04-21 19:49:21.287 [main] INFO  serverUtils.Console - Server started
+2023-04-21 19:49:21.287 [main] INFO  serverUtils.Console - The server is ready to receive commands
+2023-04-21 19:49:33.525 [main] INFO  serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
+2023-04-21 19:49:33.538 [main] INFO  serverUtils.Console - Received ping request
+2023-04-21 19:49:33.540 [main] INFO  serverUtils.ConnectionManager - Sending answer to /127.0.0.1:8080
+2023-04-21 19:49:33.558 [main] INFO  serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
+2023-04-21 19:49:33.567 [main] INFO  serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
+2023-04-21 19:49:33.568 [main] INFO  serverUtils.Console - Received initialization request
+2023-04-21 19:49:33.568 [main] INFO  serverUtils.ConnectionManager - Sending answer to /127.0.0.1:8080
+2023-04-21 19:49:33.569 [main] INFO  serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
+2023-04-21 19:49:40.739 [main] INFO  serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
+2023-04-21 19:49:40.739 [main] INFO  serverUtils.Console - Received ping request
+2023-04-21 19:49:40.739 [main] INFO  serverUtils.ConnectionManager - Sending answer to /127.0.0.1:8080
+2023-04-21 19:49:40.739 [main] INFO  serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
+2023-04-21 19:49:40.740 [main] INFO  serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
+2023-04-21 19:49:40.740 [main] INFO  serverUtils.Console - Received initialization request
+2023-04-21 19:49:40.740 [main] INFO  serverUtils.ConnectionManager - Sending answer to /127.0.0.1:8080
+2023-04-21 19:49:40.740 [main] INFO  serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}
+2023-04-21 19:49:54.208 [main] INFO  serverUtils.ConnectionManager - Received: {"queryType":"COMMAND_EXEC","information":"update_id","args":{"id":"234","spaceMarine":"{\"id\":1682095794201,\"name\":\"f43\",\"coordinates\":{\"x\":3.0,\"y\":4},\"health\":4.0,\"loyal\":true,\"category\":\"HELIX\",\"meleeWeapon\":\"POWER_FIST\",\"chapter\":{\"name\":\"fh893\",\"marinesCount\":34}}"}}
+2023-04-21 19:49:54.209 [main] INFO  serverUtils.Console - Received command: update_id
+2023-04-21 19:49:54.209 [main] INFO  serverUtils.ConnectionManager - Sending answer to /127.0.0.1:8080
+2023-04-21 19:49:54.210 [main] INFO  serverUtils.ConnectionManager - Sending: {"answerType":"ERROR","message":"exceptions.InvalidArgumentException: No Space Marine with id: 234 was found"}
+2023-04-21 19:49:54.211 [main] INFO  serverUtils.ConnectionManager - Received: {"queryType":"PING","information":"Ping","args":{}}
+2023-04-21 19:49:54.211 [main] INFO  serverUtils.Console - Received ping request
+2023-04-21 19:49:54.211 [main] INFO  serverUtils.ConnectionManager - Sending answer to /127.0.0.1:8080
+2023-04-21 19:49:54.211 [main] INFO  serverUtils.ConnectionManager - Sending: {"answerType":"SYSTEM","message":"Pong"}
+2023-04-21 19:49:54.212 [main] INFO  serverUtils.ConnectionManager - Received: {"queryType":"INITIALIZATION","information":"","args":{}}
+2023-04-21 19:49:54.212 [main] INFO  serverUtils.Console - Received initialization request
+2023-04-21 19:49:54.212 [main] INFO  serverUtils.ConnectionManager - Sending answer to /127.0.0.1:8080
+2023-04-21 19:49:54.212 [main] INFO  serverUtils.ConnectionManager - Sending: {"answerType":"INIT","message":"info show add update_id remove_by_id clear add_if_min remove_greater remove_lower remove_any_by_chapter count_by_melee_weapon filter_by_chapter"}

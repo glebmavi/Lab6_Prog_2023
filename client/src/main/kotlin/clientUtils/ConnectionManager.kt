@@ -1,6 +1,8 @@
 package clientUtils
 
 import kotlinx.serialization.json.Json
+import org.apache.logging.log4j.LogManager
+import org.apache.logging.log4j.Logger
 import utils.*
 import java.net.DatagramPacket
 import java.net.DatagramSocket
@@ -14,6 +16,8 @@ class ConnectionManager(private var host: String, private var port: Int) {
     private val outputManager = OutputManager()
     private var hostInetAddress = InetAddress.getByName(host)
     private var datagramPacket = DatagramPacket(ByteArray(4096), 4096, hostInetAddress, port)
+
+    private val logger: Logger = LogManager.getLogger(ConnectionManager::class.java)
 
     fun connect() : Boolean {
         datagramSocket.soTimeout = timeout
@@ -32,7 +36,7 @@ class ConnectionManager(private var host: String, private var port: Int) {
         val startTime = System.nanoTime()
         receive()
         val elapsedTimeInMs = (System.nanoTime() - startTime).toDouble() / 1000000
-        outputManager.println("Ping with server: $elapsedTimeInMs ms")
+        logger.info("Ping with server: $elapsedTimeInMs ms")
         return elapsedTimeInMs
     }
 
@@ -50,7 +54,7 @@ class ConnectionManager(private var host: String, private var port: Int) {
         val data = jsonQuery.toByteArray()
         hostInetAddress = datagramPacket.address
         port = datagramPacket.port
-        outputManager.println("Sending: $jsonQuery \n to $hostInetAddress:$port")
+        logger.info("Sending: $jsonQuery to $hostInetAddress:$port")
         datagramPacket = DatagramPacket(data, data.size, hostInetAddress, port)
         datagramSocket.send(datagramPacket)
     }
@@ -67,7 +71,7 @@ class ConnectionManager(private var host: String, private var port: Int) {
             return Answer(AnswerType.ERROR, e.message.toString())
         }
 
-        outputManager.println("Received: $jsonAnswer")
+        logger.info("Received: $jsonAnswer")
         return Json.decodeFromString(Answer.serializer(), jsonAnswer)
     }
 

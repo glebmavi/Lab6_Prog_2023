@@ -3,6 +3,8 @@ package clientUtils
 import commands.*
 import commands.consoleCommands.*
 import exceptions.InvalidInputException
+import org.apache.logging.log4j.LogManager
+import org.apache.logging.log4j.Logger
 import utils.*
 
 /**
@@ -21,6 +23,8 @@ class Console {
 
     private val commandInvoker = CommandInvoker(outputManager)
     private val commandReceiver = CommandReceiver(commandInvoker, outputManager, inputManager, connectionManager)
+
+    private val logger: Logger = LogManager.getLogger(Console::class.java)
 
     private var availableCommands = mapOf(
         "info" to Info(commandReceiver),
@@ -44,21 +48,27 @@ class Console {
     fun getConnection() {
         val connected = connectionManager.connect()
         if (connected) {
-            outputManager.println("Connected to server")
+            logger.debug("Connected to server")
             initialize()
         } else {
             outputManager.println("No server connection")
+            logger.warn("No server connection")
             outputManager.println("Retry connection? [y/n]")
             outputManager.print("$ ")
             val query = inputManager.read().trim().lowercase().split(" ")
             if (query[0] == "y") {
                 getConnection()
             } else {
-                commandInvoker.register("help", availableCommands.getValue("help"))
-                commandInvoker.register("exit", availableCommands.getValue("exit"))
-                commandInvoker.register("execute_script", availableCommands.getValue("execute_script"))
+                registerBasicCommands()
             }
         }
+    }
+
+    private fun registerBasicCommands() {
+        commandInvoker.register("help", availableCommands.getValue("help"))
+        commandInvoker.register("exit", availableCommands.getValue("exit"))
+        commandInvoker.register("execute_script", availableCommands.getValue("execute_script"))
+        logger.debug("Registered basic client commands")
     }
 
     /**
@@ -67,27 +77,24 @@ class Console {
     fun initialize() {
         val query = Query(QueryType.INITIALIZATION, "", mapOf())
         val answer = connectionManager.checkedSendReceive(query)
-        outputManager.println("Sent initialization query")
+        logger.debug("Sent initialization query")
         if (answer.answerType == AnswerType.ERROR) {
             outputManager.println(answer.message)
         } else {
             val serverCommands = answer.message.split(" ")
-            outputManager.println("Received commands from server: $serverCommands")
+            logger.info("Received commands from server: $serverCommands")
 
             commandInvoker.clearCommandMap()
             for (i in serverCommands) {
                 if (i in availableCommands.keys) {
                     commandInvoker.register(i, availableCommands.getValue(i))
-                    outputManager.println("Registered command $i")
+                    logger.debug("Registered command $i")
                 } else {
                     commandInvoker.register(i, UnknownCommand(commandReceiver, "This scope will be replaced with the info", 0, mapOf()))
                 }
             }
         }
-
-        commandInvoker.register("help", availableCommands.getValue("help"))
-        commandInvoker.register("exit", availableCommands.getValue("exit"))
-        commandInvoker.register("execute_script", availableCommands.getValue("execute_script"))
+        registerBasicCommands()
     }
 
     fun startInteractiveMode() {
@@ -106,11 +113,13 @@ class Console {
 
             } catch (e: InvalidInputException) {
                 outputManager.surePrint(e.message)
+                logger.warn(e.message)
                 break
             }
 
             catch (e:Exception) {
                 outputManager.surePrint(e.message.toString())
+                logger.warn(e.message)
             }
 
         } while (executeFlag != false)

@@ -37,49 +37,49 @@ class Console {
      * Registers commands and waits for user prompt
      */
     fun initialize() {
-        logger.trace("Initializing the server")
+        logger.info("Initializing the server")
 
         commandInvoker.register("info", Info(commandReceiver))
-        logger.trace("Command 'info' registered")
+        logger.debug("Command 'info' registered")
 
         commandInvoker.register("show", Show(commandReceiver))
-        logger.trace("Command 'show' registered")
+        logger.debug("Command 'show' registered")
 
         commandInvoker.register("add", Add(commandReceiver))
-        logger.trace("Command 'add' registered")
+        logger.debug("Command 'add' registered")
 
         commandInvoker.register("update_id", Update(commandReceiver))
-        logger.trace("Command 'update_id' registered")
+        logger.debug("Command 'update_id' registered")
 
         commandInvoker.register("remove_by_id", RemoveID(commandReceiver))
-        logger.trace("Command 'remove_by_id' registered")
+        logger.debug("Command 'remove_by_id' registered")
 
         commandInvoker.register("clear", Clear(commandReceiver))
-        logger.trace("Command 'clear' registered")
+        logger.debug("Command 'clear' registered")
 
         commandInvoker.register("add_if_min", AddMin(commandReceiver))
-        logger.trace("Command 'add_if_min' registered")
+        logger.debug("Command 'add_if_min' registered")
 
         commandInvoker.register("remove_greater", RemoveGreater(commandReceiver))
-        logger.trace("Command 'remove_greater' registered")
+        logger.debug("Command 'remove_greater' registered")
 
         commandInvoker.register("remove_lower", RemoveLower(commandReceiver))
-        logger.trace("Command 'remove_lower' registered")
+        logger.debug("Command 'remove_lower' registered")
 
         commandInvoker.register("remove_any_by_chapter", RemoveAnyChapter(commandReceiver))
-        logger.trace("Command 'remove_any_by_chapter' registered")
+        logger.debug("Command 'remove_any_by_chapter' registered")
 
         commandInvoker.register("count_by_melee_weapon", CountByMeleeWeapon(commandReceiver))
-        logger.trace("Command 'count_by_melee_weapon' registered")
+        logger.debug("Command 'count_by_melee_weapon' registered")
 
         commandInvoker.register("filter_by_chapter", FilterByChapter(commandReceiver))
-        logger.trace("Command 'filter_by_chapter' registered")
+        logger.debug("Command 'filter_by_chapter' registered")
 
         fileManager.load(collectionManager)
-        logger.trace("Collection loaded")
+        logger.info("Collection loaded")
 
         connectionManager.startServer("localhost", 6789)
-        logger.trace("Server started")
+        logger.info("Server started")
 
         //connectionManager.datagramChannel.register(selector, SelectionKey.OP_READ)
     }
@@ -88,7 +88,7 @@ class Console {
      * Enters interactive mode and waits for incoming queries
      */
     fun startInteractiveMode() {
-        logger.trace("The server is ready to receive commands")
+        logger.info("The server is ready to receive commands")
         var executeFlag:Boolean? = true
         val selector = Selector.open()
         connectionManager.datagramChannel.register(selector, SelectionKey.OP_READ)
@@ -107,18 +107,18 @@ class Console {
 
                         when (query.queryType) {
                             QueryType.COMMAND_EXEC -> {
-                                logger.trace("Received command: ${query.information}")
+                                logger.info("Received command: ${query.information}")
                                 commandInvoker.executeCommand(query)
                                 executeFlag = commandInvoker.getCommandMap()[query.information]?.getExecutionFlag()
 
                             }
                             QueryType.INITIALIZATION -> {
-                                logger.trace("Received initialization request")
+                                logger.info("Received initialization request")
                                 val answer = Answer(AnswerType.INIT, commandInvoker.getCommandMap().keys.joinToString(" "))
                                 connectionManager.send(answer)
                             }
                             QueryType.PING -> {
-                                logger.trace("Received ping request")
+                                logger.info("Received ping request")
                                 val answer = Answer(AnswerType.SYSTEM, "Pong")
                                 connectionManager.send(answer)
                             }

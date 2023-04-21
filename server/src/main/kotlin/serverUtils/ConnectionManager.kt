@@ -41,7 +41,7 @@ class ConnectionManager(private var host: String, private var port: Int) {
         buffer = ByteBuffer.allocate(4096)
         remoteAddress = datagramChannel.receive(buffer) as InetSocketAddress
         val jsonQuery = buffer.array().decodeToString().replace("\u0000", "")
-        logger.trace("Received: $jsonQuery")
+        logger.info("Received: $jsonQuery")
         return Json.decodeFromString(Query.serializer(), jsonQuery)
     }
 
@@ -50,8 +50,8 @@ class ConnectionManager(private var host: String, private var port: Int) {
      */
     fun send(answer: Answer) {
         buffer = ByteBuffer.allocate(4096)
-        logger.trace("Sending answer to {}", remoteAddress)
-        logger.trace("Sending: ${Json.encodeToString(Answer.serializer(), answer)}")
+        logger.info("Sending answer to {}", remoteAddress)
+        logger.info("Sending: ${Json.encodeToString(Answer.serializer(), answer)}")
         val jsonAnswer = Json.encodeToString(Answer.serializer(), answer).toByteArray()
         val data = ByteBuffer.wrap(jsonAnswer)
 

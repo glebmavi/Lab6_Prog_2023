@@ -43,9 +43,9 @@ class FileManager() {
             }
             file.close()
 
-            logger.trace("Loaded ${collectionManager.getCollection().size} elements successfully")
+            logger.info("Loaded ${collectionManager.getCollection().size} elements successfully")
         } catch (e: Exception) {
-            logger.trace(e.message.toString())
+            logger.warn(e.message.toString())
         }
 
 
