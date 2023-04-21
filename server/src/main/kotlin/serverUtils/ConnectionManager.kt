@@ -28,9 +28,18 @@ class ConnectionManager(private var host: String, private var port: Int) {
     fun startServer(host: String, port: Int) {
         this.host = host
         this.port = port
-        this.address = InetSocketAddress(host, port)
-        datagramChannel.bind(address)
+        var unbound = true
+        while (unbound) {
+            try {
+                this.port++
+                this.address = InetSocketAddress(host, port)
+                datagramChannel.bind(address)
+                unbound = false
+            } catch (_:Exception) {}
+        }
+
         datagramChannel.configureBlocking(false)
+        logger.info("Server started on $address")
     }
 
     /**

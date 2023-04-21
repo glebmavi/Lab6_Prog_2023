@@ -12,13 +12,25 @@ import java.net.InetAddress
 class ConnectionManager(private var host: String, private var port: Int) {
 
     private val timeout = 5000
-    private val datagramSocket = DatagramSocket(8080)
+    private var datagramSocket = DatagramSocket()
     private val outputManager = OutputManager()
     private var hostInetAddress = InetAddress.getByName(host)
     private var datagramPacket = DatagramPacket(ByteArray(4096), 4096, hostInetAddress, port)
 
     private val logger: Logger = LogManager.getLogger(ConnectionManager::class.java)
+    init {
+        var unbound = true
+        var port = 8080
+        while (unbound) {
+            try {
+                port++
+                datagramSocket = DatagramSocket(port)
+                unbound = false
+                logger.debug("Bound on port: $port")
+            } catch (_:Exception) {}
+        }
 
+    }
     fun connect() : Boolean {
         datagramSocket.soTimeout = timeout
         return ping() < timeout

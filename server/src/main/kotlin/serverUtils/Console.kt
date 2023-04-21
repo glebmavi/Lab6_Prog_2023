@@ -79,7 +79,6 @@ class Console {
         logger.info("Collection loaded")
 
         connectionManager.startServer("localhost", 6789)
-        logger.info("Server started")
 
         //connectionManager.datagramChannel.register(selector, SelectionKey.OP_READ)
     }

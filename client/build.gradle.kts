@@ -3,6 +3,7 @@
  */
 
 plugins {
+    application
     id("common.kotlin-library-conventions")
     kotlin("plugin.serialization") version "1.8.0"
 }
@@ -11,4 +12,12 @@ dependencies {
     api(project(":common"))
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
     implementation("org.apache.logging.log4j:log4j-core:2.17.1")
+}
+
+application {
+    mainClass.set("ClientKt")
+}
+
+tasks.named<JavaExec>("run") {
+    standardInput = System.`in`
 }
