@@ -1,82 +1,73 @@
 package clientUtils
 
 import kotlinx.serialization.json.Json
-import utils.Answer
-import utils.AnswerType
-import utils.Query
-import utils.QueryType
+import utils.*
+import java.net.DatagramPacket
+import java.net.DatagramSocket
 import java.net.InetAddress
-import java.net.InetSocketAddress
-import java.net.SocketAddress
-import java.nio.ByteBuffer
-import java.nio.channels.DatagramChannel
 
-class ConnectionManager {
-    private var port = 6789
-    private var host = InetAddress.getLocalHost()
+
+class ConnectionManager(private var host: String, private var port: Int) {
+
     private val timeout = 5000
+    private val datagramSocket = DatagramSocket(8080)
+    private val outputManager = OutputManager()
+    private var hostInetAddress = InetAddress.getByName(host)
+    private var datagramPacket = DatagramPacket(ByteArray(4096), 4096, hostInetAddress, port)
 
-    private val datagramChannel = DatagramChannel.open()
-
-    fun connect(host: String, port: Int) : Boolean {
-        this.host = InetAddress.getByName(host)
-        this.port = port
-        datagramChannel.configureBlocking(false)
-
+    fun connect() : Boolean {
+        datagramSocket.soTimeout = timeout
         return ping() < timeout
     }
 
     fun ping() : Double {
         val query = Query(QueryType.PING, "Ping", mapOf())
-        send(query)
-        val startTime = System.nanoTime()
-        val data = ByteBuffer.wrap(ByteArray(4096))
-        var elapsedTimeInMs: Double
-        do {
-            val received = datagramChannel.receive(data)
-            elapsedTimeInMs = (System.nanoTime() - startTime).toDouble() / 1000000
-        } while ((received == null) and (elapsedTimeInMs < timeout))
+        try {
+            send(query)
+        } catch (e:Exception) {
+            outputManager.println(e.message.toString())
+            return timeout.toDouble()
+        }
 
-        println("Ping with server: $elapsedTimeInMs ms")
+        val startTime = System.nanoTime()
+        receive()
+        val elapsedTimeInMs = (System.nanoTime() - startTime).toDouble() / 1000000
+        outputManager.println("Ping with server: $elapsedTimeInMs ms")
         return elapsedTimeInMs
     }
 
-    fun checkedSendReceive(query: Query) : Answer{
-        send(query)
-        val startTime = System.nanoTime()
-        val data = ByteBuffer.wrap(ByteArray(4096))
-        var elapsedTimeInMs: Double
-        var received: SocketAddress?
-        do {
-            received = datagramChannel.receive(data)
-            elapsedTimeInMs = (System.nanoTime() - startTime).toDouble() / 1000000
-        } while ((received == null) and (elapsedTimeInMs < timeout))
-
-        if (received == null) {
-            return Answer(AnswerType.ERROR, "No server connection")
+    fun checkedSendReceive(query: Query) : Answer {
+        try {
+            send(query)
+        } catch (e:Exception) {
+            return Answer(AnswerType.ERROR, e.message.toString())
         }
-        val jsonAnswer = data.array().decodeToString().replace("\u0000", "")
-        println("Received: $jsonAnswer")
-        return Json.decodeFromString(Answer.serializer(), jsonAnswer)
+        return receive()
     }
 
     fun send(query: Query) {
-        println("Sending query to $host:$port")
         val jsonQuery = Json.encodeToString(Query.serializer(), query)
-        println("Sending: $jsonQuery")
-        val data = ByteBuffer.wrap(jsonQuery.toByteArray())
-        val address = InetSocketAddress(host, port)
-        datagramChannel.send(data, address)
+        val data = jsonQuery.toByteArray()
+        hostInetAddress = datagramPacket.address
+        port = datagramPacket.port
+        outputManager.println("Sending: $jsonQuery \n to $hostInetAddress:$port")
+        datagramPacket = DatagramPacket(data, data.size, hostInetAddress, port)
+        datagramSocket.send(datagramPacket)
     }
 
     fun receive(): Answer {
-        val data = ByteBuffer.wrap(ByteArray(4096))
-        datagramChannel.receive(data)
-        val jsonAnswer = data.array().decodeToString().replace("\u0000", "")
-        if (jsonAnswer == "") {
-            return Answer(AnswerType.ERROR, "")
+        val data = ByteArray(4096)
+        val jsonAnswer : String
+        datagramPacket = DatagramPacket(data, data.size)
+        try {
+            datagramSocket.receive(datagramPacket)
+            jsonAnswer = data.decodeToString().replace("\u0000", "")
+        } catch (e:Exception) {
+            datagramPacket = DatagramPacket(ByteArray(4096), 4096, hostInetAddress, port)
+            return Answer(AnswerType.ERROR, e.message.toString())
         }
-        println("Received: $jsonAnswer")
+
+        outputManager.println("Received: $jsonAnswer")
         return Json.decodeFromString(Answer.serializer(), jsonAnswer)
     }
 

@@ -5,28 +5,32 @@ import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import utils.Answer
 import utils.Query
-import java.net.DatagramPacket
-import java.net.DatagramSocket
-import java.net.InetAddress
+import java.net.InetSocketAddress
+import java.nio.ByteBuffer
+import java.nio.channels.DatagramChannel
 
 /**
  * Class responsible for managing network connections
  */
-class ConnectionManager {
+class ConnectionManager(private var host: String, private var port: Int) {
 
     private val logger: Logger = LogManager.getLogger(ConnectionManager::class.java)
-    private var port = 6789
-    private var host = InetAddress.getLocalHost()
 
-    private val datagramSocket = DatagramSocket(port)
-    private var datagramPacket = DatagramPacket(ByteArray(4096), 4096)
+    private var address = InetSocketAddress(host, port)
+
+    var datagramChannel = DatagramChannel.open()
+    private var buffer = ByteBuffer.allocate(4096)
+    private var remoteAddress = InetSocketAddress(port)
 
     /**
      * Starts the server at given host and port
      */
     fun startServer(host: String, port: Int) {
-        this.host = InetAddress.getByName(host)
+        this.host = host
         this.port = port
+        this.address = InetSocketAddress(host, port)
+        datagramChannel.bind(address)
+        datagramChannel.configureBlocking(false)
     }
 
     /**
@@ -34,10 +38,9 @@ class ConnectionManager {
      * @return Query object
      */
     fun receive(): Query {
-        val data = ByteArray(4096)
-        datagramPacket = DatagramPacket(data, data.size)
-        datagramSocket.receive(datagramPacket)
-        val jsonQuery = data.decodeToString().replace("\u0000", "")
+        buffer = ByteBuffer.allocate(4096)
+        remoteAddress = datagramChannel.receive(buffer) as InetSocketAddress
+        val jsonQuery = buffer.array().decodeToString().replace("\u0000", "")
         logger.trace("Received: $jsonQuery")
         return Json.decodeFromString(Query.serializer(), jsonQuery)
     }
@@ -46,13 +49,12 @@ class ConnectionManager {
      * Encodes and sends the answer to the client
      */
     fun send(answer: Answer) {
-        logger.trace("Sending answer to {}:{}", host, port)
+        buffer = ByteBuffer.allocate(4096)
+        logger.trace("Sending answer to {}", remoteAddress)
         logger.trace("Sending: ${Json.encodeToString(Answer.serializer(), answer)}")
-        val data = Json.encodeToString(Answer.serializer(), answer).toByteArray()
+        val jsonAnswer = Json.encodeToString(Answer.serializer(), answer).toByteArray()
+        val data = ByteBuffer.wrap(jsonAnswer)
 
-        host = datagramPacket.address
-        port = datagramPacket.port
-        datagramPacket = DatagramPacket(data, data.size, host, port)
-        datagramSocket.send(datagramPacket)
+        datagramChannel.send(data, remoteAddress)
     }
 }

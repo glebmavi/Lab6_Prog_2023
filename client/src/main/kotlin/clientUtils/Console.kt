@@ -14,7 +14,7 @@ import utils.*
  */
 
 class Console {
-    private val connectionManager = ConnectionManager()
+    private val connectionManager = ConnectionManager("localhost", 6789)
 
     private val outputManager = OutputManager()
     private val inputManager = InputManager(outputManager)
@@ -42,10 +42,23 @@ class Console {
     )
 
     fun getConnection() {
-        val connected = connectionManager.connect("localhost", 6789)
+        val connected = connectionManager.connect()
         if (connected) {
-            println("Connected to server")
-        } else getConnection()
+            outputManager.println("Connected to server")
+            initialize()
+        } else {
+            outputManager.println("No server connection")
+            outputManager.println("Retry connection? [y/n]")
+            outputManager.print("$ ")
+            val query = inputManager.read().trim().lowercase().split(" ")
+            if (query[0] == "y") {
+                getConnection()
+            } else {
+                commandInvoker.register("help", availableCommands.getValue("help"))
+                commandInvoker.register("exit", availableCommands.getValue("exit"))
+                commandInvoker.register("execute_script", availableCommands.getValue("execute_script"))
+            }
+        }
     }
 
     /**
@@ -53,23 +66,22 @@ class Console {
      */
     fun initialize() {
         val query = Query(QueryType.INITIALIZATION, "", mapOf())
-        var answer = connectionManager.checkedSendReceive(query)
-        println("Sent initialization query")
-        while (answer.answerType == AnswerType.ERROR) {
+        val answer = connectionManager.checkedSendReceive(query)
+        outputManager.println("Sent initialization query")
+        if (answer.answerType == AnswerType.ERROR) {
             outputManager.println(answer.message)
-            answer = connectionManager.checkedSendReceive(query)
-            println("Sent initialization query")
-        }
-        val serverCommands = answer.message.split(" ")
-        println("Received commands from server: $serverCommands")
+        } else {
+            val serverCommands = answer.message.split(" ")
+            outputManager.println("Received commands from server: $serverCommands")
 
-        commandInvoker.clearCommandMap()
-        for (i in serverCommands) {
-            if (i in availableCommands.keys) {
-                commandInvoker.register(i, availableCommands.getValue(i))
-                println("Registered command $i")
-            } else {
-                commandInvoker.register(i, UnknownCommand(commandReceiver, "This scope will be replaced with the info", 0, mapOf()))
+            commandInvoker.clearCommandMap()
+            for (i in serverCommands) {
+                if (i in availableCommands.keys) {
+                    commandInvoker.register(i, availableCommands.getValue(i))
+                    outputManager.println("Registered command $i")
+                } else {
+                    commandInvoker.register(i, UnknownCommand(commandReceiver, "This scope will be replaced with the info", 0, mapOf()))
+                }
             }
         }
 
@@ -80,15 +92,10 @@ class Console {
 
     fun startInteractiveMode() {
         var executeFlag:Boolean? = true
-        outputManager.surePrint("Waiting for user prompt ...")
 
         do {
             try {
-                val ping = connectionManager.ping()
-                if (ping > 5000) {
-                    outputManager.println("No server connection")
-                    initialize()
-                }
+                getConnection()
 
                 outputManager.print("$ ")
                 val query = inputManager.read().trim().split(" ")

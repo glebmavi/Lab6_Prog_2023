@@ -4,28 +4,34 @@ import collection.CollectionManager
 import commands.CommandInvoker
 import commands.CommandReceiver
 import commands.consoleCommands.*
-import utils.*
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
+import utils.*
+import java.nio.channels.DatagramChannel
+import java.nio.channels.SelectionKey
+import java.nio.channels.Selector
+
 
 /**
  * Class that handles user commands and provides them all the necessary parameters
- * @property connectionManager - Manages connections to the server
- * @property fileManager - Used for loading data to the collection
- * @property collectionManager - Manages the collection of objects
- * @property commandInvoker - Invokes commands that operate on the collection
- * @property commandReceiver - Receives commands and executes them
+ * @property connectionManager Manages connections to the server
+ * @property fileManager Used for loading data to the collection
+ * @property collectionManager Manages the collection of objects
+ * @property commandInvoker Invokes commands that operate on the collection
+ * @property commandReceiver Receives commands and executes them
  */
 class Console {
-    private val connectionManager = ConnectionManager()
+    private val connectionManager = ConnectionManager("localhost", 6789)
     private val fileManager = FileManager()
-
     private val collectionManager = CollectionManager()
 
     private val commandInvoker = CommandInvoker(connectionManager)
     private val commandReceiver = CommandReceiver(collectionManager, connectionManager)
 
     private val logger: Logger = LogManager.getLogger(Console::class.java)
+
+    //val selector = Selector.open()
+    //private val inputChannel = newChannel(inputManager.inputStream)
 
     /**
      * Registers commands and waits for user prompt
@@ -74,6 +80,8 @@ class Console {
 
         connectionManager.startServer("localhost", 6789)
         logger.trace("Server started")
+
+        //connectionManager.datagramChannel.register(selector, SelectionKey.OP_READ)
     }
 
     /**
@@ -82,34 +90,48 @@ class Console {
     fun startInteractiveMode() {
         logger.trace("The server is ready to receive commands")
         var executeFlag:Boolean? = true
+        val selector = Selector.open()
+        connectionManager.datagramChannel.register(selector, SelectionKey.OP_READ)
 
         do {
-            try {
-                val query = connectionManager.receive()
+            selector.select()
+            val selectedKeys = selector.selectedKeys()
+            val iter = selectedKeys.iterator()
+            while (iter.hasNext()) {
+                val key = iter.next()
+                if (key.isReadable) {
+                    val client = key.channel() as DatagramChannel
+                    try {
+                        connectionManager.datagramChannel = client
+                        val query = connectionManager.receive()
 
-                when (query.queryType) {
-                    QueryType.COMMAND_EXEC -> {
-                        logger.trace("Received command: ${query.information}")
-                        commandInvoker.executeCommand(query)
-                        executeFlag = commandInvoker.getCommandMap()[query.information]?.getExecutionFlag()
+                        when (query.queryType) {
+                            QueryType.COMMAND_EXEC -> {
+                                logger.trace("Received command: ${query.information}")
+                                commandInvoker.executeCommand(query)
+                                executeFlag = commandInvoker.getCommandMap()[query.information]?.getExecutionFlag()
 
-                    }
-                    QueryType.INITIALIZATION -> {
-                        logger.trace("Received initialization request")
-                        val answer = Answer(AnswerType.INIT, commandInvoker.getCommandMap().keys.joinToString(" "))
-                        connectionManager.send(answer)
-                    }
-                    QueryType.PING -> {
-                        logger.trace("Received ping request")
-                        val answer = Answer(AnswerType.SYSTEM, "Pong")
+                            }
+                            QueryType.INITIALIZATION -> {
+                                logger.trace("Received initialization request")
+                                val answer = Answer(AnswerType.INIT, commandInvoker.getCommandMap().keys.joinToString(" "))
+                                connectionManager.send(answer)
+                            }
+                            QueryType.PING -> {
+                                logger.trace("Received ping request")
+                                val answer = Answer(AnswerType.SYSTEM, "Pong")
+                                connectionManager.send(answer)
+                            }
+                        }
+                    } catch (e:Exception) {
+                        logger.error("Error while executing command: ${e.message}")
+                        val answer = Answer(AnswerType.ERROR, e.message.toString())
                         connectionManager.send(answer)
                     }
                 }
-            } catch (e:Exception) {
-                logger.error("Error while executing command: ${e.message}")
-                val answer = Answer(AnswerType.ERROR, e.message.toString())
-                connectionManager.send(answer)
+                iter.remove()
             }
+
 
         } while (executeFlag != false)
     }
