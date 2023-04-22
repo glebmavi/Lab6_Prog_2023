@@ -98,7 +98,15 @@ class Console {
                     commandInvoker.register(i, availableCommands.getValue(i))
                     logger.debug("Registered command $i")
                 } else {
-                    commandInvoker.register(i, UnknownCommand(commandReceiver, i, serverCommands["commands"]!![i]!!, jsonCreator.stringToObject(serverCommands["arguments"]!![i]!!)))
+                    commandInvoker.register(
+                        i,
+                        UnknownCommand(
+                            commandReceiver,
+                            i,
+                            serverCommands["commands"]!![i]!!,
+                            jsonCreator.stringToObject(serverCommands["arguments"]!![i]!!)
+                        )
+                    )
                 }
             }
         }
@@ -106,27 +114,24 @@ class Console {
     }
 
     fun startInteractiveMode() {
-        var executeFlag:Boolean? = true
+        var executeFlag: Boolean? = true
         outputManager.surePrint("Waiting for user prompt ...")
 
         do {
             try {
-                getConnection()
-
                 outputManager.print("$ ")
                 val query = inputManager.read().trim().split(" ")
                 if (query[0] != "") {
                     commandInvoker.executeCommand(query)
                     executeFlag = commandInvoker.getCommandMap()[query[0]]?.getExecutionFlag()
+                    getConnection()
                 }
 
             } catch (e: InvalidInputException) {
                 outputManager.surePrint(e.message)
                 logger.warn(e.message)
                 break
-            }
-
-            catch (e:Exception) {
+            } catch (e: Exception) {
                 outputManager.surePrint(e.message.toString())
                 logger.warn(e.message)
             }
