@@ -124,10 +124,7 @@ class Console {
 
                                 for (command in commands.keys) {
                                     sendingInfo["commands"]!! += (command to commands[command]!!.getInfo())
-                                    logger.info(commands[command]!!.getInfo())
-                                    logger.info(jsonCreator.objectToString(commands[command]!!.getArgsTypes()))
                                     sendingInfo["arguments"]!! += (command to jsonCreator.objectToString(commands[command]!!.getArgsTypes()))
-                                    logger.info(sendingInfo)
                                 }
 
                                 val answer = Answer(AnswerType.SYSTEM, jsonCreator.objectToString(sendingInfo))
