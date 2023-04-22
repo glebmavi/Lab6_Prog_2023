@@ -11,12 +11,10 @@ import exceptions.InvalidArgumentException
  *
  * @constructor Create command Save
  */
-class Save() : Command() {
+class Save(
+    val commandReceiver: CommandReceiver
+) : Command() {
 
-    private lateinit var commandReceiver: CommandReceiver
-    constructor(commandReceiver: CommandReceiver) : this() {
-        this.commandReceiver = commandReceiver
-    }
 
     override fun getInfo(): String {
         return "Сохраняет коллекцию в файл"

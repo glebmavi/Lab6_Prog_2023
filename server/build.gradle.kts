@@ -6,6 +6,7 @@ plugins {
     application
     id("common.kotlin-library-conventions")
     kotlin("plugin.serialization") version "1.8.0"
+    id("com.github.johnrengelman.shadow") version "7.0.0"
 }
 
 dependencies {

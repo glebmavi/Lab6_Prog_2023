@@ -8,6 +8,7 @@ fun main() {
     val console = Console()
 
     console.initialize()
+
     val thread = thread {
         while (true) {
             when (readlnOrNull()) {
@@ -22,6 +23,7 @@ fun main() {
             }
         }
     }
+
     console.startInteractiveMode()
     thread.join()
 }
