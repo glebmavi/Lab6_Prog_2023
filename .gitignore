@@ -6,3 +6,7 @@ build
 
 # Ignore logs directory
 logs
+
+#ignore files:
+sr
+defaultCollection.yaml

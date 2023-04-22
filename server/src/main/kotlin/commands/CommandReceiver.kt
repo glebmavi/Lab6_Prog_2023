@@ -122,7 +122,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
      */
     fun save(filepath:String) {
         try {
-            Saver(connectionManager).save(filepath, collectionManager)
+            Saver().save(filepath, collectionManager)
             val answer = Answer(AnswerType.OK, "Collection was saved successfully")
             connectionManager.send(answer)
         } catch (e:Exception) {

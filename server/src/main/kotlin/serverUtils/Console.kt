@@ -7,7 +7,6 @@ import commands.consoleCommands.*
 import utils.*
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
-import utils.*
 import java.nio.channels.DatagramChannel
 import java.nio.channels.SelectionKey
 import java.nio.channels.Selector
@@ -32,8 +31,9 @@ class Console {
     private val jsonCreator = JsonCreator()
 
     private val logger: Logger = LogManager.getLogger(Console::class.java)
+    private var executeFlag = true
 
-    //val selector = Selector.open()
+    val selector = Selector.open()
     //private val inputChannel = newChannel(inputManager.inputStream)
 
     /**
@@ -78,9 +78,6 @@ class Console {
         commandInvoker.register("filter_by_chapter", FilterByChapter(commandReceiver))
         logger.debug("Command 'filter_by_chapter' registered")
 
-        commandInvoker.register("filter_by_weapon", FilterByWeapon(commandReceiver))
-        logger.debug("Command 'filter_by_weapon' registered")
-
         fileManager.load(collectionManager)
         logger.info("Collection loaded")
 
@@ -94,11 +91,9 @@ class Console {
      */
     fun startInteractiveMode() {
         logger.info("The server is ready to receive commands")
-        var executeFlag: Boolean? = true
-        val selector = Selector.open()
         connectionManager.datagramChannel.register(selector, SelectionKey.OP_READ)
 
-        do {
+        while (executeFlag) {
             selector.select()
             val selectedKeys = selector.selectedKeys()
             val iter = selectedKeys.iterator()
@@ -114,7 +109,8 @@ class Console {
                             QueryType.COMMAND_EXEC -> {
                                 logger.info("Received command: ${query.information}")
                                 commandInvoker.executeCommand(query)
-                                executeFlag = commandInvoker.getCommandMap()[query.information]?.getExecutionFlag()
+                                //executeFlag = commandInvoker.getCommandMap()[query.information]?.getExecutionFlag()
+
                             }
 
                             QueryType.INITIALIZATION -> {
@@ -139,19 +135,36 @@ class Console {
                             }
 
                             QueryType.PING -> {
-                                logger.trace("Received ping request")
+                                logger.info("Received ping request")
                                 val answer = Answer(AnswerType.SYSTEM, "Pong")
                                 connectionManager.send(answer)
                             }
                         }
-                        iter.remove()
-                    } catch (e: Exception) {
+                    } catch (e:Exception) {
                         logger.error("Error while executing command: ${e.message}")
                         val answer = Answer(AnswerType.ERROR, e.message.toString())
                         connectionManager.send(answer)
                     }
                 }
             }
-        } while (executeFlag != false)
+        }
+        connectionManager.datagramChannel.close()
+        selector.close()
+        logger.info("Closing server")
+    }
+
+    fun stop() {
+        executeFlag = false
+        selector.wakeup()
+    }
+
+    fun save() {
+        val saver = Saver()
+        try {
+            saver.save("", collectionManager)
+            logger.info("Collection saved successfully")
+        } catch (e:Exception) {
+            logger.warn("Collection was not saved: ${e.message}")
+        }
     }
 }

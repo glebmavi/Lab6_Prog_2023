@@ -57,7 +57,12 @@ class Console {
             logger.warn("No server connection")
             outputManager.println("Retry connection? [y/n]")
             outputManager.print("$ ")
-            val query = inputManager.read().trim().lowercase().split(" ")
+            var query = inputManager.read().trim().lowercase().split(" ")
+            while ((query[0] != "y") and (query[0] != "n")) {
+                outputManager.println("Wrong input\nRetry connection? [y/n]")
+                outputManager.print("$ ")
+                query = inputManager.read().trim().lowercase().split(" ")
+            }
             if (query[0] == "y") {
                 getConnection()
             } else {
