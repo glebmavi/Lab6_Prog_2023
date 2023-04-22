@@ -16,7 +16,7 @@ import utils.*
  */
 
 class Console {
-    private val connectionManager = ConnectionManager("172.28.22.3", 6789)
+    private val connectionManager = ConnectionManager("localhost", 6789)
 
     private val outputManager = OutputManager()
     private val inputManager = InputManager(outputManager)

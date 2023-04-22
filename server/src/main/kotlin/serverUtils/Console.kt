@@ -21,7 +21,7 @@ import java.nio.channels.Selector
  * @property commandReceiver Receives commands and executes them
  */
 class Console {
-    private val connectionManager = ConnectionManager("localhost", 6789)
+    private val connectionManager = ConnectionManager("localhost", 6789) //does not change anything
     private val fileManager = FileManager()
     private val collectionManager = CollectionManager()
 
@@ -33,8 +33,7 @@ class Console {
     private val logger: Logger = LogManager.getLogger(Console::class.java)
     private var executeFlag = true
 
-    val selector = Selector.open()
-    //private val inputChannel = newChannel(inputManager.inputStream)
+    private val selector = Selector.open()
 
     /**
      * Registers commands and waits for user prompt
@@ -78,10 +77,13 @@ class Console {
         commandInvoker.register("filter_by_chapter", FilterByChapter(commandReceiver))
         logger.debug("Command 'filter_by_chapter' registered")
 
+        commandInvoker.register("filter_by_weapon", FilterByWeapon(commandReceiver))
+        logger.debug("Command 'filter_by_weapon' registered")
+
         fileManager.load(collectionManager)
         logger.info("Collection loaded")
 
-        connectionManager.startServer("localhost", 6789)
+        connectionManager.startServer("172.28.22.3", 6789) //change to server ip
 
         //connectionManager.datagramChannel.register(selector, SelectionKey.OP_READ)
     }
@@ -109,8 +111,6 @@ class Console {
                             QueryType.COMMAND_EXEC -> {
                                 logger.info("Received command: ${query.information}")
                                 commandInvoker.executeCommand(query)
-                                //executeFlag = commandInvoker.getCommandMap()[query.information]?.getExecutionFlag()
-
                             }
 
                             QueryType.INITIALIZATION -> {
@@ -161,7 +161,7 @@ class Console {
     fun save() {
         val saver = Saver()
         try {
-            saver.save("", collectionManager)
+            saver.save("defaultCollection.yaml", collectionManager)
             logger.info("Collection saved successfully")
         } catch (e:Exception) {
             logger.warn("Collection was not saved: ${e.message}")
