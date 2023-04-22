@@ -29,8 +29,9 @@ class Console {
     private val commandReceiver = CommandReceiver(collectionManager, connectionManager)
 
     private val logger: Logger = LogManager.getLogger(Console::class.java)
+    private var executeFlag = true
 
-    //val selector = Selector.open()
+    val selector = Selector.open()
     //private val inputChannel = newChannel(inputManager.inputStream)
 
     /**
@@ -88,11 +89,9 @@ class Console {
      */
     fun startInteractiveMode() {
         logger.info("The server is ready to receive commands")
-        var executeFlag:Boolean? = true
-        val selector = Selector.open()
         connectionManager.datagramChannel.register(selector, SelectionKey.OP_READ)
 
-        do {
+        while (executeFlag) {
             selector.select()
             val selectedKeys = selector.selectedKeys()
             val iter = selectedKeys.iterator()
@@ -108,7 +107,7 @@ class Console {
                             QueryType.COMMAND_EXEC -> {
                                 logger.info("Received command: ${query.information}")
                                 commandInvoker.executeCommand(query)
-                                executeFlag = commandInvoker.getCommandMap()[query.information]?.getExecutionFlag()
+                                //executeFlag = commandInvoker.getCommandMap()[query.information]?.getExecutionFlag()
 
                             }
                             QueryType.INITIALIZATION -> {
@@ -130,8 +129,24 @@ class Console {
                 }
                 iter.remove()
             }
+        }
+        connectionManager.datagramChannel.close()
+        selector.close()
+        logger.info("Closing server")
+    }
 
+    fun stop() {
+        executeFlag = false
+        selector.wakeup()
+    }
 
-        } while (executeFlag != false)
+    fun save() {
+        val saver = Saver()
+        try {
+            saver.save("", collectionManager)
+            logger.info("Collection saved successfully")
+        } catch (e:Exception) {
+            logger.warn("Collection was not saved: ${e.message}")
+        }
     }
 }

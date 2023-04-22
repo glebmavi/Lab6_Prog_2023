@@ -4,11 +4,10 @@ import basicClasses.SpaceMarine
 import collection.CollectionManager
 import com.charleskorn.kaml.Yaml
 import exceptions.NoEnvironmentVariableFound
-import utils.*
 import java.io.FileOutputStream
 import java.io.OutputStreamWriter
 
-class Saver(private val connectionManager: ConnectionManager) {
+class Saver {
     /**
      * Saves elements of collection into file with provided [filename]
      * @param filename Name of the file
@@ -21,6 +20,7 @@ class Saver(private val connectionManager: ConnectionManager) {
                     FileOutputStream(System.getenv("COLLECTION"))
                 } catch (e:Exception) {
                     throw NoEnvironmentVariableFound()
+                    //FileOutputStream("defaultCollection.yaml")
                 }
             } else {
                 FileOutputStream(filename)
@@ -33,8 +33,7 @@ class Saver(private val connectionManager: ConnectionManager) {
             }
             output.close()
         } catch (e: Exception) {
-            val answer = Answer(AnswerType.ERROR, e.toString())
-            connectionManager.send(answer)
+            throw e
         }
     }
 }
