@@ -10,7 +10,8 @@ import org.apache.logging.log4j.Logger
 import java.nio.channels.DatagramChannel
 import java.nio.channels.SelectionKey
 import java.nio.channels.Selector
-
+import java.util.*
+import kotlin.concurrent.timerTask
 
 /**
  * Class that handles user commands and provides them all the necessary parameters
@@ -21,7 +22,7 @@ import java.nio.channels.Selector
  * @property commandReceiver Receives commands and executes them
  */
 class Console {
-    private val connectionManager = ConnectionManager("localhost", 6789) //does not change anything
+    private val connectionManager = ConnectionManager() //does not change anything
     private val fileManager = FileManager()
     private val collectionManager = CollectionManager()
 
@@ -34,6 +35,10 @@ class Console {
     private var executeFlag = true
 
     private val selector = Selector.open()
+
+    fun start(actions: ConnectionManager.() -> Unit) {
+        connectionManager.actions()
+    }
 
     /**
      * Registers commands and waits for user prompt
@@ -83,11 +88,43 @@ class Console {
         fileManager.load(collectionManager)
         logger.info("Collection loaded")
 
-        connectionManager.startServer("172.28.22.3", 6789) //change to server ip
-
-        //connectionManager.datagramChannel.register(selector, SelectionKey.OP_READ)
     }
 
+    fun onConnect() {
+        logger.trace("Received initialization request")
+
+        val sendingInfo = mutableMapOf<String, MutableMap<String, String>>(
+            "commands" to mutableMapOf(),
+            "arguments" to mutableMapOf()
+        )
+        val commands = commandInvoker.getCommandMap()
+
+        for (command in commands.keys) {
+            sendingInfo["commands"]!! += (command to commands[command]!!.getInfo())
+            sendingInfo["arguments"]!! += (command to jsonCreator.objectToString(commands[command]!!.getArgsTypes()))
+        }
+
+        val answer = Answer(AnswerType.SYSTEM, jsonCreator.objectToString(sendingInfo))
+        connectionManager.send(answer)
+    }
+
+
+    fun onTimeComplete(actions: Logger.() -> Unit) {
+        logger.actions()
+    }
+
+    fun scheduleTask(time:Long, actions: Logger.() -> Unit) {
+
+        val timer = Timer()
+
+        timer.schedule(timerTask {
+            run {
+                onTimeComplete {
+                    actions()
+                }
+            }
+        }, 5, time)
+    }
     /**
      * Enters interactive mode and waits for incoming queries
      */
@@ -114,21 +151,7 @@ class Console {
                             }
 
                             QueryType.INITIALIZATION -> {
-                                logger.trace("Received initialization request")
-
-                                val sendingInfo = mutableMapOf<String, MutableMap<String, String>>(
-                                    "commands" to mutableMapOf(),
-                                    "arguments" to mutableMapOf()
-                                )
-                                val commands = commandInvoker.getCommandMap()
-
-                                for (command in commands.keys) {
-                                    sendingInfo["commands"]!! += (command to commands[command]!!.getInfo())
-                                    sendingInfo["arguments"]!! += (command to jsonCreator.objectToString(commands[command]!!.getArgsTypes()))
-                                }
-
-                                val answer = Answer(AnswerType.SYSTEM, jsonCreator.objectToString(sendingInfo))
-                                connectionManager.send(answer)
+                                onConnect()
                             }
 
                             QueryType.PING -> {

@@ -20,7 +20,7 @@ class ConnectionManager(private var host: String, private var port: Int) {
     private val logger: Logger = LogManager.getLogger(ConnectionManager::class.java)
     init {
         var unbound = true
-        var port = 8080
+        var port = 6789
         while (unbound) {
             try {
                 port++

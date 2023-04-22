@@ -1,29 +1,54 @@
 import serverUtils.Console
+import utils.Answer
+import utils.AnswerType
+import utils.QueryType
 import kotlin.concurrent.thread
+
+fun server(actions: Console.() -> Unit) {
+    val console = Console()
+    console.actions()
+}
 
 /**
  * Main
  */
 fun main() {
-    val console = Console()
 
-    console.initialize()
 
-    val thread = thread {
-        while (true) {
-            when (readlnOrNull()) {
-                "exit" -> {
-                    console.save()
-                    console.stop()
-                    break
-                }
-                "save" -> {
-                    console.save()
+    server {
+        val port = 6789
+        val host = "localhost"
+
+        initialize()
+
+        val thread = thread {
+            while (true) {
+                when (readlnOrNull()) {
+                    "exit" -> {
+                        save()
+                        stop()
+                        break
+                    }
+                    "save" -> {
+                        save()
+                    }
                 }
             }
         }
+
+        start {
+            startServer(host, port)
+
+            startInteractiveMode()
+
+            scheduleTask(1000) {
+                run {
+                    info("Scheduled task")
+                }
+            }
+        }
+
+        thread.join()
     }
 
-    console.startInteractiveMode()
-    thread.join()
 }

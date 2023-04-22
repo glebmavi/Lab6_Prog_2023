@@ -12,7 +12,9 @@ import java.nio.channels.DatagramChannel
 /**
  * Class responsible for managing network connections
  */
-class ConnectionManager(private var host: String, private var port: Int) {
+class ConnectionManager() {
+    private var host = "localhost"
+    private var port = 6789
 
     private val logger: Logger = LogManager.getLogger(ConnectionManager::class.java)
 
