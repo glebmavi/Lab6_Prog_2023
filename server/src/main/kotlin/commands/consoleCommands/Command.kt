@@ -11,6 +11,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 abstract class Command {
     private var executionFlag = true
+
     fun setFlag(flag:Boolean) {
         this.executionFlag = flag
     }
@@ -18,15 +19,14 @@ abstract class Command {
     fun getExecutionFlag(): Boolean {
         return executionFlag
     }
-    constructor() {
 
-    }
     /**
      * Get info
      *
      * @return
      */
     abstract fun getInfo(): String
+    abstract fun getArgsTypes(): Map<String, String>
 
     /**
      * Execute

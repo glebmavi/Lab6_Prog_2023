@@ -18,8 +18,18 @@ class RemoveID() : Command() {
     constructor(commandReceiver: CommandReceiver) : this() {
         this.commandReceiver = commandReceiver
     }
+
+    private val info = "Deletes the element with the provided id"
+    private val argsTypes = mapOf(
+        "id" to "Long"
+    )
+
     override fun getInfo(): String {
-        return "Deletes the element with the provided id"
+        return info
+    }
+
+    override fun getArgsTypes(): Map<String, String> {
+        return argsTypes
     }
 
     /**

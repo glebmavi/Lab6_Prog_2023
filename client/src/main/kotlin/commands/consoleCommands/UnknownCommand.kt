@@ -1,20 +1,18 @@
 package commands.consoleCommands
 
 import commands.CommandReceiver
-import clientUtils.Validator
-import exceptions.InvalidArgumentException
-import java.lang.reflect.Type
+
 
 class UnknownCommand() : Command() {
     private lateinit var commandReceiver: CommandReceiver
+    private var name = "unknown_command"
     private var info = "This scope will be replaced with the info"
-    private var numberOfArgs = 0
-    private var argsTypes = mapOf<String, Type>()
+    private var argsTypes = mapOf<String, String>()
 
-    constructor(commandReceiver: CommandReceiver, info: String, numberOfArgs: Int, argsTypes:Map<String, Type>) : this() {
+    constructor(commandReceiver: CommandReceiver, name: String, info: String, argsTypes:Map<String, String>) : this() {
         this.commandReceiver = commandReceiver
+        this.name = name
         this.info = info
-        this.numberOfArgs = numberOfArgs
         this.argsTypes = argsTypes
     }
 
@@ -23,8 +21,6 @@ class UnknownCommand() : Command() {
     }
 
     override fun execute(args: List<String>) {
-        if (Validator.verifyArgs(numberOfArgs, argsTypes, args)) {
-            commandReceiver.unknownCommand(args)
-        } else throw InvalidArgumentException("Invalid arguments were entered. Use HELP command to check")
+            commandReceiver.unknownCommand(name, argsTypes)
     }
 }

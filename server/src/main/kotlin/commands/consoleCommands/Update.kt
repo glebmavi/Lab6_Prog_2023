@@ -17,8 +17,19 @@ class Update() : Command() {
     constructor(commandReceiver: CommandReceiver) : this() {
         this.commandReceiver = commandReceiver
     }
+
+    private val info = "Updates values of the element with the provided id"
+    private val argsTypes = mapOf(
+        "id" to "Long",
+        "spaceMarine" to "SpaceMarine"
+    )
+
     override fun getInfo(): String {
-        return "Updates values of the element with the provided id"
+        return info
+    }
+
+    override fun getArgsTypes(): Map<String, String> {
+        return argsTypes
     }
 
     /**

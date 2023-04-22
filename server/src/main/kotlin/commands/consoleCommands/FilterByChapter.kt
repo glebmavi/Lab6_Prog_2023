@@ -19,8 +19,17 @@ class FilterByChapter() : Command() {
         this.commandReceiver = commandReceiver
     }
 
+    private val info = "Prints elements with the provided chapter"
+    private val argsTypes = mapOf(
+        "chapter" to "Chapter"
+    )
+
     override fun getInfo(): String {
-        return "Prints elements with the provided chapter"
+        return info
+    }
+
+    override fun getArgsTypes(): Map<String, String> {
+        return argsTypes
     }
 
     /**

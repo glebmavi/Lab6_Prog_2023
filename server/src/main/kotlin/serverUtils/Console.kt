@@ -4,6 +4,7 @@ import collection.CollectionManager
 import commands.CommandInvoker
 import commands.CommandReceiver
 import commands.consoleCommands.*
+import utils.*
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import utils.*
@@ -27,6 +28,8 @@ class Console {
 
     private val commandInvoker = CommandInvoker(connectionManager)
     private val commandReceiver = CommandReceiver(collectionManager, connectionManager)
+
+    private val jsonCreator = JsonCreator()
 
     private val logger: Logger = LogManager.getLogger(Console::class.java)
 
@@ -75,6 +78,9 @@ class Console {
         commandInvoker.register("filter_by_chapter", FilterByChapter(commandReceiver))
         logger.debug("Command 'filter_by_chapter' registered")
 
+        commandInvoker.register("filter_by_weapon", FilterByWeapon(commandReceiver))
+        logger.debug("Command 'filter_by_weapon' registered")
+
         fileManager.load(collectionManager)
         logger.info("Collection loaded")
 
@@ -88,7 +94,7 @@ class Console {
      */
     fun startInteractiveMode() {
         logger.info("The server is ready to receive commands")
-        var executeFlag:Boolean? = true
+        var executeFlag: Boolean? = true
         val selector = Selector.open()
         connectionManager.datagramChannel.register(selector, SelectionKey.OP_READ)
 
@@ -109,29 +115,43 @@ class Console {
                                 logger.info("Received command: ${query.information}")
                                 commandInvoker.executeCommand(query)
                                 executeFlag = commandInvoker.getCommandMap()[query.information]?.getExecutionFlag()
-
                             }
+
                             QueryType.INITIALIZATION -> {
-                                logger.info("Received initialization request")
-                                val answer = Answer(AnswerType.INIT, commandInvoker.getCommandMap().keys.joinToString(" "))
+                                logger.trace("Received initialization request")
+
+                                val sendingInfo = mutableMapOf<String, MutableMap<String, String>>(
+                                    "commands" to mutableMapOf(),
+                                    "arguments" to mutableMapOf()
+                                )
+                                val commands = commandInvoker.getCommandMap()
+
+                                for (command in commands.keys) {
+                                    sendingInfo["commands"]!! += (command to commands[command]!!.getInfo())
+                                    logger.info(commands[command]!!.getInfo())
+                                    logger.info(jsonCreator.objectToString(commands[command]!!.getArgsTypes()))
+                                    sendingInfo["arguments"]!! += (command to jsonCreator.objectToString(commands[command]!!.getArgsTypes()))
+                                    logger.info(sendingInfo)
+                                }
+
+                                val answer = Answer(AnswerType.SYSTEM, jsonCreator.objectToString(sendingInfo))
                                 connectionManager.send(answer)
                             }
+
                             QueryType.PING -> {
-                                logger.info("Received ping request")
+                                logger.trace("Received ping request")
                                 val answer = Answer(AnswerType.SYSTEM, "Pong")
                                 connectionManager.send(answer)
                             }
                         }
-                    } catch (e:Exception) {
+                        iter.remove()
+                    } catch (e: Exception) {
                         logger.error("Error while executing command: ${e.message}")
                         val answer = Answer(AnswerType.ERROR, e.message.toString())
                         connectionManager.send(answer)
                     }
                 }
-                iter.remove()
             }
-
-
         } while (executeFlag != false)
     }
 }

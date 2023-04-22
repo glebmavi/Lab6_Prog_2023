@@ -7,8 +7,8 @@ import clientUtils.Console
 fun main() {
     val console = Console()
 
-    //console.getConnection()
+    console.getConnection()
 
-    //console.initialize()
+    console.initialize()
     console.startInteractiveMode()
 }

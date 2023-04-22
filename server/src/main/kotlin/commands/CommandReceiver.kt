@@ -25,7 +25,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
             val answer = Answer(AnswerType.OK, collectionManager.getInfo())
             connectionManager.send(answer)
         } catch (e: Exception) {
-            val answer = Answer(AnswerType.ERROR, e.message!!)
+            val answer = Answer(AnswerType.ERROR, e.message.toString())
             connectionManager.send(answer)
         }
     }
@@ -38,7 +38,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
             val answer = Answer(AnswerType.OK, collectionManager.show().joinToString("\n"))
             connectionManager.send(answer)
         } catch (e: Exception) {
-            val answer = Answer(AnswerType.ERROR, e.message!!)
+            val answer = Answer(AnswerType.ERROR, e.message.toString())
             connectionManager.send(answer)
         }
     }
@@ -53,7 +53,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
             val answer = Answer(AnswerType.OK, "Space Marine ${spaceMarine.getName()} has been created and added to the collection")
             connectionManager.send(answer)
         } catch (e: Exception) {
-            val answer = Answer(AnswerType.ERROR, e.message!!)
+            val answer = Answer(AnswerType.ERROR, e.message.toString())
             connectionManager.send(answer)
         }
     }
@@ -73,7 +73,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
             connectionManager.send(answer)
 
         } catch (e: Exception) {
-            val answer = Answer(AnswerType.ERROR, e.toString())
+            val answer = Answer(AnswerType.ERROR, e.message.toString())
             connectionManager.send(answer)
         }
     }
@@ -93,7 +93,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
             connectionManager.send(answer)
 
         } catch (e: Exception) {
-            val answer = Answer(AnswerType.ERROR, e.toString())
+            val answer = Answer(AnswerType.ERROR, e.message.toString())
             connectionManager.send(answer)
         }
     }
@@ -108,7 +108,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
                 val answer = Answer(AnswerType.OK, "Collection has been cleared")
                 connectionManager.send(answer)
             } catch (e: Exception) {
-                val answer = Answer(AnswerType.ERROR, e.toString())
+                val answer = Answer(AnswerType.ERROR, e.message.toString())
                 connectionManager.send(answer)
             }
         } else {
@@ -126,7 +126,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
             val answer = Answer(AnswerType.OK, "Collection was saved successfully")
             connectionManager.send(answer)
         } catch (e:Exception) {
-            val answer = Answer(AnswerType.ERROR, e.toString())
+            val answer = Answer(AnswerType.ERROR, e.message.toString())
             connectionManager.send(answer)
         }
     }
@@ -150,7 +150,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
             }
 
         } catch (e: Exception) {
-            val answer = Answer(AnswerType.ERROR, e.toString())
+            val answer = Answer(AnswerType.ERROR, e.message.toString())
             connectionManager.send(answer)
         }
     }
@@ -180,7 +180,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
             connectionManager.send(answer)
 
         } catch (e: Exception) {
-            val answer = Answer(AnswerType.ERROR, e.toString())
+            val answer = Answer(AnswerType.ERROR, e.message.toString())
             connectionManager.send(answer)
         }
     }
@@ -211,7 +211,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
             connectionManager.send(answer)
 
         } catch (e: Exception) {
-            val answer = Answer(AnswerType.ERROR, e.toString())
+            val answer = Answer(AnswerType.ERROR, e.message.toString())
             connectionManager.send(answer)
         }
     }
@@ -242,7 +242,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
             connectionManager.send(answer)
 
         } catch (e: Exception) {
-            val answer = Answer(AnswerType.ERROR, e.toString())
+            val answer = Answer(AnswerType.ERROR, e.message.toString())
             connectionManager.send(answer)
         }
 
@@ -271,7 +271,7 @@ class CommandReceiver(private val collectionManager: CollectionManager,
                 throw Exception("The collection is empty")
             }
         } catch (e: Exception) {
-            val answer = Answer(AnswerType.ERROR, e.toString())
+            val answer = Answer(AnswerType.ERROR, e.message.toString())
             connectionManager.send(answer)
         }
     }
@@ -285,11 +285,36 @@ class CommandReceiver(private val collectionManager: CollectionManager,
                 filteredList.add(i)
             }
 
+            if (filteredList.isEmpty()) {
+                throw Exception("No Space Marines with $chapter were found")
+            }
+
             val answer = Answer(AnswerType.OK, filteredList.joinToString("\n"))
             connectionManager.send(answer)
 
         } catch (e: Exception) {
-            val answer = Answer(AnswerType.ERROR, e.toString())
+            val answer = Answer(AnswerType.ERROR, e.message.toString())
+            connectionManager.send(answer)
+        }
+    }
+
+    fun filterByWeapon(args: Map<String, String>) {
+        try {
+            val weapon = jsonCreator.stringToObject<MeleeWeapon>(args["weapon"]!!)
+            val filteredList = mutableListOf<SpaceMarine>()
+
+            for (i in collectionManager.filter { e -> e.getWeapon()!! == weapon }) {
+                filteredList.add(i)
+            }
+            if (filteredList.isEmpty()) {
+                throw Exception("No Space Marines with $weapon were found")
+            }
+
+            val answer = Answer(AnswerType.OK, filteredList.joinToString("\n"))
+            connectionManager.send(answer)
+
+        } catch (e: Exception) {
+            val answer = Answer(AnswerType.ERROR, e.message.toString())
             connectionManager.send(answer)
         }
     }

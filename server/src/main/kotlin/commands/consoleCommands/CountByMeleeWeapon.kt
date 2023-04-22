@@ -18,8 +18,18 @@ class CountByMeleeWeapon() : Command() {
     constructor(commandReceiver: CommandReceiver) : this() {
         this.commandReceiver = commandReceiver
     }
+
+    private val info = "Prints the amount of elements with the provided weapon"
+    private val argsTypes = mapOf(
+        "weapon" to "MeleeWeapon"
+    )
+
     override fun getInfo(): String {
-        return "Prints the amount of elements with the provided weapon"
+        return info
+    }
+
+    override fun getArgsTypes(): Map<String, String> {
+        return argsTypes
     }
 
     /**

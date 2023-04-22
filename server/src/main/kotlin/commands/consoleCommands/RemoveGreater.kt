@@ -19,8 +19,17 @@ class RemoveGreater() : Command() {
         this.commandReceiver = commandReceiver
     }
 
+    private val info = "Deletes from collection all elements greater than provided"
+    private val argsTypes = mapOf(
+        "spaceMarine" to "SpaceMarine"
+    )
+
     override fun getInfo(): String {
-        return "Deletes from collection all elements greater than provided"
+        return info
+    }
+
+    override fun getArgsTypes(): Map<String, String> {
+        return argsTypes
     }
 
     /**

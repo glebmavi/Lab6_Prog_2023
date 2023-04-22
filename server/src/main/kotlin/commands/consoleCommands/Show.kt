@@ -17,8 +17,16 @@ class Show() : Command() {
     constructor(commandReceiver: CommandReceiver) : this() {
         this.commandReceiver = commandReceiver
     }
+
+    private val info = "Prints all elements of the collection"
+    private val argsTypes = mapOf<String, String>()
+
     override fun getInfo(): String {
-        return "Prints all elements of the collection"
+        return info
+    }
+
+    override fun getArgsTypes(): Map<String, String> {
+        return argsTypes
     }
 
     /**

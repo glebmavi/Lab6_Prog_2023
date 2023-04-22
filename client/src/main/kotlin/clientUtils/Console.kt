@@ -24,6 +24,8 @@ class Console {
     private val commandInvoker = CommandInvoker(outputManager)
     private val commandReceiver = CommandReceiver(commandInvoker, outputManager, inputManager, connectionManager)
 
+    private val jsonCreator = JsonCreator()
+
     private val logger: Logger = LogManager.getLogger(Console::class.java)
 
     private var availableCommands = mapOf(
@@ -81,16 +83,17 @@ class Console {
         if (answer.answerType == AnswerType.ERROR) {
             outputManager.println(answer.message)
         } else {
-            val serverCommands = answer.message.split(" ")
-            logger.info("Received commands from server: $serverCommands")
+            val serverCommands = jsonCreator.stringToObject<Map<String, Map<String, String>>>(answer.message)
+            logger.info("Received commands from server: ${serverCommands["commands"]!!.keys.toList()}")
 
             commandInvoker.clearCommandMap()
-            for (i in serverCommands) {
+
+            for (i in serverCommands["commands"]!!.keys) {
                 if (i in availableCommands.keys) {
                     commandInvoker.register(i, availableCommands.getValue(i))
                     logger.debug("Registered command $i")
                 } else {
-                    commandInvoker.register(i, UnknownCommand(commandReceiver, "This scope will be replaced with the info", 0, mapOf()))
+                    commandInvoker.register(i, UnknownCommand(commandReceiver, i, serverCommands["commands"]!![i]!!, jsonCreator.stringToObject(serverCommands["arguments"]!![i]!!)))
                 }
             }
         }
@@ -99,6 +102,7 @@ class Console {
 
     fun startInteractiveMode() {
         var executeFlag:Boolean? = true
+        outputManager.surePrint("Waiting for user prompt ...")
 
         do {
             try {

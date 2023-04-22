@@ -19,8 +19,16 @@ class AddMin() : Command() {
         this.commandReceiver = commandReceiver
     }
 
+    private val info = "Adds a new element into the collection if its value is lower than the lowest element in the collection"
+    private val argsTypes = mapOf(
+        "spaceMarine" to "SpaceMarine"
+    )
     override fun getInfo(): String {
-        return "Adds a new element into the collection if its value is lower than the lowest element in the collection"
+        return info
+    }
+
+    override fun getArgsTypes(): Map<String, String> {
+        return argsTypes
     }
 
     /**

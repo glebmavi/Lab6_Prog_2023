@@ -18,8 +18,16 @@ class Clear() : Command() {
     constructor(commandReceiver: CommandReceiver) : this() {
         this.commandReceiver = commandReceiver
     }
+
+    private val info = "Clears all elements in the collection"
+    private val argsTypes = mapOf<String, String>()
+
     override fun getInfo(): String {
-        return "Clears all elements in the collection"
+        return info
+    }
+
+    override fun getArgsTypes(): Map<String, String> {
+        return argsTypes
     }
 
     /**

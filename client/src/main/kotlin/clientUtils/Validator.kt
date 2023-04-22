@@ -1,24 +1,11 @@
 package clientUtils
 
-import java.lang.reflect.Type
-
 class Validator {
     companion object {
         fun verifyArgs (size:Int, args: List<String>):Boolean {
             return args.size == size
         }
 
-        fun verifyArgs (size:Int, argsTypes:Map<String, Type>, args: List<String>):Boolean {
-            if (args.size != size) return false
-
-            for (i in args.indices) {
-                if (argsTypes[argsTypes.keys.toList()[i]] != args[i]::class.java) {
-                    return false
-                }
-            }
-
-            return true
-        }
 
         fun verifyList (array: List<String>): Boolean {
             return try {

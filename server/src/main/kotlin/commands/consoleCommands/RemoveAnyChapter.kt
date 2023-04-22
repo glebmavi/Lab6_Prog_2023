@@ -18,8 +18,18 @@ class RemoveAnyChapter() : Command() {
     constructor(commandReceiver: CommandReceiver) : this() {
         this.commandReceiver = commandReceiver
     }
+
+    private val info = "Deletes an element with a provided chapter value"
+    private val argsTypes = mapOf(
+        "chapter" to "Chapter"
+    )
+
     override fun getInfo(): String {
-        return "Deletes an element with a provided chapter value"
+        return info
+    }
+
+    override fun getArgsTypes(): Map<String, String> {
+        return argsTypes
     }
 
     /**

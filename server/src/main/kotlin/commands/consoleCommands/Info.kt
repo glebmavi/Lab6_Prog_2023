@@ -18,8 +18,16 @@ class Info() : Command() {
     constructor(commandReceiver: CommandReceiver) : this() {
         this.commandReceiver = commandReceiver
     }
+
+    private val info = "Prints info about the collection (type, creation date, amount of elements)"
+    private val argsTypes = mapOf<String, String>()
+
     override fun getInfo(): String {
-        return "Prints info about the collection (type, creation date, amount of elements)"
+        return info
+    }
+
+    override fun getArgsTypes(): Map<String, String> {
+        return argsTypes
     }
 
     /**
