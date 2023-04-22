@@ -16,7 +16,7 @@ class FileManager() {
 
     private val logger: Logger = LogManager.getLogger(FileManager::class.java)
 
-    private val collectionFileName = try {
+    private var collectionFileName = try {
         System.getenv("COLLECTION")
     } catch (e:Exception) {
         throw NoEnvironmentVariableFound()
@@ -29,10 +29,11 @@ class FileManager() {
     fun load(collectionManager: CollectionManager) {
         try {
             if (collectionFileName == null) {
-                throw NoEnvironmentVariableFound()
+                collectionFileName = "defaultCollection.yaml"
             }
 
             val file = FileReader(collectionFileName)
+            logger.info("Loading from $collectionFileName")
             val datalist = file.readText().split("#ENDOFSPACEMARINE")
             for (data in datalist) {
                 data.trim()
