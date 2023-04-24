@@ -1,6 +1,5 @@
 package commands.consoleCommands
 
-import commands.CommandReceiver
 import clientUtils.Validator
 import exceptions.InvalidArgumentException
 
@@ -9,12 +8,8 @@ import exceptions.InvalidArgumentException
  *
  * @constructor Create command Exit
  */
-class Exit() : Command() {
-
-    private lateinit var commandReceiver: CommandReceiver
-    constructor(commandReceiver: CommandReceiver) : this() {
-        this.commandReceiver = commandReceiver
-    }
+class Exit(
+) : Command() {
 
     override fun getInfo(): String {
         return "Exits the app (without saving data)"

@@ -1,7 +1,4 @@
 import serverUtils.Console
-import utils.Answer
-import utils.AnswerType
-import utils.QueryType
 import kotlin.concurrent.thread
 
 fun server(actions: Console.() -> Unit) {
@@ -13,7 +10,6 @@ fun server(actions: Console.() -> Unit) {
  * Main
  */
 fun main() {
-
 
     server {
         val port = 6789

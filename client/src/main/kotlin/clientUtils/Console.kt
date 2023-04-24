@@ -28,24 +28,6 @@ class Console {
 
     private val logger: Logger = LogManager.getLogger(Console::class.java)
 
-    private var availableCommands = mapOf(
-        "info" to Info(commandReceiver),
-        "show" to Show(commandReceiver),
-        "add" to Add(commandReceiver),
-        "update_id" to Update(commandReceiver),
-        "remove_by_id" to RemoveID(commandReceiver),
-        "clear" to Clear(commandReceiver),
-        "save" to Save(commandReceiver),
-        "execute_script" to ScriptFromFile(commandReceiver),
-        "exit" to Exit(commandReceiver),
-        "add_if_min" to AddMin(commandReceiver),
-        "remove_greater" to RemoveGreater(commandReceiver),
-        "remove_lower" to RemoveLower(commandReceiver),
-        "remove_any_by_chapter" to RemoveAnyChapter(commandReceiver),
-        "count_by_melee_weapon" to CountByMeleeWeapon(commandReceiver),
-        "filter_by_chapter" to FilterByChapter(commandReceiver),
-        "help" to Help(commandReceiver)
-    )
 
     fun getConnection() {
         val connected = connectionManager.connect()
@@ -72,9 +54,9 @@ class Console {
     }
 
     private fun registerBasicCommands() {
-        commandInvoker.register("help", availableCommands.getValue("help"))
-        commandInvoker.register("exit", availableCommands.getValue("exit"))
-        commandInvoker.register("execute_script", availableCommands.getValue("execute_script"))
+        commandInvoker.register("help", Help(commandReceiver))
+        commandInvoker.register("exit", Exit())
+        commandInvoker.register("execute_script", ScriptFromFile(commandReceiver))
         logger.debug("Registered basic client commands")
     }
 
@@ -94,22 +76,18 @@ class Console {
             commandInvoker.clearCommandMap()
 
             for (i in serverCommands["commands"]!!.keys) {
-                if (i in availableCommands.keys) {
-                    commandInvoker.register(i, availableCommands.getValue(i))
-                    logger.debug("Registered command $i")
-                } else {
-                    commandInvoker.register(
+                commandInvoker.register(
+                    i,
+                    UnknownCommand(
+                        commandReceiver,
                         i,
-                        UnknownCommand(
-                            commandReceiver,
-                            i,
-                            serverCommands["commands"]!![i]!!,
-                            jsonCreator.stringToObject(serverCommands["arguments"]!![i]!!)
-                        )
+                        serverCommands["commands"]!![i]!!,
+                        jsonCreator.stringToObject(serverCommands["arguments"]!![i]!!)
                     )
-                }
+                )
             }
         }
+
         registerBasicCommands()
     }
 

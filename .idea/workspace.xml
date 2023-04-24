@@ -4,15 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="318493da-6bbb-42c7-92f9-02df2e4b3d16" name="Changes" comment="TODO and some changes">
+    <list default="true" id="318493da-6bbb-42c7-92f9-02df2e4b3d16" name="Changes" comment="additional task">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectionManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/ConnectionManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Console.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/clientUtils/Console.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandReceiver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/CommandReceiver.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Add.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/AddMin.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Clear.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/CountByMeleeWeapon.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Exit.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Exit.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/FilterByChapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Help.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Help.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Info.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/RemoveAnyChapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/RemoveGreater.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/RemoveID.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/RemoveLower.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Save.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/ScriptFromFile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/ScriptFromFile.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Show.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/UnknownCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/UnknownCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/kotlin/commands/consoleCommands/Update.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/issue" beforeDir="false" afterPath="$PROJECT_DIR$/issue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/client.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/client.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/server.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/Server.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/Server.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/ConnectionManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/ConnectionManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/kotlin/serverUtils/Console.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +76,20 @@
                 <item name="client" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Lab6" type="f1a62948:ProjectNode" />
+                <item name="client" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Lab6" type="f1a62948:ProjectNode" />
+                <item name="client" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="distribution" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -134,7 +164,29 @@
       <recent name="serializers" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.ServerKt">
+  <component name="RunManager" selected="Kotlin.ClientKt">
+    <configuration name="Lab6:client [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/client" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <configuration name="Lab6:client [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -147,28 +199,6 @@
         <option name="taskNames">
           <list>
             <option value="run" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="Lab6:server [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/server" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="jar" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -217,11 +247,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.ServerKt" />
         <item itemvalue="Kotlin.ClientKt" />
+        <item itemvalue="Kotlin.ServerKt" />
+        <item itemvalue="Gradle.Lab6:client [jar]" />
         <item itemvalue="Gradle.Lab6:client [run]" />
         <item itemvalue="Gradle.Lab6:server [run]" />
-        <item itemvalue="Gradle.Lab6:server [jar]" />
       </list>
     </recent_temporary>
   </component>
@@ -249,7 +279,10 @@
       <workItem from="1681990560955" duration="11716000" />
       <workItem from="1682002763616" duration="21681000" />
       <workItem from="1682090422891" duration="5572000" />
-      <workItem from="1682163790257" duration="5798000" />
+      <workItem from="1682163790257" duration="6999000" />
+      <workItem from="1682197917464" duration="1000" />
+      <workItem from="1682255626510" duration="224000" />
+      <workItem from="1682323615790" duration="834000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit Lab6">
       <created>1680607747881</created>
@@ -335,7 +368,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682095972479</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="additional task">
+      <created>1682170759776</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1682170759776</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,6 +417,7 @@
     <MESSAGE value="Comments" />
     <MESSAGE value="Changed connection managers in both server and client. Added selector to server" />
     <MESSAGE value="Added logger to client, improved logger for server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added logger to client, improved logger for server" />
+    <MESSAGE value="additional task" />
+    <option name="LAST_COMMIT_MESSAGE" value="additional task" />
   </component>
 </project>

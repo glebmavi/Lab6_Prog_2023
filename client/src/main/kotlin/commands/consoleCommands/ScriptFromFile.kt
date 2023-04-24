@@ -11,12 +11,10 @@ import exceptions.InvalidArgumentException
  *
  * @constructor Create command Script from file
  */
-class ScriptFromFile(): Command() {
+class ScriptFromFile(
+    private val commandReceiver: CommandReceiver
+): Command() {
 
-    private lateinit var commandReceiver: CommandReceiver
-    constructor(commandReceiver: CommandReceiver) : this() {
-        this.commandReceiver = commandReceiver
-    }
     override fun getInfo(): String {
         return "Reads and executes script from provided file (The script should have the same commands used in the interactive mode)"
     }
